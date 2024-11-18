@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -14,15 +13,15 @@ const transition = {
 };
 
 export const Menu = ({
-  setActive,
+  
   children,
 }: {
-  setActive: (item: string | null) => void;
+  
   children: React.ReactNode;
 }) => {
   return (
     <nav
-      onMouseLeave={() => setActive(null)} // resets the state
+      
       className="relative   shadow-input flex justify-center space-x-4 px-0 py-6 "
     >
       {children}
