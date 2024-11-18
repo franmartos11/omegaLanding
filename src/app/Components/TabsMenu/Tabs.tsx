@@ -9,7 +9,7 @@ type Tab = {
     value: string;
     link: string;
     logo:string;
-    content?: string | React.ReactNode | any;
+    content?: string | React.ReactNode ;
 };
 
 export const Tabs = ({
@@ -95,7 +95,6 @@ export const FadeInDiv = ({
     className,
     tabs,
     hovering,
-    active,
 }: {
     className?: string;
     key?: string;

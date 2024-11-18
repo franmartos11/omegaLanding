@@ -1,55 +1,10 @@
 "use client";
-import Image from "next/image";
+
 import { Tabs } from "./Tabs";
 
 
 export function TabsDemo() {
-    const texts = {
-        es: {
-            titulo: 'Nuestros Servicios',
-            tab1: {
-                nombre: 'Carcheck',
-                imgpath: '/aspacarcheckbanner.png',
-
-            },
-            tab2: {
-                nombre: 'Audit',
-                imgpath: '/aspaAuditBanner.png',
-            },
-            tab3:
-            {
-                nombre: 'Páginas Web',
-                imgpath: '/desarrolloWebBanner.png',
-            },
-            tab4: {
-                nombre: 'Apps a Medida',
-                imgpath: '/appsAMedidaBanner.png',
-            },
-
-        },
-    en: {
-            titulo: 'Our Services',
-            tab1: {
-                nombre: 'Carcheck',
-                imgpath: '/aspacarcheckbanner.png',
-
-            },
-            tab2: {
-                nombre: 'Audit',
-                imgpath: '/aspaAuditBanner.png',
-            },
-            tab3:
-            {
-                nombre: 'Web Pages',
-                imgpath: '/desarrolloWebBanner.png',
-            },
-            tab4: {
-                nombre: 'Custom Apps',
-                imgpath: '/appsAMedidaBanner.png',
-            },
-
-        }
-    }
+    
 
     const tabs = [
         {
