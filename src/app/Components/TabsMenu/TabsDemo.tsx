@@ -136,15 +136,4 @@ export function TabsDemo() {
     );
 }
 
-const DummyContent = () => {
-    return (
-        <Image
-            src="/desarrollado.jpg"
-            alt="image"
-            title="image"
-            width="500"
-            height="500"
-            className="object-cover object-left-top h-[90%]  md:h-[90%]  w-[90%] rounded-xl mx-auto"
-        />
-    );
-};
+

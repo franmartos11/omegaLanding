@@ -2,7 +2,6 @@
 
 import { cn } from "@/app/utils/cn";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { useState } from "react";
 
 type Tab = {

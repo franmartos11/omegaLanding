@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { NavbarDemo } from "./Components/Navbar/Navbar";
 import { TabsDemo } from "./Components/TabsMenu/TabsDemo";
 import FloatingButton from "./Components/WhatsAppLogo/WhatsAppButton";
