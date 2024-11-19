@@ -43,19 +43,27 @@ const Footer = () => {
         Arias Velázquez 733, A4400 Salta
       </p>
       <div className="flex justify-center space-x-6">
-        
-        <Link href="https://instagram.com/your-profile" target="_blank">
+      <Link href="https://www.linkedin.com/company/omegasoluciones/about/" target="_blank">
           <Image
-            src="/instagram.png" // Reemplaza con la ruta correcta del ícono de Instagram
+            src="/linkedin.png" 
+            alt="Linkedin"
+            width={40}
+            height={40}
+            className="rounded-full"
+          />
+        </Link>
+        <Link href="https://www.instagram.com/omegasoluciones.srl/" target="_blank">
+          <Image
+            src="/instagram.png"
             alt="Instagram"
             width={40}
             height={40}
             className="rounded-full"
           />
         </Link>
-        <Link href="https://facebook.com/your-page" target="_blank">
+        <Link href="https://www.facebook.com/profile.php?id=61560097936589" target="_blank">
           <Image
-            src="/facebook.png" // Reemplaza con la ruta correcta del ícono de Facebook
+            src="/facebook.png"
             alt="Facebook"
             width={40}
             height={40}

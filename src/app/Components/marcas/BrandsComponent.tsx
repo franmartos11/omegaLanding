@@ -18,7 +18,7 @@ const BrandsComponent = () => {
         <section className=" py-12 px-4 text-center">
             <div className="container    px-6 pt-7 pb-0 mx-auto sm:pt-0  ">
                 <h2 className="text-4xl pt-16  font-semibold text-center  capitalize lg:text-6xl ">
-                    UNIDADES DE NEGOCIO
+                TRABAJAMOS CON LAS MEJORES MARCAS
                 </h2>
                 
                 <div className="flex justify-center mx-auto mt-4">
