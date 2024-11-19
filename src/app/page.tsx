@@ -12,7 +12,6 @@ export default function Home() {
   return (
     <div>
     <NavbarDemo></NavbarDemo>
-  
     <TabsDemo></TabsDemo>
     <MissionVision></MissionVision>
     <StatsComponent></StatsComponent>

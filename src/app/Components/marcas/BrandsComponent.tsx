@@ -35,16 +35,16 @@ const BrandsComponent = () => {
             <div className=" w-[80%] grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
                 {brands.map((brand, index) => (
                     <div
-                        key={index}
-                        className="flex items-center justify-center bg-white rounded-lg shadow-lg p-6"
-                    >
-                        <img
-                            src={brand.logo}
-                            alt={brand.name}
-                            title={brand.name}
-                            className="h-[9rem] w-[9rem] object-contain"
-                        />
-                    </div>
+                    key={index}
+                    className="flex items-center justify-center bg-white rounded-lg shadow-lg p-6 transition-all duration-500 hover:bg-gradient-to-b hover:from-orange-100 hover:to-orange-400"
+                  >
+                    <img
+                      src={brand.logo}
+                      alt={brand.name}
+                      title={brand.name}
+                      className="h-[9rem] w-[9rem] object-contain"
+                    />
+                  </div>
                 ))}
             </div>
 </div>
