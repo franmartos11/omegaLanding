@@ -24,7 +24,7 @@ function Navbar({ className }: { className?: string }) {
       {/* Logo */}
       <div className="logo">
         <img
-          src="/omegalogo3.png"
+          src="/omegaLogo3.png"
           alt="Company Logo"
           className="h-[4rem] w-auto"
         />
