@@ -51,7 +51,7 @@ const OmegaShowcase: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-gray-100 to-gray-300 min-h-screen flex flex-col items-center justify-center p-4">
+    <div className="bg-gradient-to-b from-gray-100 to-gray-300 min-h-screen flex flex-col items-center justify-center pt-[12rem] lg:pt-[3rem]">
       {/* Contenedor principal con dos columnas */}
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 w-full max-w-5xl">
         {/* Columna izquierda: Logo principal */}
@@ -81,28 +81,55 @@ const OmegaShowcase: React.FC = () => {
         </div>
       </div>
 
-      {/* Logos secundarios */}
-      <div className="flex flex-wrap lg:flex-nowrap flex-col lg:flex-row justify-center items-center gap-6 mt-12 w-full">
-        {logos.map((logo) => (
+      {/* Logos secundarios con separador */}
+      <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-6 mt-12 w-full">
+        {/* OMEGA SOLUCIONES */}
+        <div className="flex flex-col items-center">
           <button
-            key={logo.id}
-            onClick={() => handleLogoChange(logo)}
+            onClick={() => handleLogoChange(logos[0])}
             className={`flex flex-col items-center transition-all duration-300 ${
-              activeLogo.id === logo.id
+              activeLogo.id === logos[0].id
                 ? "opacity-100"
                 : "opacity-50 hover:opacity-100"
             }`}
           >
             <div className="bg-white rounded-full p-4 shadow-md">
               <img
-                src={logo.logo}
-                alt={logo.title}
+                src={logos[0].logo}
+                alt={logos[0].title}
                 className="h-[9rem] w-[9rem] object-contain"
               />
             </div>
-            <span className="mt-2 text-sm text-gray-800">{logo.title}</span>
+            <span className="mt-2 text-sm text-gray-800">{logos[0].title}</span>
           </button>
-        ))}
+        </div>
+
+        {/* Línea divisoria */}
+        <div className="h-[9rem] w-[2px] bg-gray-400"></div>
+
+        {/* Otros logos secundarios */}
+        <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-6">
+          {logos.slice(1).map((logo) => (
+            <button
+              key={logo.id}
+              onClick={() => handleLogoChange(logo)}
+              className={`flex flex-col items-center transition-all duration-300 ${
+                activeLogo.id === logo.id
+                  ? "opacity-100"
+                  : "opacity-50 hover:opacity-100"
+              }`}
+            >
+              <div className="bg-white rounded-full p-4 shadow-md">
+                <img
+                  src={logo.logo}
+                  alt={logo.title}
+                  className="h-[9rem] w-[9rem] object-contain"
+                />
+              </div>
+              <span className="mt-2 text-sm text-gray-800">{logo.title}</span>
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );

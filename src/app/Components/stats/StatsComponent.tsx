@@ -22,7 +22,7 @@ const StatsComponent = () => {
     return (
         <section
             ref={ref}
-            className="py-12 px-4 text-center bg-white flex justify-center items-center gap-12"
+            className="py-12 px-4 text-center bg-white flex flex-wrap justify-center items-center gap-8"
         >
             {stats.map((stat, index) => (
                 <StatCard
@@ -67,7 +67,7 @@ const StatCard = ({
     }, [visible, value]);
 
     return (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center max-w-[200px]">
             <span className="text-4xl font-bold text-orange-500">+{count}</span>
             <span className="text-lg font-medium text-gray-700">{label}</span>
         </div>

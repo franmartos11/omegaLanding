@@ -1,4 +1,3 @@
-
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -6,17 +5,20 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="bg-orange-500 text-white py-8 text-center">
-      <div className="flex justify-center mb-[2rem]">
+      {/* Logo */}
+      <div className="flex justify-center mb-6">
         <Image
-          src="/omegaSolucionesLogo.webp" 
+          src="/omegaSolucionesLogo.webp"
           alt="Omega Soluciones Logo"
-          width={100}
-          height={100}
-          className="rounded-full bg-white" 
+          width={80}
+          height={80}
+          className="rounded-full bg-white"
         />
       </div>
-      <nav className="mb-[2rem]">
-        <ul className="flex justify-center space-x-8 font-bold">
+
+      {/* Navegación */}
+      <nav className="mb-6">
+        <ul className="flex flex-wrap justify-center space-x-4 lg:space-x-8 font-bold text-sm md:text-base">
           <li>
             <Link href="/" className="hover:underline">
               INICIO
@@ -39,35 +41,51 @@ const Footer = () => {
           </li>
         </ul>
       </nav>
-      <p className="mb-4 text-sm">
+
+      {/* Dirección */}
+      <p className="mb-6 text-xs md:text-sm">
         Arias Velázquez 733, A4400 Salta
       </p>
-      <div className="flex justify-center space-x-6">
-      <Link href="https://www.linkedin.com/company/omegasoluciones/about/" target="_blank">
+
+      {/* Redes sociales */}
+      <div className="flex justify-center space-x-4 md:space-x-6">
+        <Link
+          href="https://www.linkedin.com/company/omegasoluciones/about/"
+          target="_blank"
+          aria-label="Linkedin"
+        >
           <Image
-            src="/linkedin.png" 
+            src="/linkedin.png"
             alt="Linkedin"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
             className="rounded-full"
           />
         </Link>
-        <Link href="https://www.instagram.com/omegasoluciones.srl/" target="_blank">
+        <Link
+          href="https://www.instagram.com/omegasoluciones.srl/"
+          target="_blank"
+          aria-label="Instagram"
+        >
           <Image
             src="/instagram.png"
             alt="Instagram"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
             className="rounded-full"
           />
         </Link>
-        <Link href="https://www.facebook.com/profile.php?id=61560097936589" target="_blank">
+        <Link
+          href="https://www.facebook.com/profile.php?id=61560097936589"
+          target="_blank"
+          aria-label="Facebook"
+        >
           <Image
             src="/facebook.png"
             alt="Facebook"
-            width={40}
-            height={40}
-            className="rounded-full "
+            width={30}
+            height={30}
+            className="rounded-full"
           />
         </Link>
       </div>
