@@ -13,31 +13,31 @@ interface LogoData {
 const logos: LogoData[] = [
   {
     id: "omega-soluciones",
-    logo: "/omega-soluciones-logo.png",
+    logo: "/omegaSolucionesLogo.webp",
     title: "OMEGA SOLUCIONES",
     description: "Lo necesitas? Lo tenemos.",
   },
   {
     id: "omega-distribuciones",
-    logo: "/omega-distribuciones-logo.png",
+    logo: "/omegaDistribucionesLogo_no_background.png",
     title: "OMEGA DISTRIBUCIONES",
     description: "Distribución confiable y rápida.",
   },
   {
     id: "omega-clean",
-    logo: "/omega-clean-logo.png",
+    logo: "/omegaCleanLogo_no_background.png",
     title: "OMEGA CLEAN",
     description: "Limpieza al alcance de tu mano.",
   },
   {
     id: "omega-construcciones",
-    logo: "/omega-construcciones-logo.png",
+    logo: "/omegaConstruccionesLogo_no_background.png",
     title: "OMEGA CONSTRUCCIONES",
     description: "Construyendo el futuro contigo.",
   },
   {
     id: "omega-tech",
-    logo: "/omega-tech-logo.png",
+    logo: "/omegaTechLogo_no_background.png",
     title: "OMEGA TECH",
     description: "Innovación en cada clic.",
   },
@@ -51,48 +51,79 @@ const OmegaShowcase: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-gray-100 to-gray-300 min-h-screen flex flex-col items-center justify-center">
+    <div className="bg-gradient-to-b from-gray-100 to-gray-300 min-h-screen flex flex-col items-center justify-center p-4">
       {/* Logo principal */}
       <motion.div
         key={activeLogo.id}
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="flex flex-col items-center"
+        className="flex flex-col items-center mb-12"
       >
         <div className="bg-white rounded-full p-8 shadow-lg">
           <img
             src={activeLogo.logo}
             alt={activeLogo.title}
-            className="h-40 w-40 object-contain"
+            className="h-[20rem] w-[20rem] object-contain"
           />
         </div>
-        <h1 className="text-4xl font-bold text-gray-800 mt-6">
+        <h1 className="text-4xl font-bold text-gray-800 mt-6 text-center">
           {activeLogo.title}
         </h1>
-        <p className="text-lg text-gray-600 mt-2">{activeLogo.description}</p>
+        <p className="text-lg text-gray-600 mt-2 text-center">
+          {activeLogo.description}
+        </p>
       </motion.div>
 
-      {/* Botones para cambiar logo */}
-      <div className="flex justify-center mt-12 space-x-8">
-        {logos.map((logo) => (
+      {/* Logos secundarios con separador */}
+      <div className="flex flex-col lg:flex-row items-center lg:space-x-8 lg:space-y-0 space-y-6">
+        {/* OMEGA SOLUCIONES */}
+        <div className="flex flex-col items-center">
           <button
-            key={logo.id}
-            onClick={() => handleLogoChange(logo)}
+            onClick={() => handleLogoChange(logos[0])}
             className={`flex flex-col items-center transition-all duration-300 ${
-              activeLogo.id === logo.id ? "opacity-100" : "opacity-50 hover:opacity-100"
+              activeLogo.id === logos[0].id
+                ? "opacity-100"
+                : "opacity-50 hover:opacity-100"
             }`}
           >
             <div className="bg-white rounded-full p-4 shadow-md">
               <img
-                src={logo.logo}
-                alt={logo.title}
-                className="h-16 w-16 object-contain"
+                src={logos[0].logo}
+                alt={logos[0].title}
+                className="h-[9rem] w-[9rem] object-contain"
               />
             </div>
-            <span className="mt-2 text-sm text-gray-800">{logo.title}</span>
+            <span className="mt-2 text-sm text-gray-800">{logos[0].title}</span>
           </button>
-        ))}
+        </div>
+
+        {/* Línea divisoria (oculta en móviles) */}
+        <div className="hidden lg:block h-[9rem] w-[2px] bg-gray-400"></div>
+
+        {/* Otras empresas */}
+        <div className="flex flex-wrap justify-center lg:space-x-8 gap-6">
+          {logos.slice(1).map((logo) => (
+            <button
+              key={logo.id}
+              onClick={() => handleLogoChange(logo)}
+              className={`flex flex-col items-center transition-all duration-300 ${
+                activeLogo.id === logo.id
+                  ? "opacity-100"
+                  : "opacity-50 hover:opacity-100"
+              }`}
+            >
+              <div className="bg-white rounded-full p-4 shadow-md">
+                <img
+                  src={logo.logo}
+                  alt={logo.title}
+                  className="h-[9rem] w-[9rem] object-contain"
+                />
+              </div>
+              <span className="mt-2 text-sm text-gray-800">{logo.title}</span>
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );
