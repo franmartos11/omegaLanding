@@ -13,7 +13,7 @@ interface LogoData {
 const logos: LogoData[] = [
   {
     id: "omega-soluciones",
-    logo: "/omegaSolucionesLogo.webp",
+    logo: "/omegaSolucionesLogo3.png",
     title: "OMEGA SOLUCIONES",
     description: "Lo necesitas? Lo tenemos.",
   },
