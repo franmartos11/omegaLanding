@@ -4,7 +4,7 @@ import React from "react";
 
 const WorkProcess = () => {
   const steps = [
-    { title: "Análisis", icon: "/analysis-icon.png" },
+    { title: "Análisis", icon: "/lupa.png" },
     { title: "Gestión", icon: "/management-icon.png" },
     { title: "Entrega", icon: "/delivery-icon.png" },
     { title: "Seguimiento", icon: "/tracking-icon.png" },
@@ -29,7 +29,7 @@ const WorkProcess = () => {
         {steps.map((step, index) => (
           <div
             key={index}
-            className={`relative flex flex-col items-center ${
+            className={` relative pt-[1rem] flex flex-col items-center ${
               index % 2 === 0 ? "lg:translate-y-16" : "lg:-translate-y-16"
             }`}
           >
@@ -49,16 +49,16 @@ const WorkProcess = () => {
             )}
 
             {/* Círculo con ícono */}
-            <div className="flex items-center justify-center w-48 h-48 bg-white rounded-full shadow-lg border-4 border-orange-500">
+            <div className="flex items-center justify-center  w-48 h-48 bg-white rounded-full shadow-lg border-4 border-orange-500">
               <img
                 src={step.icon}
                 alt={step.title}
-                className="w-20 h-20 object-contain"
+                className="w-[7rem] h-[7rem] hover:w-[8rem] hover:h-[8rem] object-contain"
               />
             </div>
 
             {/* Título */}
-            <p className="mt-6 text-lg font-bold text-gray-700">{step.title}</p>
+            <p className="mt-6  text-lg font-bold text-gray-700">{step.title}</p>
           </div>
         ))}
       </div>

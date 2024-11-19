@@ -15,7 +15,7 @@ function Navbar({ className }: { className?: string }) {
         <nav
             className={cn("fixed nav gowun-batang-bold inset-x-0 mx-auto z-50 flex justify-between items-center bg-white p-[0.6rem] border-b-2 border-gray-300", className)}
         >   <div className="logo">
-                <img src="/omegalogo2.png" alt="Company Logo" className=" logo h-[4rem] w-auto" />
+                <img src="/omegalogo3.png" alt="Company Logo" className=" logo h-[4rem] w-auto" />
             </div>
 
             <div className=" option pr-[0rem] sm:pr-[5rem] lg:pr-[10rem]">

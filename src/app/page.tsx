@@ -1,3 +1,4 @@
+import OmegaShowcase from "./Components/Hero/OmegaShowcase";
 import { NavbarDemo } from "./Components/Navbar/Navbar";
 import { TabsDemo } from "./Components/TabsMenu/TabsDemo";
 import FloatingButton from "./Components/WhatsAppLogo/WhatsAppButton";
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <div>
     <NavbarDemo></NavbarDemo>
+    <OmegaShowcase></OmegaShowcase>
     <TabsDemo></TabsDemo>
     <MissionVision></MissionVision>
     <StatsComponent></StatsComponent>

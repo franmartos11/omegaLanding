@@ -15,7 +15,7 @@ const BrandsComponent = () => {
     ];
 
     return (
-        <section className=" py-12 px-4 text-center">
+        <section className=" py-12 px-4 text-center  ">
             <div className="container    px-6 pt-7 pb-0 mx-auto sm:pt-0  ">
                 <h2 className="text-4xl pt-16  font-semibold text-center  capitalize lg:text-6xl ">
                 TRABAJAMOS CON LAS MEJORES MARCAS
@@ -32,11 +32,11 @@ const BrandsComponent = () => {
             </div>
             
             <div className="flex pt-[5rem] pb-[5rem]  align-middle justify-center"> 
-            <div className=" w-[80%] grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
+            <div className=" w-[80%] grid grid-cols-2 md:grid-cols-4 gap-[2rem] mt-10">
                 {brands.map((brand, index) => (
                     <div
                     key={index}
-                    className="flex items-center justify-center bg-white rounded-lg shadow-lg p-6 transition-all duration-500 hover:bg-gradient-to-b hover:from-orange-100 hover:to-orange-400"
+                    className="flex items-center justify-center bg-white rounded-lg shadow-lg p-6 transition-all duration-500 hover:bg-gradient-to-b hover:to-orange-400 hover:from-orange-100 "
                   >
                     <img
                       src={brand.logo}
