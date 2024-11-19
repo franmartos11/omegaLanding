@@ -13,10 +13,9 @@ export default function Home() {
   return (
     <div>
     <NavbarDemo></NavbarDemo>
-    
     <OmegaShowcase></OmegaShowcase>
-    <TabsDemo></TabsDemo>
     <MissionVision></MissionVision>
+    <TabsDemo></TabsDemo>
     <StatsComponent></StatsComponent>
     <WorkProcess></WorkProcess>
     <BrandsComponent></BrandsComponent>
