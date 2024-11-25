@@ -18,7 +18,7 @@ const TeamSection = () => {
   ];
 
   return (
-    <div className=" flex justify-center align-middle">
+    <div id="team" className=" flex justify-center align-middle">
 
     
     <section className=" py-16 px-6 text-center  w-[80%]">

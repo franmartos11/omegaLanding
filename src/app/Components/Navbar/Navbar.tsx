@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { HoveredLink, Menu } from "./NavbarMenu";
 import { cn } from "@/app/utils/cn";
+import { Link } from "react-scroll";
 
 export function NavbarDemo() {
   return <Navbar />;
@@ -31,12 +32,40 @@ function Navbar({ className }: { className?: string }) {
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden sm:flex pr-[0rem] sm:pr-[5rem] lg:pr-[10rem]">
+      <div className="hidden sm:flex pr-[0rem] sm:pr-[5rem] lg:pr-[10rem] ">
         <Menu>
-          <HoveredLink href="/">INICIO</HoveredLink>
-          <HoveredLink href="/">UNIDADES DE NEGOCIO</HoveredLink>
-          <HoveredLink href="/">MARCAS</HoveredLink>
-          <HoveredLink href="/">NOSOTROS</HoveredLink>
+          <Link
+            className="text-neutral-700 text-xl hover:text-orange-500 cursor-pointer" // Aquí agregamos cursor-pointer
+            to="hero"
+            smooth={true}
+            duration={1000}
+          >
+            INICIO
+          </Link>
+          <Link
+            className="text-neutral-700 text-xl hover:text-orange-500 cursor-pointer"
+            to="tabsDemo"
+            smooth={true}
+            duration={1000}
+          >
+            UNIDADES DE NEGOCIO
+          </Link>
+          <Link
+            className="text-neutral-700 text-xl hover:text-orange-500 cursor-pointer"
+            to="marcas"
+            smooth={true}
+            duration={1000}
+          >
+            MARCAS
+          </Link>
+          <Link
+            className="text-neutral-700 text-xl hover:text-orange-500 cursor-pointer"
+            to="team"
+            smooth={true}
+            duration={1000}
+          >
+            NOSOTROS
+          </Link>
         </Menu>
       </div>
 
@@ -57,10 +86,38 @@ function Navbar({ className }: { className?: string }) {
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white shadow-lg z-40 sm:hidden">
           <Menu>
-            <HoveredLink href="/">INICIO</HoveredLink>
-            <HoveredLink href="/">UNIDADES DE NEGOCIO</HoveredLink>
-            <HoveredLink href="/">MARCAS</HoveredLink>
-            <HoveredLink href="/">NOSOTROS</HoveredLink>
+            <Link
+              className="text-neutral-700 text-xl hover:text-orange-500 cursor-pointer"
+              to="hero"
+              smooth={true}
+              duration={1000}
+            >
+              INICIO
+            </Link>
+            <Link
+              className="text-neutral-700 text-xl hover:text-orange-500 cursor-pointer"
+              to="tabsDemo"
+              smooth={true}
+              duration={1000}
+            >
+              UNIDADES DE NEGOCIO
+            </Link>
+            <Link
+              className="text-neutral-700 text-xl hover:text-orange-500 cursor-pointer"
+              to="marcas"
+              smooth={true}
+              duration={1000}
+            >
+              MARCAS
+            </Link>
+            <Link
+              className="text-neutral-700 text-xl hover:text-orange-500 cursor-pointer"
+              to="team"
+              smooth={true}
+              duration={1000}
+            >
+              NOSOTROS
+            </Link>
           </Menu>
         </div>
       )}

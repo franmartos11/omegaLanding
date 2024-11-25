@@ -74,7 +74,7 @@ export function TabsDemo() {
     ];
 
     return (
-        <div className="pt-[3rem]"> 
+        <div className="pt-[5rem]" id="tabsDemo"> 
             <div className="container    px-6 pt-7 pb-0 mx-auto sm:pt-0  ">
                 <h2 className="text-4xl pt-16  font-semibold text-center  capitalize lg:text-6xl ">
                     UNIDADES DE NEGOCIO

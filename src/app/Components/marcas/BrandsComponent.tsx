@@ -15,7 +15,7 @@ const BrandsComponent = () => {
     ];
 
     return (
-        <section className=" py-12 px-4 text-center  ">
+        <section id="marcas" className=" py-[5rem] px-4 text-center  ">
             <div className="container    px-6 pt-7 pb-0 mx-auto sm:pt-0  ">
                 <h2 className="text-4xl pt-16  font-semibold text-center  capitalize lg:text-6xl ">
                 TRABAJAMOS CON LAS MEJORES MARCAS
