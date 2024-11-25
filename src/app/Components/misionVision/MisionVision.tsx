@@ -9,7 +9,7 @@ const MissionVision = () => {
   const [visionRef, visionInView] = useInView({ triggerOnce: true });
 
   return (
-    <section className="bg-[url('/background3.png')] bg-no-repeat bg-cover bg-center min-h-screen py-16 px-6 relative text-center lg:text-left">
+    <section className="bg-[url('/background5.png')] bg-no-repeat bg-cover bg-center min-h-screen py-16 px-6 relative text-center lg:text-left">
       {/* Contenedor principal */}
       <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Misión */}
@@ -46,7 +46,7 @@ const MissionVision = () => {
           <img
             src="/nuestraMision.webp"
             alt="Misión"
-            className="w-[22rem] h-auto object-cover rounded shadow-lg"
+            className="w-[24rem] h-auto object-cover rounded shadow-lg"
           />
         </motion.div>
 
@@ -61,7 +61,7 @@ const MissionVision = () => {
           <img
             src="/nuestraVision.webp"
             alt="Visión"
-            className="w-[22rem] h-auto object-cover rounded shadow-lg"
+            className="w-[24rem] h-auto object-cover rounded shadow-lg"
           />
         </motion.div>
 
