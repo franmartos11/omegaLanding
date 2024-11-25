@@ -1,5 +1,7 @@
+'use client'
 import React from "react";
 import Link from "next/link";
+import {Link as Link2}from 'react-scroll';
 import Image from "next/image";
 
 const Footer = () => {
@@ -20,24 +22,40 @@ const Footer = () => {
       <nav className="mb-6">
         <ul className="flex flex-wrap justify-center space-x-4 lg:space-x-8 font-bold text-sm md:text-base">
           <li>
-            <Link href="/" className="hover:underline">
+          <Link2 className=" cursor-pointer mb-6 text-xs md:text-xl hover:underline"  
+            to="hero"
+            smooth={true}
+            duration={1000}
+          >
               INICIO
-            </Link>
+            </Link2>
           </li>
           <li>
-            <Link href="/filiales" className="hover:underline">
+          <Link2 className="cursor-pointer mb-6 text-xs md:text-xl hover:underline"
+            to="tabsDemo"
+            smooth={true}
+            duration={1000}
+          >
               UNIDADES DE NEGOCIO
-            </Link>
+            </Link2>
           </li>
           <li>
-            <Link href="/clientes" className="hover:underline">
+          <Link2 className="cursor-pointer mb-6 text-xs md:text-xl hover:underline"
+            to="marcas"
+            smooth={true}
+            duration={1000}
+          >
               MARCAS
-            </Link>
+            </Link2>
           </li>
           <li>
-            <Link href="/nosotros" className="hover:underline">
+            <Link2 className="cursor-pointer mb-6 text-xs md:text-xl hover:underline"
+            to="team"
+            smooth={true}
+            duration={1000}
+          >
               NOSOTROS
-            </Link>
+            </Link2>
           </li>
         </ul>
       </nav>
