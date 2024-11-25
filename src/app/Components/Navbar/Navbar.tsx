@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { HoveredLink, Menu } from "./NavbarMenu";
+import { Menu } from "./NavbarMenu";
 import { cn } from "@/app/utils/cn";
 import { Link } from "react-scroll";
 

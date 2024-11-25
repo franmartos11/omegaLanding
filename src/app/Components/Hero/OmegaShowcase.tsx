@@ -51,12 +51,7 @@ const OmegaShowcase: React.FC = () => {
     setActiveLogo(logo);
   };
 
-  const handleScroll = (id:string) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" }); // Desplazamiento suave
-    }
-  };
+  
 
   return (
     <div id="hero" className="bg-gradient-to-b from-gray-100 to-gray-300 min-h-screen flex flex-col items-center justify-center pt-[12rem] lg:pt-[3rem]">
