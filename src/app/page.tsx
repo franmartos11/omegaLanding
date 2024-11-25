@@ -16,8 +16,9 @@ export default function Home() {
     <OmegaShowcase></OmegaShowcase>
     <MissionVision></MissionVision>
     <TabsDemo></TabsDemo>
-    <StatsComponent></StatsComponent>
+    
     <WorkProcess></WorkProcess>
+    <StatsComponent></StatsComponent>
     <BrandsComponent></BrandsComponent>
     <TeamSection></TeamSection>
     <Footer></Footer>
