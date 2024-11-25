@@ -64,7 +64,7 @@ const OmegaShowcase: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="flex justify-center"
         >
-          <div className="bg-white rounded-full p-[3rem] shadow-lg">
+          <div className="bg-white rounded-full p-[1rem] lg:p-[3rem] shadow-lg">
             <img
               src={activeLogo.logo}
               alt={activeLogo.title}
