@@ -11,10 +11,10 @@ const WorkProcess = () => {
   ];
 
   return (
-    <section className=" py-20 px-6 text-center mh-[50rem]">
+    <section className="  bg-[url('/background3.png')] bg-no-repeat bg-cover bg-center min-h-screen pt-[5rem]  py-20 px-6 text-center mh-[50rem]">
       {/* Título */}
       <div className="container    px-6 pt-7  mx-auto sm:pt-0 pb-[14rem]  ">
-                <h2 className="text-4xl pt-16  font-semibold text-center  capitalize lg:text-6xl ">
+                <h2 className="text-4xl pt-16 text-white  font-semibold text-center  capitalize lg:text-6xl ">
                     FORMA DE TRABAJO
                 </h2>
                 <div className="flex justify-center mx-auto mt-6">

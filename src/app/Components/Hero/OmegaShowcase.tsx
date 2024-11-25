@@ -54,7 +54,10 @@ const OmegaShowcase: React.FC = () => {
   
 
   return (
-    <div id="hero" className="bg-gradient-to-b from-gray-100 to-gray-300 min-h-screen flex flex-col items-center justify-center pt-[12rem] lg:pt-[3rem]">
+   
+   
+
+    <div id="hero" className=" bg-[url('/backgound1.png')] bg-no-repeat bg-cover bg-center min-h-screen flex flex-col items-center justify-center pt-[12rem] lg:pt-[3rem]">
       {/* Contenedor principal con dos columnas */}
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 w-full max-w-5xl">
         {/* Columna izquierda: Logo principal */}

@@ -18,12 +18,12 @@ const TeamSection = () => {
   ];
 
   return (
-    <div id="team" className=" flex justify-center align-middle">
+    <div id="team" className=" bg-[url('/background6.png')] bg-no-repeat bg-cover bg-center min-h-screen pt-[5rem]  flex justify-center align-middle">
 
     
     <section className=" py-16 px-6 text-center  w-[80%]">
       
-      <h2 className="text-4xl pt-16  font-semibold text-center  capitalize lg:text-6xl ">
+      <h2 className="text-4xl pt-16 pb-[0.5rem] text-white  font-semibold text-center  capitalize lg:text-6xl ">
                     NOSOTROS
       </h2>
       <div className="flex justify-center mx-auto mb-8">
@@ -36,11 +36,11 @@ const TeamSection = () => {
       <div className="flex flex-col pt-[3rem] lg:flex-row items-center lg:items-start gap-12 mb-16">
         {/* Texto */}
         <div className="lg:w-1/2 text-left">
-          <p className="text-3xl text-gray-800 font-bold mb-4">
+          <p className="text-3xl text-white  font-bold mb-2">
             Hace más de cinco años que ayudamos a clientes en proyectos públicos
             y privados.
           </p>
-          <p className="text-xl text-gray-700 pt-[1rem]">
+          <p className="text-xl text-gray-100 pt-[1rem]">
             Enfrentamos todo tipo de desafíos: Soporte en inundaciones,
             Sequías, Proyectos mineros, Campamentos, Oficinas, Nuevos
             emprendimientos.
@@ -58,17 +58,17 @@ const TeamSection = () => {
                 height={160}
                 className="rounded-full object-cover mx-auto mb-4"
               />
-              <h4 className="text-lg font-bold text-gray-800">
+              <h4 className="text-lg font-bold text-gray-100">
                 {founder.name}
               </h4>
-              <p className="text-sm text-gray-600">{founder.role}</p>
+              <p className="text-sm text-gray-200">{founder.role}</p>
             </div>
           ))}
         </div>
       </div>
 
       {/* Equipo */}
-      <h3 className="text-2xl font-bold text-gray-800 uppercase mb-6">
+      <h3 className="text-2xl font-bold text-white uppercase mb-6">
         Equipo
       </h3>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
@@ -81,8 +81,8 @@ const TeamSection = () => {
               height={140}
               className="rounded-full object-cover mx-auto mb-4"
             />
-            <h4 className="text-lg font-bold text-gray-800">{member.name}</h4>
-            <p className="text-sm text-gray-600">{member.role}</p>
+            <h4 className="text-lg font-bold text-gray-100">{member.name}</h4>
+            <p className="text-sm text-gray-200">{member.role}</p>
           </div>
         ))}
       </div>
