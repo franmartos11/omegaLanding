@@ -10,70 +10,44 @@ export function TabsDemo() {
 
   const tabs = [
     {
-      title: "test",
       value: "product",
       link: "/carcheck",
       logo: "/omegaDistribucionesLogo.webp",
-      content: (
-        <div className="flex items-center justify-center w-full h-[26rem]">
-          <img
-            src="/image.png"
-            alt="carcheck-data"
-            title="carcheck-data"
-            className="rounded-2xl justify-center align-middle"
-          />
-        </div>
-      ),
+      src: "/image.png",
+
+      alt: "OmegaDistribucionesLogo",
+      title: "carcheck-data",
     },
     {
-      title: "test",
       value: "services",
       link: "/auditorias",
       logo: "/omegaConstruccionesLogo.webp",
-      content: (
-        <div className="flex items-center justify-center w-full h-[26rem]">
-          <img
-            src="/image.png"
-            alt="Auditorias-data"
-            title="Auditorias-data"
-            className="rounded-2xl"
-          />
-        </div>
-      ),
+      src: "/image.png",
+
+      alt: "OmegaConstruccionesLogo",
+      title: "Auditorias-data",
     },
     {
-      title: "test",
+
       value: "playground",
       link: "/desarrollo-web",
       logo: "/omegaCleanLogo.webp",
-      content: (
-        <div className="flex items-center justify-center w-full h-[26rem] ">
-          <img
-            src="/image.png"
-            alt="Paginas-Web-data"
-            title="Paginas-Web-data"
-            className="rounded-2xl"
-          />
-        </div>
-      ),
+      src: "/image.png",
+      alt: "OmegaCleanLogo",
+      title: "Paginas-Web-data",
     },
     {
-      title: "test",
+
       value: "content",
       link: "/apps-a-medida",
       logo: "/omegaTechLogo.webp",
-      content: (
-        <div className="flex items-center justify-center w-full h-[26rem]">
-          <img
-            src="/image.png"
-            alt="Apps-a-Medida-data"
-            title="Apps-a-Medida-data"
-            className="rounded-2xl"
-          />
-        </div>
-      ),
+      src: "/image.png",
+
+      alt: "OmegaTechLogo",
+      title: "Apps-a-Medida-data",
     },
   ];
+
 
   return (
     <div className=" bg-[url('/backgound1.png')] bg-no-repeat bg-cover bg-center min-h-screen pt-[5rem] " id="tabsDemo">

@@ -8,8 +8,9 @@ type Tab = {
     title: string;
     value: string;
     link: string;
-    logo:string;
-    content?: string | React.ReactNode ;
+    logo: string;
+    src: string;
+    alt: string;
 };
 
 export const Tabs = ({
@@ -76,7 +77,7 @@ export const Tabs = ({
                         )}
                         <span className="relative block  ">
                             <img className=" justify-center align-middle h-[6rem] w-[6rem] rounded-full"
-                            src={tab.logo}></img>
+                                src={tab.logo}></img>
                         </span>
                     </button>
                 ))}
@@ -126,7 +127,14 @@ export const FadeInDiv = ({
                         className
                     )}
                 >
-                    {tab.content}
+                    <div className="flex items-center justify-center w-full h-[26rem]">
+                        <img
+                            src={tab.src}
+                            alt={tab.alt}
+                            title={tab.title}
+                            className="rounded-2xl"
+                        />
+                    </div>
 
                 </motion.div>
             ))}
