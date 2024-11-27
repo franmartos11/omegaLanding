@@ -75,8 +75,8 @@ export const Tabs = ({
                                 )}
                             />
                         )}
-                        <span className="relative block  ">
-                            <img className=" justify-center align-middle h-[6rem] w-[6rem] rounded-full"
+                        <span className="relative block   ">
+                            <img className="  justify-center align-middle h-[4rem] w-[4rem] sm:w-[6rem] sm:h-[6rem] rounded-full"
                                 src={tab.logo}></img>
                         </span>
                     </button>
