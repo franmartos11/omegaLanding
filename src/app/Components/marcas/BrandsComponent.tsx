@@ -22,7 +22,7 @@ const BrandsComponent = () => {
         { name: "Campanita", logo: "/campanitaLogo.webp" },
     ];
 
-    // Estado para controlar cuántas marcas mostrar
+
     const [visibleBrands, setVisibleBrands] = useState(8);
 
     const handleShowMore = () => {
@@ -32,7 +32,7 @@ const BrandsComponent = () => {
     return (
         <section
             id="marcas"
-            className="bg-[url('/test3.png')] bg-no-repeat bg-cover bg-center min-h-screen pt-[5rem] py-[5rem] px-4 text-center"
+            className="bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center min-h-screen pt-[5rem] py-[5rem] px-4 text-center"
         >
             <div className="container px-6 pt-7 pb-0 mx-auto sm:pt-0">
                 <h2 className="text-4xl text-black pt-16 font-semibold text-center capitalize lg:text-6xl">
@@ -67,7 +67,6 @@ const BrandsComponent = () => {
                 </div>
             </div>
 
-            {/* Botón para mostrar más */}
             {visibleBrands < allBrands.length && (
                 <div className="mt-10">
                     <button

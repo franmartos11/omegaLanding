@@ -22,7 +22,7 @@ function Navbar({ className }: { className?: string }) {
         className
       )}
     >
-      {/* Logo */}
+
       <div className="logo">
         <img
           src="/omegaLogo3.png"
@@ -31,11 +31,11 @@ function Navbar({ className }: { className?: string }) {
         />
       </div>
 
-      {/* Desktop Menu */}
+
       <div className="hidden sm:flex pr-[0rem] sm:pr-[5rem] lg:pr-[10rem] ">
         <Menu>
           <Link
-            className="text-neutral-700 text-xl hover:text-orange-500 cursor-pointer" // Aquí agregamos cursor-pointer
+            className="text-neutral-700 text-xl hover:text-orange-500 cursor-pointer"
             to="hero"
             smooth={true}
             duration={1000}
@@ -69,7 +69,7 @@ function Navbar({ className }: { className?: string }) {
         </Menu>
       </div>
 
-      {/* Mobile Menu Button */}
+
       <button
         className="sm:hidden flex items-center text-neutral-700 focus:outline-none"
         onClick={toggleMobileMenu}
@@ -82,7 +82,7 @@ function Navbar({ className }: { className?: string }) {
         </div>
       </button>
 
-      {/* Mobile Menu */}
+
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white shadow-lg z-40 sm:hidden">
           <Menu>

@@ -15,16 +15,16 @@ const WorkProcess = () => {
     hidden: {
       opacity: 0,
       x: 0,
-      y: 0, // Comienza en el centro
+      y: 0,
     },
     visible: (index: number) => ({
       opacity: 1,
-      x: 0, // Se queda en la misma posición horizontal
-      y: index % 2 === 0 ? -50 : 50, // Alterna posiciones en Y
+      x: 0,
+      y: index % 2 === 0 ? -50 : 50,
       transition: {
-        duration: 1,
+        duration: 2,
         ease: "easeOut",
-        delay: index * 0.5, // Añade un pequeño retraso para cada paso
+        delay: index * 1,
       },
     }),
   };
@@ -32,8 +32,8 @@ const WorkProcess = () => {
   const isDesktop = typeof window !== "undefined" && window.innerWidth >= 1024;
 
   return (
-    <section className="bg-[url('/background3.png')] bg-no-repeat bg-cover bg-center min-h-screen pt-[5rem] py-20 px-6 text-center mh-[50rem]">
-      {/* Título */}
+    <section className="bg-[url('/bgorange.png')] bg-no-repeat bg-cover bg-center min-h-screen pt-[5rem] py-20 px-6 text-center mh-[50rem]">
+
       <div className="container px-6 pt-7 mx-auto sm:pt-0 pb-[5rem] sm:pb-[14rem] ">
         <h2 className="text-4xl pt-16 text-white font-semibold text-center capitalize lg:text-6xl">
           FORMA DE TRABAJO
@@ -45,14 +45,13 @@ const WorkProcess = () => {
         </div>
       </div>
 
-      {/* Pasos */}
+
       <div className="relative flex flex-col items-center lg:flex-row lg:justify-center lg:gap-16 space-y-10 lg:space-y-0">
         {steps.map((step, index) => (
           <motion.div
             key={index}
-            className={`relative flex flex-col items-center ${
-              index % 2 === 0 ? "lg:translate-y-16" : "lg:-translate-y-16"
-            }`}
+            className={`relative flex flex-col items-center ${index % 2 === 0 ? "lg:translate-y-16" : "lg:-translate-y-16"
+              }`}
             {...(isDesktop && {
               initial: "hidden",
               animate: "visible",
@@ -60,8 +59,8 @@ const WorkProcess = () => {
               custom: index,
             })}
           >
-            {/* Línea de conexión */}
-            {index > 0 && isDesktop && ( // Línea solo en desktop
+
+            {index > 0 && isDesktop && (
               <div
                 className="absolute bg-orange-500"
                 style={{
@@ -75,9 +74,9 @@ const WorkProcess = () => {
               ></div>
             )}
 
-            {/* Círculo con ícono */}
+
             <motion.div
-              whileHover={isDesktop ? { scale: 1.1 } : {}} // Hover solo en desktop
+              whileHover={isDesktop ? { scale: 1.1 } : {}}
               className="flex items-center justify-center w-48 h-48 bg-white rounded-full shadow-lg border-4 border-orange-500"
             >
               <img
@@ -87,7 +86,7 @@ const WorkProcess = () => {
               />
             </motion.div>
 
-            {/* Título */}
+
             <p className="mt-6 text-lg font-bold text-white">{step.title}</p>
           </motion.div>
         ))}

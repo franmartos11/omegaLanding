@@ -25,7 +25,7 @@ const TeamSection = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        delay: i * 0.1, // Efecto en cadena para cada elemento
+        delay: i * 0.2,
       },
     }),
   };
@@ -33,7 +33,7 @@ const TeamSection = () => {
   return (
     <div
       id="team"
-      className="bg-[url('/background6.png')] bg-no-repeat bg-cover bg-center min-h-screen pt-[5rem] flex justify-center align-middle"
+      className="bg-[url('/bgorange.png')] bg-no-repeat bg-cover bg-center min-h-screen pt-[5rem] flex justify-center align-middle"
     >
       <motion.section
         initial="hidden"
@@ -41,7 +41,7 @@ const TeamSection = () => {
         viewport={{ once: true, amount: 0.2 }}
         className="py-16 px-6 text-center w-[80%]"
       >
-        {/* Título */}
+
         <motion.h2
           variants={fadeInUp}
           custom={0}
@@ -59,9 +59,9 @@ const TeamSection = () => {
           <span className="inline-block w-5 h-1 bg-orange-500 rounded-full"></span>
         </motion.div>
 
-        {/* Fundadores */}
+
         <div className="flex flex-col pt-[3rem] lg:flex-row items-center lg:items-start gap-12 mb-16">
-          {/* Texto */}
+
           <motion.div
             variants={fadeInUp}
             custom={2}
@@ -78,7 +78,7 @@ const TeamSection = () => {
             </p>
           </motion.div>
 
-          {/* Fundadores */}
+
           <motion.div
             className="lg:w-1/2 flex flex-wrap justify-center gap-8"
             initial="hidden"
@@ -108,7 +108,7 @@ const TeamSection = () => {
           </motion.div>
         </div>
 
-        {/* Equipo */}
+
         <motion.h3
           variants={fadeInUp}
           custom={founders.length + 4}

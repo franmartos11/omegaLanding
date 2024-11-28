@@ -49,8 +49,8 @@ const StatCard = ({
     useEffect(() => {
         if (visible) {
             let start = 0;
-            const duration = 2000; // Duración de la animación en milisegundos
-            const increment = Math.ceil(value / (duration / 50)); // Incremento por frame
+            const duration = 2000; 
+            const increment = Math.ceil(value / (duration / 50)); 
 
             const interval = setInterval(() => {
                 start += increment;

@@ -52,11 +52,11 @@ const OmegaShowcase: React.FC = () => {
   };
 
   return (
-   
-    <div id="hero" className=" bg-[url('/testhome2.png')] bg-no-repeat bg-cover bg-center min-h-screen flex flex-col items-center justify-center pt-[12rem] lg:pt-[3rem]">
-      {/* Contenedor principal con dos columnas */}
+
+    <div id="hero" className=" bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center min-h-screen flex flex-col items-center justify-center pt-[12rem] lg:pt-[3rem]">
+
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 w-full max-w-5xl">
-        {/* Columna izquierda: Logo principal */}
+
         <motion.div
           key={activeLogo.id}
           initial={{ opacity: 0, scale: 0.8 }}
@@ -73,29 +73,28 @@ const OmegaShowcase: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Columna derecha: Información */}
+
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
           <h1 className="text-6xl font-bold text-gray-800">{activeLogo.title}</h1>
           <p className="text-xl text-gray-600 mt-4">{activeLogo.description}</p>
           <Link to="tabsDemo" smooth={true} duration={1000}>
-          <button  className="mt-6 px-6 py-3 bg-white text-gray-800 font-bold rounded-full shadow-md hover:bg-gray-200 transition-all">
-            Más información
-          </button>
+            <button className="mt-6 px-6 py-3 bg-white text-gray-800 font-bold rounded-full shadow-md hover:bg-gray-200 transition-all">
+              Más información
+            </button>
           </Link>
         </div>
       </div>
 
-      {/* Logos secundarios con separador */}
+
       <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-6 mt-[6rem] w-full">
-        {/* OMEGA SOLUCIONES */}
+
         <div className="flex flex-col items-center">
           <button
             onClick={() => handleLogoChange(logos[0])}
-            className={`flex flex-col items-center transition-all duration-300 ${
-              activeLogo.id === logos[0].id
+            className={`flex flex-col items-center transition-all duration-300 ${activeLogo.id === logos[0].id
                 ? "opacity-100"
                 : "opacity-50 hover:opacity-100"
-            }`}
+              }`}
           >
             <div className="bg-white rounded-full p-4 shadow-md">
               <img
@@ -108,20 +107,19 @@ const OmegaShowcase: React.FC = () => {
           </button>
         </div>
 
-        {/* Línea divisoria */}
+
         <div className="h-0 w-0 sm:h-[9rem] sm:w-[2px] bg-gray-400"></div>
 
-        {/* Otros logos secundarios */}
+
         <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-6">
           {logos.slice(1).map((logo) => (
             <button
               key={logo.id}
               onClick={() => handleLogoChange(logo)}
-              className={`flex flex-col items-center transition-all duration-300 ${
-                activeLogo.id === logo.id
+              className={`flex flex-col items-center transition-all duration-300 ${activeLogo.id === logo.id
                   ? "opacity-100"
                   : "opacity-50 hover:opacity-100"
-              }`}
+                }`}
             >
               <div className="bg-white rounded-full p-4 shadow-md">
                 <img

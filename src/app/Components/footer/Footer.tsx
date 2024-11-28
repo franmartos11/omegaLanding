@@ -1,13 +1,13 @@
 'use client'
 import React from "react";
 import Link from "next/link";
-import {Link as Link2}from 'react-scroll';
+import { Link as Link2 } from 'react-scroll';
 import Image from "next/image";
 
 const Footer = () => {
   return (
     <footer className="bg-orange-500 text-white py-8 text-center">
-      {/* Logo */}
+
       <div className="flex justify-center mb-6">
         <Image
           src="/omegaSolucionesLogo.webp"
@@ -18,55 +18,55 @@ const Footer = () => {
         />
       </div>
 
-      {/* Navegación */}
+
       <nav className="mb-6">
         <ul className="flex flex-wrap justify-center space-x-4 lg:space-x-8 font-bold text-sm md:text-base">
           <li>
-          <Link2 className=" cursor-pointer mb-6 text-xs md:text-xl hover:underline"  
-            to="hero"
-            smooth={true}
-            duration={1000}
-          >
+            <Link2 className=" cursor-pointer mb-6 text-xs md:text-xl hover:underline"
+              to="hero"
+              smooth={true}
+              duration={1000}
+            >
               INICIO
             </Link2>
           </li>
           <li>
-          <Link2 className="cursor-pointer mb-6 text-xs md:text-xl hover:underline"
-            to="tabsDemo"
-            smooth={true}
-            duration={1000}
-          >
+            <Link2 className="cursor-pointer mb-6 text-xs md:text-xl hover:underline"
+              to="tabsDemo"
+              smooth={true}
+              duration={1000}
+            >
               UNIDADES DE NEGOCIO
             </Link2>
           </li>
           <li>
-          <Link2 className="cursor-pointer mb-6 text-xs md:text-xl hover:underline"
-            to="marcas"
-            smooth={true}
-            duration={1000}
-          >
+            <Link2 className="cursor-pointer mb-6 text-xs md:text-xl hover:underline"
+              to="marcas"
+              smooth={true}
+              duration={1000}
+            >
               MARCAS
             </Link2>
           </li>
           <li>
             <Link2 className="cursor-pointer mb-6 text-xs md:text-xl hover:underline"
-            to="team"
-            smooth={true}
-            duration={1000}
-          >
+              to="team"
+              smooth={true}
+              duration={1000}
+            >
               NOSOTROS
             </Link2>
           </li>
         </ul>
       </nav>
 
-      {/* Dirección */}
-      <Link  aria-label="maps" target="_blank" href={"https://www.google.com/maps/place/Omega+Soluciones/@-24.7618653,-65.41137,15z/data=!4m6!3m5!1s0x941bc36adcbf6bd9:0x9db0642ee2c946ce!8m2!3d-24.7618653!4d-65.41137!16s%2Fg%2F11gmds8b0m?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D"}>
-          <p className="mb-6 text-xs md:text-sm hover:underline">
-            Arias Velázquez 733, A4400 Salta
-          </p>
+
+      <Link aria-label="maps" target="_blank" href={"https://www.google.com/maps/place/Omega+Soluciones/@-24.7618653,-65.41137,15z/data=!4m6!3m5!1s0x941bc36adcbf6bd9:0x9db0642ee2c946ce!8m2!3d-24.7618653!4d-65.41137!16s%2Fg%2F11gmds8b0m?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D"}>
+        <p className="mb-6 text-xs md:text-sm hover:underline">
+          Arias Velázquez 733, A4400 Salta
+        </p>
       </Link>
-      {/* Redes sociales */}
+
       <div className="flex justify-center space-x-4 md:space-x-6">
         <Link
           href="https://www.linkedin.com/company/omegasoluciones/about/"
