@@ -9,14 +9,14 @@ const MissionVision = () => {
   const [visionRef, visionInView] = useInView({ triggerOnce: true });
 
   return (
-    <section className="bg-[url('/background5.png')] bg-no-repeat bg-cover bg-center min-h-screen py-16 px-6 relative text-center lg:text-left">
+    <section className="bg-[url('/background5.png')] bg-no-repeat bg-cover bg-center min-h-screen py-16 px-6 relative text-center lg:text-left overflow-hidden">
       {/* Contenedor principal */}
       <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Misión */}
         <motion.div
           ref={missionRef}
-          initial={{ x: -100, opacity: 0 }}
-          animate={missionInView ? { x: 0, opacity: 1 } : {}}
+          initial={{ opacity: 0, translateX: -50 }}
+          animate={missionInView ? { opacity: 1, translateX: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative z-10"
         >
@@ -38,8 +38,8 @@ const MissionVision = () => {
         {/* Imagen misión */}
         <motion.div
           ref={missionRef}
-          initial={{ x: -100, opacity: 0 }}
-          animate={missionInView ? { x: 0, opacity: 1 } : {}}
+          initial={{ opacity: 0, translateX: -50 }}
+          animate={missionInView ? { opacity: 1, translateX: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
           className="relative flex justify-center lg:justify-end"
         >
@@ -53,8 +53,8 @@ const MissionVision = () => {
         {/* Imagen visión */}
         <motion.div
           ref={visionRef}
-          initial={{ x: 100, opacity: 0 }}
-          animate={visionInView ? { x: 0, opacity: 1 } : {}}
+          initial={{ opacity: 0, translateX: 50 }}
+          animate={visionInView ? { opacity: 1, translateX: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative flex justify-center lg:justify-start"
         >
@@ -68,8 +68,8 @@ const MissionVision = () => {
         {/* Visión */}
         <motion.div
           ref={visionRef}
-          initial={{ x: 100, opacity: 0 }}
-          animate={visionInView ? { x: 0, opacity: 1 } : {}}
+          initial={{ opacity: 0, translateX: 50 }}
+          animate={visionInView ? { opacity: 1, translateX: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
           className="relative z-10"
         >
