@@ -61,7 +61,7 @@ const OmegaShowcase: React.FC = () => {
           key={activeLogo.id}
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.9 }}
           className="flex justify-center"
         >
           <div className="bg-white rounded-full p-[1rem] lg:p-[3rem] shadow-lg">
@@ -86,7 +86,7 @@ const OmegaShowcase: React.FC = () => {
       </div>
 
       {/* Logos secundarios con separador */}
-      <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-6 mt-12 w-full">
+      <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-6 mt-[6rem] w-full">
         {/* OMEGA SOLUCIONES */}
         <div className="flex flex-col items-center">
           <button
@@ -101,15 +101,15 @@ const OmegaShowcase: React.FC = () => {
               <img
                 src={logos[0].logo}
                 alt={logos[0].title}
-                className="h-[9rem] w-[9rem] object-contain"
+                className="h-[8rem] w-[8rem] object-contain"
               />
             </div>
-            <span className="mt-2 text-sm text-gray-800">{logos[0].title}</span>
+            <span className=" mt-2 text-sm text-gray-800">{logos[0].title}</span>
           </button>
         </div>
 
         {/* Línea divisoria */}
-        <div className="h-[9rem] w-[2px] bg-gray-400"></div>
+        <div className="h-0 w-0 sm:h-[9rem] sm:w-[2px] bg-gray-400"></div>
 
         {/* Otros logos secundarios */}
         <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-6">
@@ -127,7 +127,7 @@ const OmegaShowcase: React.FC = () => {
                 <img
                   src={logo.logo}
                   alt={logo.title}
-                  className="h-[9rem] w-[9rem] object-contain"
+                  className="h-[8rem] w-[8rem] object-contain"
                 />
               </div>
               <span className="mt-2 text-sm text-gray-800">{logo.title}</span>
