@@ -17,8 +17,8 @@ export default {
       },
       keyframes: {
         fadeIn: {
-          "0%": { opacity: 0 }, // Estado inicial
-          "100%": { opacity: 1 }, // Estado final
+          "0%": { opacity: "0" }, // Estado inicial (como string)
+          "100%": { opacity: "1" }, // Estado final (como string)
         },
       },
     },
