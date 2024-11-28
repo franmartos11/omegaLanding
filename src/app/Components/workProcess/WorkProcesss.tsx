@@ -24,7 +24,7 @@ const WorkProcess = () => {
       transition: {
         duration: 1,
         ease: "easeOut",
-        delay: index * 0.3, // Añade un pequeño retraso para cada paso
+        delay: index * 0.5, // Añade un pequeño retraso para cada paso
       },
     }),
   };
