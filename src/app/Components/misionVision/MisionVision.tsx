@@ -9,7 +9,7 @@ const MissionVision = () => {
   const [visionRef, visionInView] = useInView({ triggerOnce: true });
 
   return (
-    <section className="bg-[url('/background5.png')] bg-no-repeat bg-cover bg-center min-h-screen py-16 px-6 relative text-center lg:text-left overflow-hidden">
+    <section className="bg-[url('/test2.png')] bg-no-repeat bg-cover bg-center min-h-screen py-16 px-6 relative text-center lg:text-left overflow-hidden">
       {/* Contenedor principal */}
       <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Misión */}

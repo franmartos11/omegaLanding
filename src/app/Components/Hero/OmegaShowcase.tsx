@@ -53,7 +53,7 @@ const OmegaShowcase: React.FC = () => {
 
   return (
    
-    <div id="hero" className=" bg-[url('/backgound1.png')] bg-no-repeat bg-cover bg-center min-h-screen flex flex-col items-center justify-center pt-[12rem] lg:pt-[3rem]">
+    <div id="hero" className=" bg-[url('/testhome2.png')] bg-no-repeat bg-cover bg-center min-h-screen flex flex-col items-center justify-center pt-[12rem] lg:pt-[3rem]">
       {/* Contenedor principal con dos columnas */}
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 w-full max-w-5xl">
         {/* Columna izquierda: Logo principal */}
@@ -101,7 +101,7 @@ const OmegaShowcase: React.FC = () => {
               <img
                 src={logos[0].logo}
                 alt={logos[0].title}
-                className="h-[8rem] w-[8rem] object-contain"
+                className="h-[7rem] w-[7rem] object-contain"
               />
             </div>
             <span className=" mt-2 text-sm text-gray-800">{logos[0].title}</span>
@@ -127,7 +127,7 @@ const OmegaShowcase: React.FC = () => {
                 <img
                   src={logo.logo}
                   alt={logo.title}
-                  className="h-[8rem] w-[8rem] object-contain"
+                  className="h-[7rem] w-[7rem] object-contain"
                 />
               </div>
               <span className="mt-2 text-sm text-gray-800">{logo.title}</span>
