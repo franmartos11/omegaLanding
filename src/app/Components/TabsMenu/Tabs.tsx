@@ -75,7 +75,7 @@ export const Tabs = ({
                                 )}
                             />
                         )}
-                        <span className="relative block   ">
+                        <span className="relative block    ">
                             <img className="  justify-center align-middle h-[4rem] w-[4rem] sm:w-[6rem] sm:h-[6rem] rounded-full"
                                 src={tab.logo}></img>
                         </span>
@@ -86,7 +86,7 @@ export const Tabs = ({
                 tabs={tabs}
                 active={active}
                 hovering={hovering}
-                className={cn("mt-[8rem]", contentClassName)}
+                className={cn("mt-[3rem] sm:mt-[11rem]", contentClassName)}
             />
         </>
     );
