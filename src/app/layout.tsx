@@ -46,7 +46,7 @@ export default function RootLayout({
         <meta name="twitter:image" content="/og-image.jpg" />
       </Head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >
         {children}
       </body>

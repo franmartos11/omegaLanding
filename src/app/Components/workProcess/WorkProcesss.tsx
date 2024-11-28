@@ -24,15 +24,17 @@ const WorkProcess = () => {
       transition: {
         duration: 1,
         ease: "easeOut",
-        delay: index * 0.5, // Añade un pequeño retraso para cada paso
+        delay: index * 0.3, // Añade un pequeño retraso para cada paso
       },
     }),
   };
 
+  const isDesktop = typeof window !== "undefined" && window.innerWidth >= 1024;
+
   return (
     <section className="bg-[url('/background3.png')] bg-no-repeat bg-cover bg-center min-h-screen pt-[5rem] py-20 px-6 text-center mh-[50rem]">
       {/* Título */}
-      <div className="container px-6 pt-7 mx-auto sm:pt-0 pb-[14rem]">
+      <div className="container px-6 pt-7 mx-auto sm:pt-0 pb-[5rem] sm:pb-[14rem] ">
         <h2 className="text-4xl pt-16 text-white font-semibold text-center capitalize lg:text-6xl">
           FORMA DE TRABAJO
         </h2>
@@ -51,13 +53,15 @@ const WorkProcess = () => {
             className={`relative flex flex-col items-center ${
               index % 2 === 0 ? "lg:translate-y-16" : "lg:-translate-y-16"
             }`}
-            initial={window.innerWidth >= 1024 ? "hidden" : null} // Sin animación en móviles
-            animate={window.innerWidth >= 1024 ? "visible" : null} // Animación solo en desktop
-            variants={stepVariants}
-            custom={index}
+            {...(isDesktop && {
+              initial: "hidden",
+              animate: "visible",
+              variants: stepVariants,
+              custom: index,
+            })}
           >
             {/* Línea de conexión */}
-            {index > 0 && window.innerWidth >= 1024 && ( // Línea solo en desktop
+            {index > 0 && isDesktop && ( // Línea solo en desktop
               <div
                 className="absolute bg-orange-500"
                 style={{
@@ -73,7 +77,7 @@ const WorkProcess = () => {
 
             {/* Círculo con ícono */}
             <motion.div
-              whileHover={window.innerWidth >= 1024 ? { scale: 1.1 } : {}} // Hover solo en desktop
+              whileHover={isDesktop ? { scale: 1.1 } : {}} // Hover solo en desktop
               className="flex items-center justify-center w-48 h-48 bg-white rounded-full shadow-lg border-4 border-orange-500"
             >
               <img
