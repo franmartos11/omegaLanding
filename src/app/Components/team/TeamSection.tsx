@@ -35,7 +35,7 @@ const TeamSection = () => {
      
       <div className="flex flex-col pt-[3rem] lg:flex-row items-center lg:items-start gap-12 mb-16">
         {/* Texto */}
-        <div className="lg:w-1/2 text-left">
+        <div className="lg:w-1/2 text-center sm:text-left">
           <p className="text-3xl text-white  font-bold mb-2">
             Hace más de cinco años que ayudamos a clientes en proyectos públicos
             y privados.
