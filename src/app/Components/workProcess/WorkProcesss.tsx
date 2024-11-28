@@ -14,17 +14,17 @@ const WorkProcess = () => {
   const stepVariants = {
     hidden: {
       opacity: 0,
-      x: 0, // Empieza desde el centro horizontal
-      y: 0, // Empieza desde el centro vertical
+      x: 0,
+      y: 0, // Comienza en el centro
     },
     visible: (index: number) => ({
       opacity: 1,
-      x: 0, // Posiciona horizontalmente para mantener responsive
+      x: 0, // Se queda en la misma posición horizontal
       y: index % 2 === 0 ? -50 : 50, // Alterna posiciones en Y
       transition: {
         duration: 1,
         ease: "easeOut",
-        delay: index * 0.3, // Añade un pequeño retraso para cada paso
+        delay: index * 0.5, // Añade un pequeño retraso para cada paso
       },
     }),
   };
@@ -44,28 +44,25 @@ const WorkProcess = () => {
       </div>
 
       {/* Pasos */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }} // Anima solo una vez cuando el 30% del elemento está en vista
-        className="relative flex flex-col items-center lg:flex-row lg:justify-center lg:gap-16"
-      >
+      <div className="relative flex flex-col items-center lg:flex-row lg:justify-center lg:gap-16 space-y-10 lg:space-y-0">
         {steps.map((step, index) => (
           <motion.div
             key={index}
-            custom={index} // Pasamos el índice al controlador de variantes
-            variants={stepVariants}
             className={`relative flex flex-col items-center ${
               index % 2 === 0 ? "lg:translate-y-16" : "lg:-translate-y-16"
             }`}
+            initial={window.innerWidth >= 1024 ? "hidden" : null} // Sin animación en móviles
+            animate={window.innerWidth >= 1024 ? "visible" : null} // Animación solo en desktop
+            variants={stepVariants}
+            custom={index}
           >
             {/* Línea de conexión */}
-            {index > 0 && (
+            {index > 0 && window.innerWidth >= 1024 && ( // Línea solo en desktop
               <div
                 className="absolute bg-orange-500"
                 style={{
                   width: "0px",
-                  height: "4px", // Línea más gruesa
+                  height: "4px",
                   top: "50%",
                   left: "-130px",
                   transform: `rotate(${index % 2 === 0 ? "45deg" : "-45deg"})`,
@@ -76,7 +73,7 @@ const WorkProcess = () => {
 
             {/* Círculo con ícono */}
             <motion.div
-              whileHover={{ scale: 1.1 }} // Efecto de hover
+              whileHover={window.innerWidth >= 1024 ? { scale: 1.1 } : {}} // Hover solo en desktop
               className="flex items-center justify-center w-48 h-48 bg-white rounded-full shadow-lg border-4 border-orange-500"
             >
               <img
@@ -87,17 +84,10 @@ const WorkProcess = () => {
             </motion.div>
 
             {/* Título */}
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 * index }}
-              className="mt-6 text-lg font-bold text-white"
-            >
-              {step.title}
-            </motion.p>
+            <p className="mt-6 text-lg font-bold text-white">{step.title}</p>
           </motion.div>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 };
