@@ -75,7 +75,7 @@ const OmegaShowcase: React.FC = () => {
 
 
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-          <h1 className="text-6xl font-bold text-gray-800">{activeLogo.title}</h1>
+          <h1 className="text-4xl sm:text-6xl font-bold text-gray-800">{activeLogo.title}</h1>
           <p className="text-xl text-gray-600 mt-4">{activeLogo.description}</p>
           <Link to="tabsDemo" smooth={true} duration={1000}>
             <button className="mt-6 px-6 py-3 bg-white text-gray-800 font-bold rounded-full shadow-md hover:bg-gray-200 transition-all">
