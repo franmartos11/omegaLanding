@@ -18,7 +18,7 @@ function Navbar({ className }: { className?: string }) {
   return (
     <nav
       className={cn(
-        "fixed inset-x-0 mx-auto z-50 flex items-center justify-between bg-white p-4 border-b-2 border-gray-300",
+        "fixed inset-x-0 mx-auto z-50 flex items-center justify-between bg-white p-[0.5rem] border-b-2 border-gray-300",
         className
       )}
     >
@@ -27,12 +27,12 @@ function Navbar({ className }: { className?: string }) {
         <img
           src="/omegaLogo3.png"
           alt="Company Logo"
-          className="h-[4rem] w-auto"
+          className="h-[3rem] w-auto"
         />
       </div>
 
 
-      <div className="hidden sm:flex pr-[0rem] sm:pr-[5rem] lg:pr-[10rem] ">
+      <div className="hidden sm:flex pr-[0rem] sm:pr-[5rem] lg:pr-[0rem] ">
         <Menu>
           <Link
             className="text-neutral-700 text-xl hover:text-orange-500 cursor-pointer"

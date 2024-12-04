@@ -16,31 +16,31 @@ const logos: LogoData[] = [
     id: "omega-soluciones",
     logo: "/omegaSolucionesLogo3.png",
     title: "OMEGA SOLUCIONES",
-    description: "Lo necesitas? Lo tenemos.",
+    description: "Multiples unidades de negocio diseñadas para abordar diferentes problemáticas",
   },
   {
     id: "omega-distribuciones",
     logo: "/omegaDistribucionesLogo_no_background.png",
     title: "OMEGA DISTRIBUCIONES",
-    description: "Distribución confiable y rápida.",
+    description: "Comercialización y distribución de todo tipo de productos y servicios.",
   },
   {
     id: "omega-clean",
     logo: "/omegaCleanLogo_no_background.png",
     title: "OMEGA CLEAN",
-    description: "Limpieza al alcance de tu mano.",
+    description: "Fabricacion y envasado de productos de higiene domestica e institucional.",
   },
   {
     id: "omega-construcciones",
     logo: "/omegaConstruccionesLogo_no_background.png",
     title: "OMEGA CONSTRUCCIONES",
-    description: "Construyendo el futuro contigo.",
+    description: "Diseño, construcción, remodelación y desarrollo de todo tipo de proyectos.",
   },
   {
     id: "omega-tech",
     logo: "/omegaTechLogo_no_background.png",
     title: "OMEGA TECH",
-    description: "Innovación en cada clic.",
+    description: "Desarrollo de software a medida y comercialización de todo tipo de hardware",
   },
 ];
 
@@ -55,7 +55,7 @@ const OmegaShowcase: React.FC = () => {
 
     <div id="hero" className=" bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center min-h-screen flex flex-col items-center justify-center pt-[12rem] lg:pt-[3rem]">
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 w-full max-w-5xl">
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-[1rem] w-full max-w-5xl">
 
         <motion.div
           key={activeLogo.id}
@@ -68,7 +68,7 @@ const OmegaShowcase: React.FC = () => {
             <img
               src={activeLogo.logo}
               alt={activeLogo.title}
-              className="h-[20rem] w-[20rem] object-contain"
+              className="h-[15rem] w-[15rem] object-contain"
             />
           </div>
         </motion.div>
