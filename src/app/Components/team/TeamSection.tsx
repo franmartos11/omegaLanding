@@ -33,7 +33,7 @@ const TeamSection = () => {
   return (
     <div
       id="team"
-      className="bg-[url('/bgorange.png')] bg-no-repeat bg-cover bg-center min-h-screen pt-[5rem] flex justify-center align-middle"
+      className="bg-[url('/bgorange.png')] bg-no-repeat bg-cover bg-center min-h-screen  flex justify-center align-middle"
     >
       <motion.section
         initial="hidden"
@@ -111,10 +111,10 @@ const TeamSection = () => {
 
         <motion.h3
           variants={fadeInUp}
-          custom={founders.length + 4}
+          custom={founders.length + 2}
           className="text-2xl font-bold text-white uppercase mb-6"
         >
-          Equipo
+          
         </motion.h3>
         <motion.div
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8"
