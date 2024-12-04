@@ -68,13 +68,10 @@ const TeamSection = () => {
             className="lg:w-1/2 text-center sm:text-left"
           >
             <p className="text-3xl text-white font-bold mb-2">
-              Hace más de cinco años que ayudamos a clientes en proyectos
-              públicos y privados.
+              Desde 2019 que ayudamos  a nuestros clientes en proyectos públicos y privados.
             </p>
             <p className="text-xl text-gray-100 pt-[1rem]">
-              Enfrentamos todo tipo de desafíos: Soporte en inundaciones,
-              Sequías, Proyectos mineros, Campamentos, Oficinas, Nuevos
-              emprendimientos.
+              Enfrentamos todo tipo de desafíos: soporte en inundaciones, sequias, proyectos mineros, campamentos, oficinas, colegios, hospitales, nuevos emprendimientos y mas..
             </p>
           </motion.div>
 
@@ -114,7 +111,7 @@ const TeamSection = () => {
           custom={founders.length + 2}
           className="text-2xl font-bold text-white uppercase mb-6"
         >
-          
+
         </motion.h3>
         <motion.div
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8"
