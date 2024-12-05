@@ -59,9 +59,9 @@ const MissionVision = () => {
           className="relative flex justify-center lg:justify-start"
         >
           <img
-            src="/nuestraVision.webp"
+            src="/trabajador.jpeg"
             alt="Visión"
-            className="w-[18rem] h-auto object-cover rounded shadow-lg"
+            className="w-[18rem] h-[18rem] object-cover rounded shadow-lg"
           />
         </motion.div>
 
