@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from 'react-scroll';
+import { useMediaQuery } from "react-responsive";
 
 interface LogoData {
   id: string;
@@ -46,6 +47,7 @@ const logos: LogoData[] = [
 
 const OmegaShowcase: React.FC = () => {
   const [activeLogo, setActiveLogo] = useState<LogoData>(logos[0]);
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   const handleLogoChange = (logo: LogoData) => {
     setActiveLogo(logo);
@@ -108,7 +110,8 @@ const OmegaShowcase: React.FC = () => {
         </div>
 
 
-        <div className="h-0 w-0 sm:h-[9rem] sm:w-[2px] bg-gray-400"></div>
+        {isMobile ? <></>: <div className="h-0 w-0 sm:h-[9rem] sm:w-[2px] bg-gray-400"/> }
+        
 
 
         <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-6">
