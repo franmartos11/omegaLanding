@@ -104,7 +104,7 @@ const TeamSection = () => {
           custom={founders.length + 2}
           className="text-2xl font-bold text-white uppercase mb-6"
         >
-
+          
         </motion.h3>
         
       </motion.section>

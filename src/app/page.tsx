@@ -8,8 +8,6 @@ import BrandsComponent from "./Components/marcas/BrandsComponent";
 import MissionVision from "./Components/misionVision/MisionVision";
 import StatsComponent from "./Components/stats/StatsComponent";
 import TeamSection from "./Components/team/TeamSection";
-import WorkProcess from "./Components/workProcess/WorkProcesss";
-import WorkProcessV2 from "./Components/workProcess/WorkProcessV2";
 import WorkComponent from "./Components/workProcess/WorkComponent";
 
 
