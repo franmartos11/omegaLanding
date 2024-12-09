@@ -54,49 +54,34 @@ const WorkProcess = () => {
       </div>
 
 
-      <div className="relative flex flex-col items-center lg:flex-row lg:justify-center lg:gap-16 space-y-10 lg:space-y-0">
-        {steps.map((step, index) => (
-          <motion.div
-            key={index}
-            className={`relative flex flex-col items-center ${index % 2 === 0 ? "lg:translate-y-16" : "lg:-translate-y-16"
-              }`}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={stepVariants}
-            custom={index}
-          >
-
-            {index > 0 && (
-              <div
-                className="absolute bg-orange-500"
-                style={{
-                  width: "0px",
-                  height: "4px",
-                  top: "50%",
-                  left: "-130px",
-                  transform: `rotate(${index % 2 === 0 ? "45deg" : "-45deg"})`,
-                  transformOrigin: "center",
-                }}
-              ></div>
-            )}
-
-
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              className="flex items-center justify-center w-48 h-48 bg-white rounded-full shadow-lg border-4 border-orange-500"
-            >
-              <img
-                src={step.icon}
-                alt={step.title}
-                className="w-[7rem] h-[7rem] object-contain"
-              />
-            </motion.div>
+      <div className="relative flex flex-col items-center space-y-16 lg:flex-row lg:justify-center lg:space-y-0 lg:gap-16">
+  {steps.map((step, index) => (
+    <motion.div
+      key={index}
+      className={`relative flex flex-col items-center ${
+        index % 2 === 0 ? "lg:translate-y-16" : "lg:-translate-y-16"
+      }`}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={stepVariants}
+      custom={index}
+    >
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        className="flex items-center justify-center w-48 h-48 bg-white rounded-full shadow-lg border-4 border-orange-500"
+      >
+        <img
+          src={step.icon}
+          alt={step.title}
+          className="w-[7rem] h-[7rem] object-contain"
+        />
+      </motion.div>
+      <p className="mt-6 text-lg font-bold text-white">{step.title}</p>
+    </motion.div>
+  ))}
+</div>
 
 
-            <p className="mt-6 text-lg font-bold text-white">{step.title}</p>
-          </motion.div>
-        ))}
-      </div>
     </section>
   );
 };

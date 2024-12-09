@@ -9,14 +9,7 @@ const TeamSection = () => {
     { name: "Tomás", role: "Ventas", image: "/tomas.webp" },
   ];
 
-  const team = [
-    { name: "Camila", role: "Almacén", image: "/camila.webp" },
-    { name: "Matías", role: "Operario Depósito", image: "/matias.webp" },
-    { name: "Julio", role: "Encargado Depósito", image: "/julio.webp" },
-    { name: "Luciano", role: "Ventas", image: "/luciano.webp" },
-    { name: "Agustina", role: "Compras", image: "/agustina.webp" },
-    { name: "Martín", role: "Operario Depósito", image: "/martin.webp" },
-  ];
+  
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 50 },
@@ -113,31 +106,7 @@ const TeamSection = () => {
         >
 
         </motion.h3>
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          {team.map((member, index) => (
-            <motion.div
-              key={index}
-              variants={fadeInUp}
-              custom={index + founders.length + 5}
-              className="text-center"
-            >
-              <Image
-                src={member.image}
-                alt={member.name}
-                width={140}
-                height={140}
-                className="rounded-full object-cover mx-auto mb-4"
-              />
-              <h4 className="text-lg font-bold text-gray-100">{member.name}</h4>
-              <p className="text-sm text-gray-200">{member.role}</p>
-            </motion.div>
-          ))}
-        </motion.div>
+        
       </motion.section>
     </div>
   );

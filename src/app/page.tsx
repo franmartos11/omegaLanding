@@ -1,3 +1,4 @@
+
 import OmegaShowcase from "./Components/Hero/OmegaShowcase";
 import { NavbarDemo } from "./Components/Navbar/Navbar";
 import { TabsDemo } from "./Components/TabsMenu/TabsDemo";
@@ -8,21 +9,25 @@ import MissionVision from "./Components/misionVision/MisionVision";
 import StatsComponent from "./Components/stats/StatsComponent";
 import TeamSection from "./Components/team/TeamSection";
 import WorkProcess from "./Components/workProcess/WorkProcesss";
+import WorkProcessV2 from "./Components/workProcess/WorkProcessV2";
+import WorkComponent from "./Components/workProcess/WorkComponent";
+
 
 export default function Home() {
+
   return (
     <div>
-    <NavbarDemo></NavbarDemo>
-    <OmegaShowcase></OmegaShowcase>
-    <MissionVision></MissionVision>
-    <TabsDemo></TabsDemo>
-    
-    <WorkProcess></WorkProcess>
-    <StatsComponent></StatsComponent>
-    <BrandsComponent></BrandsComponent>
-    <TeamSection></TeamSection>
-    <Footer></Footer>
-    <FloatingButton></FloatingButton>
+      <NavbarDemo />
+      <OmegaShowcase />
+      <MissionVision />
+      <TabsDemo />
+      <WorkComponent/>
+      <StatsComponent />
+      <BrandsComponent />
+      <TeamSection />
+      <Footer />
+      <FloatingButton />
     </div>
   );
 }
+

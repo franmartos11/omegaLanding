@@ -29,7 +29,10 @@ const WorkProcess = () => {
   const isDesktop = typeof window !== "undefined" && window.innerWidth >= 1024;
 
   return (
-    <section className="bg-[url('/bgorange.png')] bg-no-repeat bg-cover bg-center min-h-screen pt-[5rem] py-20 px-6 text-center">
+    <section
+      
+      className="bg-[url('/bgorange.png')] bg-no-repeat bg-cover bg-center min-h-screen pt-[5rem] py-20 px-6 text-center mh-[50rem]"
+    >
       <div className="container mx-auto text-center">
         <h2 className="text-4xl text-white font-semibold capitalize lg:text-6xl">
           FORMA DE TRABAJO
@@ -51,27 +54,7 @@ const WorkProcess = () => {
             animate="visible"
             variants={stepVariants}
           >
-            {/* Flechas animadas (desktop) */}
-            {index > 0 && isDesktop && (
-              <motion.div
-                className="absolute w-full h-full lg:block hidden"
-                style={{
-                  width: "120px", // Ajusta según la separación de los círculos
-                  height: "4px",
-                  backgroundColor: "white",
-                  position: "absolute",
-                  top: "50%",
-                  left: "-120px",
-                }}
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{
-                  duration: 0.7,
-                  ease: "easeOut",
-                  delay: index * 0.5,
-                }}
-              ></motion.div>
-            )}
+            
 
             {/* Íconos con círculos */}
             <motion.div
