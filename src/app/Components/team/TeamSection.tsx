@@ -26,7 +26,7 @@ const TeamSection = () => {
   return (
     <div
       id="team"
-      className="bg-[url('/bgorange.png')] bg-no-repeat bg-cover bg-center min-h-screen  flex justify-center align-middle"
+      className="bg-[url('/bgorange.png')] bg-no-repeat bg-cover bg-center  flex justify-center align-middle"
     >
       <motion.section
         initial="hidden"
@@ -53,7 +53,7 @@ const TeamSection = () => {
         </motion.div>
 
 
-        <div className="flex flex-col pt-[3rem] lg:flex-row items-center lg:items-start gap-12 mb-16">
+        <div className="flex flex-col lg:pt-[7rem] lg:flex-row items-center lg:items-start gap-12 mb-16">
 
           <motion.div
             variants={fadeInUp}
