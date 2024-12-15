@@ -13,7 +13,7 @@ export function TabsDemo() {
       value: "product",
       link: "/carcheck",
       logo: "/omegaDistribucionesLogo.webp",
-      src: "/image.png",
+      src: "/distribucionesTab.png",
 
       alt: "OmegaDistribucionesLogo",
       title: "carcheck-data",
@@ -22,7 +22,7 @@ export function TabsDemo() {
       value: "services",
       link: "/auditorias",
       logo: "/omegaConstruccionesLogo.webp",
-      src: "/image.png",
+      src: "/construccionesTab.png",
 
       alt: "OmegaConstruccionesLogo",
       title: "Auditorias-data",
@@ -32,7 +32,7 @@ export function TabsDemo() {
       value: "playground",
       link: "/desarrollo-web",
       logo: "/omegaCleanLogo.webp",
-      src: "/image.png",
+      src: "/cleanTab.png",
       alt: "OmegaCleanLogo",
       title: "Paginas-Web-data",
     },
@@ -41,7 +41,7 @@ export function TabsDemo() {
       value: "content",
       link: "/apps-a-medida",
       logo: "/omegaTechLogo.webp",
-      src: "/image.png",
+      src: "/techTab.png",
 
       alt: "OmegaTechLogo",
       title: "Apps-a-Medida-data",
@@ -50,7 +50,7 @@ export function TabsDemo() {
 
 
   return (
-    <div className=" bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center  pt-[5rem] min-h-[60rem] " id="tabsDemo">
+    <div className=" bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center  min-h-screen " id="tabsDemo">
       <motion.div
         ref={titleRef}
         initial={{ opacity: 0, y: 50 }}
@@ -73,7 +73,7 @@ export function TabsDemo() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={tabsInView ? { opacity: 1, scale: 1 } : {}}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="h-[20rem] md:h-[37rem] [perspective:1000px] relative flex flex-col max-w-5xl mx-auto w-full align-middle items-start justify-start mt-10 mb-40"
+        className="h-[20rem] md:h-[37rem] [perspective:1000px] relative flex flex-col max-w-5xl mx-auto w-full align-middle items-start justify-start mt-[2rem] mb-[7rem]"
       >
         <Tabs tabs={tabs} />
       </motion.div>
