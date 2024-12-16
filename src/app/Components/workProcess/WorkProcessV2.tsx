@@ -19,56 +19,50 @@ const WorkProcess = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 1,
+        duration: 0.8,
         ease: "easeOut",
-        delay: index * 0.5,
+        delay: index * 0.2,
       },
     }),
   };
 
-  const isDesktop = typeof window !== "undefined" && window.innerWidth >= 1024;
-
   return (
-    <section
-      
-      className="bg-[url('/bgorange.png')] bg-no-repeat bg-cover bg-center min-h-screen pt-[5rem] py-20 px-6 text-center mh-[50rem]"
-    >
-      <div className="container mx-auto text-center">
-        <h2 className="text-4xl text-white font-semibold capitalize lg:text-6xl">
+    <section className="bg-[url('/bgorange.png')] bg-no-repeat bg-cover bg-center h-auto pt-10 pb-10 px-4 text-center">
+      <div className="container mx-auto">
+        {/* Título */}
+        <h2 className="text-3xl text-white font-semibold capitalize sm:text-4xl">
           FORMA DE TRABAJO
         </h2>
-        <div className="flex justify-center mt-6">
-          <span className="inline-block w-40 h-1 bg-orange-500 rounded-full"></span>
-          <span className="inline-block w-3 h-1 mx-1 bg-orange-500 rounded-full"></span>
+        <div className="flex justify-center mt-4">
+          <span className="inline-block w-32 h-1 bg-orange-500 rounded-full"></span>
+          <span className="inline-block w-2 h-1 mx-1 bg-orange-500 rounded-full"></span>
           <span className="inline-block w-1 h-1 bg-orange-500 rounded-full"></span>
         </div>
       </div>
 
-      <div className="relative flex flex-col items-center lg:flex-row lg:justify-center lg:gap-16 space-y-10 lg:space-y-0 mt-10">
+      {/* Pasos siempre alineados */}
+      <div className="relative flex justify-center items-center gap-4 mt-8">
         {steps.map((step, index) => (
           <motion.div
             key={index}
-            className="relative flex flex-col items-center"
+            className="flex flex-col items-center"
             custom={index}
             initial="hidden"
             animate="visible"
             variants={stepVariants}
           >
-            
-
-            {/* Íconos con círculos */}
-            <motion.div
-              whileHover={isDesktop ? { scale: 1.1 } : {}}
-              className="flex items-center justify-center w-48 h-48 bg-white rounded-full shadow-lg border-4 border-orange-500"
-            >
+            {/* Círculos Responsivos */}
+            <div className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 lg:w-28 lg:h-28 bg-white rounded-full shadow-md border-2 md:border-4 border-orange-500">
               <img
                 src={step.icon}
                 alt={step.title}
-                className="w-[7rem] h-[7rem] object-contain"
+                className="w-[2rem] h-[2rem] md:w-[3rem] md:h-[3rem] object-contain"
               />
-            </motion.div>
-
-            <p className="mt-6 text-lg font-bold text-white">{step.title}</p>
+            </div>
+            {/* Título */}
+            <p className="mt-2 text-xs md:text-sm lg:text-base font-bold text-white">
+              {step.title}
+            </p>
           </motion.div>
         ))}
       </div>
@@ -77,3 +71,4 @@ const WorkProcess = () => {
 };
 
 export default WorkProcess;
+
