@@ -41,7 +41,7 @@ const WorkProcess = () => {
       ref={ref}
       className="bg-[url('/bgorange.png')] bg-no-repeat bg-cover bg-center min-h-screen pt-[5rem] py-20 px-6 text-center mh-[50rem]"
     >
-      <div className="container px-6  mx-auto sm:pt-0 pb-[5rem] sm:pb-[14rem]">
+      <div className="container px-6  mx-auto sm:pt-0 mb-[5rem] sm:pb-[8rem]">
         <h2 className="text-4xl  text-white font-semibold text-center capitalize lg:text-6xl">
           FORMA DE TRABAJO
         </h2>
@@ -53,7 +53,7 @@ const WorkProcess = () => {
       </div>
 
 
-      <div className="relative flex flex-col items-center space-y-16 lg:flex-row lg:justify-center lg:space-y-0 lg:gap-16">
+      <div className="relative flex  items-center space-y-16 flex-row justify-center lg:space-y-0 lg:gap-16">
   {steps.map((step, index) => (
     <motion.div
       key={index}

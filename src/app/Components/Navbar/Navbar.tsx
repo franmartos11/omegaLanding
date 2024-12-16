@@ -24,11 +24,18 @@ function Navbar({ className }: { className?: string }) {
     >
 
       <div className="logo">
+      <Link
+            className="cursor-pointer"
+            to="hero"
+            smooth={true}
+            duration={1000}
+          >
         <img
           src="/omegaLogo3.png"
           alt="Company Logo"
           className="h-[3rem] w-auto"
         />
+        </Link>
       </div>
 
 
