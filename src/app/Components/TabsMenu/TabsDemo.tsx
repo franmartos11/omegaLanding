@@ -50,7 +50,7 @@ export function TabsDemo() {
 
 
   return (
-    <div className=" bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center  min-h-[80vh] sm:min-h-[110vh]  " id="tabsDemo">
+    <div className=" bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center  min-h-[100vh] sm:min-h-[120vh]  " id="tabsDemo">
       <motion.div
         ref={titleRef}
         initial={{ opacity: 0, y: 50 }}
