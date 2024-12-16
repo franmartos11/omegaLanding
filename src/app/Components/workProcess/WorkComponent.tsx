@@ -5,11 +5,11 @@ import WorkProcess from "./WorkProcesss";
 
 export default function WorkComponent() {
     // Media queries
-    const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+    const isMobile = useMediaQuery({ query: "(min-width: 768px)" });
 
     return (
         <div>
-            {isMobile ? <WorkProcessV2 /> : <WorkProcess />}
+            {isMobile ? <WorkProcess /> :<WorkProcessV2 /> }
         </div>
     );
 }
