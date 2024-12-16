@@ -1,9 +1,7 @@
 "use client";
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from 'react-scroll';
-import { useMediaQuery } from "react-responsive";
+import { Link } from "react-scroll";
 
 interface LogoData {
   id: string;
@@ -47,18 +45,18 @@ const logos: LogoData[] = [
 
 const OmegaShowcase: React.FC = () => {
   const [activeLogo, setActiveLogo] = useState<LogoData>(logos[0]);
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   const handleLogoChange = (logo: LogoData) => {
     setActiveLogo(logo);
   };
 
   return (
-
-    <div id="hero" className=" bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center min-h-screen flex flex-col items-center justify-center pt-[12rem] lg:pt-[3rem]">
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-[1rem] w-full max-w-5xl">
-
+    <div
+      id="hero"
+      className="bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center min-h-screen flex flex-col items-center justify-center px-4 pt-6 lg:pt-10"
+    >
+      {/* Contenido Principal */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 w-full max-w-5xl mt-[8rem] mb-6 lg:mb-10">
         <motion.div
           key={activeLogo.id}
           initial={{ opacity: 0, scale: 0.8 }}
@@ -66,75 +64,54 @@ const OmegaShowcase: React.FC = () => {
           transition={{ duration: 0.9 }}
           className="flex justify-center"
         >
-          <div className="bg-white rounded-full p-[1rem] lg:p-[3rem] shadow-lg">
+          <div className="bg-white rounded-full p-6 lg:p-8 shadow-lg">
             <img
               src={activeLogo.logo}
               alt={activeLogo.title}
-              className="h-[15rem] w-[15rem] object-contain"
+              className="h-32 w-32 lg:h-[20rem] lg:w-[20rem] object-contain"
             />
           </div>
         </motion.div>
 
-
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-          <h1 className="text-4xl sm:text-6xl font-bold text-gray-800">{activeLogo.title}</h1>
-          <p className="text-xl text-gray-600 mt-4">{activeLogo.description}</p>
+          <h1 className="text-2xl sm:text-4xl font-bold text-gray-800">
+            {activeLogo.title}
+          </h1>
+          <p className="text-base sm:text-xl text-gray-600 mt-4">
+            {activeLogo.description}
+          </p>
           <Link to="tabsDemo" smooth={true} duration={1000}>
-            <button className="mt-6 px-6 py-3 bg-white text-gray-800 font-bold rounded-full shadow-md hover:bg-gray-200 transition-all">
+            <button className="mt-6 px-4 py-2 sm:px-6 sm:py-3 bg-white text-gray-800 font-bold rounded-full shadow-md hover:bg-gray-200 transition-all">
               Más información
             </button>
           </Link>
         </div>
       </div>
 
-
-      <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-6 mt-[6rem] w-full">
-
-        <div className="flex flex-col items-center">
+      {/* Botones Siempre Abajo */}
+      <div className="flex flex-wrap justify-center gap-4 sm:gap-6 w-full mt-[3rem]">
+        {logos.map((logo) => (
           <button
-            onClick={() => handleLogoChange(logos[0])}
-            className={`flex flex-col items-center transition-all duration-300 ${activeLogo.id === logos[0].id
+            key={logo.id}
+            onClick={() => handleLogoChange(logo)}
+            className={`flex flex-col items-center transition-all duration-300 ${
+              activeLogo.id === logo.id
                 ? "opacity-100"
                 : "opacity-50 hover:opacity-100"
-              }`}
+            }`}
           >
-            <div className="bg-white rounded-full p-4 shadow-md">
+            <div className="bg-white rounded-full p-2 sm:p-4 shadow-md">
               <img
-                src={logos[0].logo}
-                alt={logos[0].title}
-                className="h-[7rem] w-[7rem] object-contain"
+                src={logo.logo}
+                alt={logo.title}
+                className="h-16 w-16 sm:h-20 sm:w-20 object-contain"
               />
             </div>
-            <span className=" mt-2 text-sm text-gray-800">{logos[0].title}</span>
+            <span className="mt-2 text-xs sm:text-sm text-gray-800">
+              {logo.title}
+            </span>
           </button>
-        </div>
-
-
-        {isMobile ? <></>: <div className="h-0 w-0 sm:h-[9rem] sm:w-[2px] bg-gray-400"/> }
-        
-
-
-        <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-6">
-          {logos.slice(1).map((logo) => (
-            <button
-              key={logo.id}
-              onClick={() => handleLogoChange(logo)}
-              className={`flex flex-col items-center transition-all duration-300 ${activeLogo.id === logo.id
-                  ? "opacity-100"
-                  : "opacity-50 hover:opacity-100"
-                }`}
-            >
-              <div className="bg-white rounded-full p-4 shadow-md">
-                <img
-                  src={logo.logo}
-                  alt={logo.title}
-                  className="h-[7rem] w-[7rem] object-contain"
-                />
-              </div>
-              <span className="mt-2 text-sm text-gray-800">{logo.title}</span>
-            </button>
-          ))}
-        </div>
+        ))}
       </div>
     </div>
   );
