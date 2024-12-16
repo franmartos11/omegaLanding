@@ -9,7 +9,10 @@ export default function WorkComponent() {
 
     return (
         <div>
-            {isMobile ? <WorkProcess /> :<WorkProcessV2 /> }
+
+            <WorkProcess /> 
+
+
         </div>
     );
 }

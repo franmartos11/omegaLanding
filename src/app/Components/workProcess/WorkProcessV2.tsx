@@ -27,7 +27,7 @@ const WorkProcess = () => {
   };
 
   return (
-    <section className="bg-[url('/bgorange.png')] bg-no-repeat bg-cover bg-center h-auto pt-10 pb-10 px-4 text-center">
+    <section className="bg-[url('/bgorange.png')] bg-no-repeat bg-cover bg-center h-auto pt-10 pb-10 px-4 text-center ">
       <div className="container mx-auto">
         {/* Título */}
         <h2 className="text-3xl text-white font-semibold capitalize sm:text-4xl">
