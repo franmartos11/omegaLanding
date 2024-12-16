@@ -2,7 +2,7 @@
 
 import { cn } from "@/app/utils/cn";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Tab = {
     title: string;
@@ -38,12 +38,21 @@ export const Tabs = ({
     };
 
     const [hovering, setHovering] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Detectar si la pantalla es móvil
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+        checkMobile(); // Llamar al inicio
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
 
     return (
         <>
             <div
                 className={cn(
-                    "flex sm:flex-row items-center justify-center relative overflow-auto sm:overflow-visible  no-visible-scrollbar max-w-full w-full ",
+                    "flex sm:flex-row items-center justify-center relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full ",
                     containerClassName
                 )}
             >
@@ -75,9 +84,11 @@ export const Tabs = ({
                                 )}
                             />
                         )}
-                        <span className="relative block    ">
-                            <img className="  justify-center align-middle h-[4rem] w-[4rem] sm:w-[6rem] sm:h-[6rem] rounded-full"
-                                src={tab.logo}></img>
+                        <span className="relative block">
+                            <img
+                                className="justify-center align-middle h-[4rem] w-[4rem] sm:w-[6rem] sm:h-[6rem] rounded-full"
+                                src={tab.logo}
+                            ></img>
                         </span>
                     </button>
                 ))}
@@ -86,6 +97,7 @@ export const Tabs = ({
                 tabs={tabs}
                 active={active}
                 hovering={hovering}
+                isMobile={isMobile}
                 className={cn("mt-[3rem] sm:mt-[11rem]", contentClassName)}
             />
         </>
@@ -96,12 +108,14 @@ export const FadeInDiv = ({
     className,
     tabs,
     hovering,
+    isMobile,
 }: {
     className?: string;
     key?: string;
     tabs: Tab[];
     active: Tab;
     hovering?: boolean;
+    isMobile: boolean;
 }) => {
     const isActive = (tab: Tab) => {
         return tab.value === tabs[0].value;
@@ -115,7 +129,7 @@ export const FadeInDiv = ({
                     layoutId={tab.value}
                     style={{
                         scale: 1 - idx * 0.1,
-                        top: hovering ? idx * -50 : 0,
+                        top: !isMobile && hovering ? idx * -50 : 0, // Solo aplica el efecto si no es móvil
                         zIndex: -idx,
                         opacity: idx < 3 ? 1 - idx * 0.1 : 0,
                     }}
@@ -135,9 +149,9 @@ export const FadeInDiv = ({
                             className="rounded-2xl"
                         />
                     </div>
-
                 </motion.div>
             ))}
         </div>
     );
 };
+
