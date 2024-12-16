@@ -146,7 +146,7 @@ export const FadeInDiv = ({
                             src={tab.src}
                             alt={tab.alt}
                             title={tab.title}
-                            className="rounded-2xl"
+                            className="rounded-2xl w-[150%] scale-125 sm:scale-100"
                         />
                     </div>
                 </motion.div>
