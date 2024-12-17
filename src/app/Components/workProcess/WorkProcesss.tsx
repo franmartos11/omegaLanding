@@ -58,7 +58,7 @@ const WorkProcess = () => {
     <motion.div
       key={index}
       className={`relative flex flex-col items-center ${
-        index % 2 === 0 ? "lg:translate-y-16" : "lg:-translate-y-16"
+        index % 2 === 0 ? "translate-y-16" : "-translate-y-16"
       }`}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}

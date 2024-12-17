@@ -5,7 +5,6 @@ import WorkProcess from "./WorkProcesss";
 
 export default function WorkComponent() {
     // Media queries
-    const isMobile = useMediaQuery({ query: "(min-width: 768px)" });
 
     return (
         <div>
