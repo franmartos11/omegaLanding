@@ -17,7 +17,7 @@ const BrandsComponent = () => {
           { name: "Hp", logo: "/hpLogo.webp" },
           { name: "Dell", logo: "/dellLogo.webp" },
           { name: "Asus", logo: "/asusLogo.webp" },
-          { name: "Bosh", logo: "/boschLogo.png" },
+          { name: "Bosh", logo: "/BoschLogo.png" },
           { name: "Tinacos", logo: "/tinacosLogo.webp" },
           { name: "Biassoni", logo: "/biassoniLogo.png" },
           { name: "Makita", logo: "/makitaLogo.png" },

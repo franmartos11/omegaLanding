@@ -22,7 +22,7 @@ export default function Home() {
       <WorkComponent/>
       <StatsComponent />
       <BrandsComponent />
-      <TeamSection />
+      
       <Footer />
       <FloatingButton />
     </div>
