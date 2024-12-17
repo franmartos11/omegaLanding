@@ -10,17 +10,17 @@ const MissionVision = () => {
 
   return (
     <section className="flex justify-center align-middle bg-[url('/bgorange.png')] bg-no-repeat bg-cover bg-center min-h-screen py-16 px-6 relative text-center lg:text-left overflow-hidden">
-
       <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
 
+        {/* Bloque 1: Texto (Misión) */}
         <motion.div
           ref={missionRef}
           initial={{ opacity: 0, translateX: -50 }}
           animate={missionInView ? { opacity: 1, translateX: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative z-10"
+          className="relative z-10 order-1"
         >
-          <h2 className="text-3xl font-bold text-white uppercase mb-4">
+          <h2 className="text-4xl font-bold text-white uppercase mb-4">
             Nuestra Misión
           </h2>
           <div className="flex justify-center lg:justify-start mb-4">
@@ -28,20 +28,20 @@ const MissionVision = () => {
             <span className="inline-block w-20 h-1 bg-orange-500 rounded-full"></span>
             <span className="inline-block w-10 h-1 mx-1 bg-orange-500 rounded-full"></span>
           </div>
-          <p className="text-gray-100 text-xl">
+          <p className="text-gray-100 text-2xl max-w-[35rem]">
             Solucionar los problemas de abastecimiento de nuestros clientes,
             ofreciéndoles todo lo que requieran sin importar el tipo de producto
             o servicio.
           </p>
         </motion.div>
 
-
+        {/* Bloque 1: Imagen */}
         <motion.div
           ref={missionRef}
           initial={{ opacity: 0, translateX: -50 }}
           animate={missionInView ? { opacity: 1, translateX: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
-          className="relative flex justify-center lg:justify-end"
+          className="relative flex justify-center lg:justify-end order-2"
         >
           <img
             src="/nuestraMision.webp"
@@ -50,30 +50,15 @@ const MissionVision = () => {
           />
         </motion.div>
 
-
+        {/* Bloque 2: Texto (Visión) */}
         <motion.div
           ref={visionRef}
-          initial={{ opacity: 0, translateX: 50 }}
-          animate={visionInView ? { opacity: 1, translateX: 0 } : {}}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative flex justify-center lg:justify-start"
-        >
-          <img
-            src="/trabajador.jpeg"
-            alt="Visión"
-            className="w-[18rem] h-[18rem] object-cover rounded shadow-lg"
-          />
-        </motion.div>
-
-
-        <motion.div
-          ref={visionRef}
-          initial={{ opacity: 0, translateX: 50 }}
+          initial={{ opacity: 0, translateX: -50 }}
           animate={visionInView ? { opacity: 1, translateX: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-          className="relative z-10"
+          className="relative z-10 order-3 lg:order-4"
         >
-          <h2 className="text-3xl font-bold text-white uppercase mb-4">
+          <h2 className="text-4xl font-bold text-white uppercase mb-4">
             Nuestra Visión
           </h2>
           <div className="flex justify-center lg:justify-start mb-4">
@@ -81,11 +66,26 @@ const MissionVision = () => {
             <span className="inline-block w-20 h-1 bg-orange-500 rounded-full"></span>
             <span className="inline-block w-10 h-1 mx-1 bg-orange-500 rounded-full"></span>
           </div>
-          <p className="text-gray-100 text-xl">
+          <p className="text-gray-100 text-2xl max-w-[35rem]">
             Trabajar en conjunto con las empresas más grandes de la
             región y convertirnos así, en un aliado estratégico para su
             desarrollo.
           </p>
+        </motion.div>
+
+        {/* Bloque 2: Imagen */}
+        <motion.div
+          ref={visionRef}
+          initial={{ opacity: 0, translateX: -50 }}
+          animate={visionInView ? { opacity: 1, translateX: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+          className="relative flex justify-center lg:justify-start order-4 lg:order-3"
+        >
+          <img
+            src="/trabajador.jpeg"
+            alt="Visión"
+            className="w-[18rem] h-[18rem] object-cover rounded shadow-lg"
+          />
         </motion.div>
       </div>
     </section>
