@@ -1,15 +1,21 @@
-'use client'
+"use client";
+
+import React from "react";
+
+import WorkProcessV2 from "./WorkProcessV2";
+import useDeviceType from "./detect";
 import WorkProcess from "./WorkProcesss";
 
-export default function WorkComponent() {
-    // Media queries
 
-    return (
-        <div>
+const WorkProcessWrapper = () => {
+  const isMobile = useDeviceType();
 
-            <WorkProcess /> 
+  return (
+    <div>
+      {isMobile ? <WorkProcessV2 /> : <WorkProcess />}
+    </div>
+  );
+};
 
+export default WorkProcessWrapper;
 
-        </div>
-    );
-}
