@@ -56,7 +56,7 @@ const OmegaShowcase: React.FC = () => {
       className="bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center min-h-screen flex flex-col items-center justify-center px-4 pt-6 lg:pt-10"
     >
       {/* Contenido Principal */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 w-full max-w-5xl  sm:mt-[8rem] mb-6 lg:mb-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 w-full max-w-5xl  sm:mt-[6rem] mb-6 lg:mb-10">
         <motion.div
           key={activeLogo.id}
           initial={{ opacity: 0, scale: 0.8 }}
