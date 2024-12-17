@@ -50,7 +50,7 @@ export function TabsDemo() {
 
 
   return (
-    <div className=" bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center  min-h-[100vh] sm:min-h-[120vh]  " id="tabsDemo">
+    <div className=" bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center  pt-[5rem] min-h-[60rem] " id="tabsDemo">
       <motion.div
         ref={titleRef}
         initial={{ opacity: 0, y: 50 }}
@@ -73,7 +73,7 @@ export function TabsDemo() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={tabsInView ? { opacity: 1, scale: 1 } : {}}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="h-[20rem] md:h-[37rem] [perspective:1000px] relative flex flex-col max-w-5xl mx-auto w-full align-middle items-start justify-start mt-[2rem] mb-[7rem]"
+        className="h-[20rem] md:h-[37rem] [perspective:1000px] relative flex flex-col max-w-5xl mx-auto w-full align-middle items-start justify-start mt-10 mb-40"
       >
         <Tabs tabs={tabs} />
       </motion.div>
