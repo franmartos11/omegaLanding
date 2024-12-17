@@ -4,7 +4,7 @@ const FloatingButton = () => {
     return (
         <a
             title="link"
-            href="https://wa.me/5493517730900?text=Hola!%20"
+            href="https://wa.me/5493876472604?text=Hola!%20"
         >
             <svg
                 className="fixed bottom-4 right-4 p-1 bg-green-500 text-white rounded-full shadow-md hover:bg-green-600 block  "

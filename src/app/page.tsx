@@ -7,7 +7,6 @@ import Footer from "./Components/footer/Footer";
 import BrandsComponent from "./Components/marcas/BrandsComponent";
 import MissionVision from "./Components/misionVision/MisionVision";
 import StatsComponent from "./Components/stats/StatsComponent";
-import TeamSection from "./Components/team/TeamSection";
 import WorkComponent from "./Components/workProcess/WorkComponent";
 
 
@@ -22,7 +21,6 @@ export default function Home() {
       <WorkComponent/>
       <StatsComponent />
       <BrandsComponent />
-      
       <Footer />
       <FloatingButton />
     </div>
