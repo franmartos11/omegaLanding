@@ -14,6 +14,7 @@ export function TabsDemo() {
       link: "/carcheck",
       logo: "/omegaDistribucionesLogo.webp",
       src: "/distribucionesTab.png",
+
       alt: "OmegaDistribucionesLogo",
       title: "carcheck-data",
     },
@@ -45,7 +46,7 @@ export function TabsDemo() {
 
 
   return (
-    <div className=" bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center  pt-[5rem] min-h-[60rem] " id="tabsDemo">
+    <div className=" bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center  pt-[0rem] min-h-[100vh] " id="tabsDemo">
       <motion.div
         ref={titleRef}
         initial={{ opacity: 0, y: 50 }}
