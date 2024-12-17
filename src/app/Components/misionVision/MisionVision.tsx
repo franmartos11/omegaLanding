@@ -21,13 +21,13 @@ const CombinedSection = () => {
   };
 
   return (
-    <section className="bg-[url('/bgorange.png')] bg-no-repeat bg-cover bg-center min-h-screen flex flex-col justify-center items-center px-6  overflow-hidden">
+    <section className="bg-[url('/bgorange.png')] bg-no-repeat bg-cover bg-center min-h-screen flex flex-col justify-center items-center px-6 py-[3rem] lg:py-[0rem] overflow-hidden">
       {/* Team Section (Parte Superior) */}
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="text-center max-w-5xl mx-auto mb-[8rem]"
+        className="text-center max-w-5xl mx-auto mb-[3rem] sm:mb-[7rem]"
       >
         <motion.h2
           variants={fadeInUp}
