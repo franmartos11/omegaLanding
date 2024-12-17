@@ -3,6 +3,7 @@
 import { Tabs } from "./Tabs";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export function TabsDemo() {
   const [titleRef, titleInView] = useInView({ triggerOnce: true });
@@ -13,8 +14,7 @@ export function TabsDemo() {
       value: "product",
       link: "/carcheck",
       logo: "/omegaDistribucionesLogo.webp",
-      src: "/distribucionesTab.png",
-
+      src: "/distribucionesTab2.png",
       alt: "OmegaDistribucionesLogo",
       title: "carcheck-data",
     },
@@ -22,7 +22,7 @@ export function TabsDemo() {
       value: "services",
       link: "/auditorias",
       logo: "/omegaConstruccionesLogo.webp",
-      src: "/construccionesTab.png",
+      src: "/construccionesTab2.png",
       alt: "OmegaConstruccionesLogo",
       title: "Auditorias-data",
     },
@@ -30,7 +30,7 @@ export function TabsDemo() {
       value: "playground",
       link: "/desarrollo-web",
       logo: "/omegaCleanLogo.webp",
-      src: "/cleanTab.png",
+      src: "/cleanTab2.png",
       alt: "OmegaCleanLogo",
       title: "Paginas-Web-data",
     },
@@ -38,15 +38,17 @@ export function TabsDemo() {
       value: "content",
       link: "/apps-a-medida",
       logo: "/omegaTechLogo.webp",
-      src: "/techTab.png",
+      src: "/techTab2.png",
       alt: "OmegaTechLogo",
       title: "Apps-a-Medida-data",
     },
   ];
 
+ 
+
 
   return (
-    <div className=" bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center  pt-[0rem] min-h-[100vh] " id="tabsDemo">
+    <div className=" bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center  pt-[0rem] sm:min-h-[100vh] " id="tabsDemo">
       <motion.div
         ref={titleRef}
         initial={{ opacity: 0, y: 50 }}

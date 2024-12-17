@@ -2,7 +2,7 @@
 
 import { cn } from "@/app/utils/cn";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Tab = {
     title: string;
@@ -38,6 +38,15 @@ export const Tabs = ({
     };
 
     const [hovering, setHovering] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Detectar si la pantalla es móvil
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+        checkMobile(); // Llamar al inicio
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
 
     return (
         <>
@@ -53,8 +62,8 @@ export const Tabs = ({
                         onClick={() => {
                             moveSelectedTabToTop(idx);
                         }}
-                        onMouseEnter={() => setHovering(true)}
-                        onMouseLeave={() => setHovering(false)}
+                        onMouseEnter={() => !isMobile && setHovering(true)} // No ejecuta si es móvil
+                        onMouseLeave={() => !isMobile && setHovering(false)} // No ejecuta si es móvil
                         className={cn(
                             "relative px-4 py-2 rounded-full",
                             tabClassName
@@ -75,9 +84,12 @@ export const Tabs = ({
                                 )}
                             />
                         )}
-                        <span className="relative block    ">
-                            <img className="  justify-center align-middle h-[4rem] w-[4rem] sm:w-[6rem] sm:h-[6rem] rounded-full"
-                                src={tab.logo}></img>
+                        <span className="relative block">
+                            <img
+                                className="justify-center align-middle h-[4rem] w-[4rem] sm:w-[6rem] sm:h-[6rem] rounded-full"
+                                src={tab.logo}
+                                alt={tab.title}
+                            />
                         </span>
                     </button>
                 ))}
@@ -85,7 +97,7 @@ export const Tabs = ({
             <FadeInDiv
                 tabs={tabs}
                 active={active}
-                hovering={hovering}
+                hovering={!isMobile && hovering} // Desactiva hovering si es móvil
                 className={cn("mt-[3rem] sm:mt-[11rem]", contentClassName)}
             />
         </>
@@ -115,7 +127,7 @@ export const FadeInDiv = ({
                     layoutId={tab.value}
                     style={{
                         scale: 1 - idx * 0.1,
-                        top: hovering ? idx * -50 : 0,
+                        top: hovering ? idx * -50 : 0, // Evita cambios en hover si está desactivado
                         zIndex: -idx,
                         opacity: idx < 3 ? 1 - idx * 0.1 : 0,
                     }}
@@ -132,10 +144,9 @@ export const FadeInDiv = ({
                             src={tab.src}
                             alt={tab.alt}
                             title={tab.title}
-                            className="rounded-2xl"
+                            className="rounded-[2.5rem] sm:w-[70%]"
                         />
                     </div>
-
                 </motion.div>
             ))}
         </div>
