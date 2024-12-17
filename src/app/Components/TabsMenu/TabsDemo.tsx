@@ -71,7 +71,7 @@ export function TabsDemo() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={tabsInView ? { opacity: 1, scale: 1 } : {}}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="h-[20rem] md:h-[37rem] [perspective:1000px] relative flex flex-col max-w-5xl mx-auto w-full align-middle items-start justify-start mt-10 mb-40"
+        className="h-[34rem] md:h-[37rem] [perspective:1000px] relative flex flex-col max-w-5xl mx-auto w-full align-middle items-start justify-start mt-10 "
       >
         <Tabs tabs={tabs} />
       </motion.div>
