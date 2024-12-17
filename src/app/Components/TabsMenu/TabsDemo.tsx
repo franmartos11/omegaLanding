@@ -3,7 +3,7 @@
 import { Tabs } from "./Tabs";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+
 
 export function TabsDemo() {
   const [titleRef, titleInView] = useInView({ triggerOnce: true });
