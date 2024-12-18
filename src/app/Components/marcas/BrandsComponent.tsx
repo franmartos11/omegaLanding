@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const BrandsComponent = () => {
   const allBrands = [
@@ -11,7 +11,6 @@ const BrandsComponent = () => {
     { name: "Kanji", logo: "/kanjiLogo.webp" },
     { name: "LG", logo: "/lg_logo.webp" },
     { name: "Motorola", logo: "/motorolaLogo.png" },
-    { name: "Hisense", logo: "/hisenseLogo.png" },
     { name: "Lenovo", logo: "/lenovoLogo.webp" },
     { name: "Hp", logo: "/hpLogo.webp" },
     { name: "Dell", logo: "/dellLogo.webp" },
@@ -37,12 +36,25 @@ const BrandsComponent = () => {
     { name: "Babysec", logo: "/babysecLogo.png" },
     { name: "Kovalplast", logo: "/kovalplastLogo.png" },
     { name: "Cellpack", logo: "/cellpackLogo.png" },
+    { name: "Hisense", logo: "/hisenseLogo.png" },
   ];
 
-  const [visibleBrands, setVisibleBrands] = useState(16);
+  const [visibleBrands, setVisibleBrands] = useState(8);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+      setVisibleBrands(window.innerWidth < 640 ? 8 : 16);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleShowMore = () => {
-    setVisibleBrands((prev) => Math.min(prev + 16, allBrands.length));
+    setVisibleBrands((prev) => Math.min(prev + (isMobile ? 8 : 16), allBrands.length));
   };
 
   return (
@@ -64,8 +76,10 @@ const BrandsComponent = () => {
       </div>
 
       {/* Grid de Marcas */}
-      <div className="flex pt-[3rem] pb-[3rem] justify-center">
-        <div className="w-full max-w-[70%] grid grid-cols-4 gap-6">
+      <div className="flex sm:pt-[5rem] pt-[3rem] pb-[3rem] justify-center">
+        <div
+          className="w-full max-w-[80%] grid grid-cols-2 sm:grid-cols-4 gap-6"
+        >
           {allBrands.slice(0, visibleBrands).map((brand, index) => (
             <div
               key={index}

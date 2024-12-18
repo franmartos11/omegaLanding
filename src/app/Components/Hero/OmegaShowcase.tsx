@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll"; // Para desplazarse a la sección "Tabs Demo"
 
 interface LogoData {
   id: string;
@@ -84,6 +85,16 @@ const OmegaShowcase: React.FC = () => {
           <p className="text-base sm:text-xl text-gray-600 mt-4">
             {activeLogo.description}
           </p>
+          <div className="hidden lg:block mt-8">
+        <Link
+          to="tabsDemo" // ID de la sección a la que quieres ir
+          smooth={true}
+          duration={800}
+          className="bg-orange-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-orange-600 transition-all cursor-pointer"
+        >
+          Mas Informacion
+        </Link>
+      </div>
         </div>
       </div>
 
@@ -121,6 +132,9 @@ const OmegaShowcase: React.FC = () => {
           </button>
         ))}
       </div>
+
+      
+      
     </div>
   );
 };

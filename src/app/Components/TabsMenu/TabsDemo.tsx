@@ -48,7 +48,8 @@ export function TabsDemo() {
 
 
   return (
-    <div className=" bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center  pt-[0rem] sm:min-h-[100vh] " id="tabsDemo">
+    
+    <div className=" bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center sm:pt-[4rem] sm:min-h-[100vh]  " id="tabsDemo" >
       <motion.div
         ref={titleRef}
         initial={{ opacity: 0, y: 50 }}
@@ -76,6 +77,7 @@ export function TabsDemo() {
         <Tabs tabs={tabs} />
       </motion.div>
     </div>
+    
   );
 }
 
