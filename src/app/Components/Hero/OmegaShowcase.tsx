@@ -19,6 +19,13 @@ const logos: LogoData[] = [
       "Multiples unidades de negocio diseñadas para abordar diferentes problemáticas.",
   },
   {
+    id: "omega-distribuciones",
+    logo: "/omegaDistribucionesLogo_no_background.png",
+    title: "OMEGA DISTRIBUCIONES",
+    description:
+      "Comercialización y distribución de todo tipo de productos y servicios.",
+  },
+  {
     id: "omega-clean",
     logo: "/omegaCleanLogo_no_background.png",
     title: "OMEGA CLEAN",
@@ -26,26 +33,18 @@ const logos: LogoData[] = [
       "Fabricación y envasado de productos de higiene doméstica e institucional.",
   },
   {
-    id: "omega-tech",
-    logo: "/omegaTechLogo_no_background.png",
-    title: "OMEGA TECH",
-    description:
-      "Desarrollo de software a medida y comercialización de hardware.",
-  },
-  {
-    id: "omega-distribuciones",
-    logo: "/omegaDistribucionesLogo_no_background.png",
-    title: "OMEGA DISTRIBUCIONES",
-    description:
-      "Comercialización y distribución de todo tipo de productos y servicios.",
-  },
-  
-  {
     id: "omega-construcciones",
     logo: "/omegaConstruccionesLogo_no_background.png",
     title: "OMEGA CONSTRUCCIONES",
     description:
       "Diseño, construcción, remodelación y desarrollo de todo tipo de proyectos.",
+  },
+  {
+    id: "omega-tech",
+    logo: "/omegaTechLogo_no_background.png",
+    title: "OMEGA TECH",
+    description:
+      "Desarrollo de software a medida y comercialización de hardware.",
   },
 ];
 

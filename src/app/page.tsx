@@ -3,6 +3,7 @@ import OmegaShowcase from "./Components/Hero/OmegaShowcase";
 import { NavbarDemo } from "./Components/Navbar/Navbar";
 import { TabsDemo } from "./Components/TabsMenu/TabsDemo";
 import FloatingButton from "./Components/WhatsAppLogo/WhatsAppButton";
+import { Contacto } from "./Components/contacto/Contacto";
 import Footer from "./Components/footer/Footer";
 import BrandsComponent from "./Components/marcas/BrandsComponent";
 import MissionVision from "./Components/misionVision/MisionVision";
@@ -21,6 +22,7 @@ export default function Home() {
       <WorkComponent/>
       <StatsComponent />
       <BrandsComponent />
+      <Contacto/>
       <Footer />
       <FloatingButton />
     </div>
