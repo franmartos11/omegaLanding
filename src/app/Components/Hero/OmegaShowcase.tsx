@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-scroll";
 
 interface LogoData {
   id: string;
@@ -15,31 +14,36 @@ const logos: LogoData[] = [
     id: "omega-soluciones",
     logo: "/omegaSolucionesLogo3.png",
     title: "OMEGA SOLUCIONES",
-    description: "Multiples unidades de negocio diseñadas para abordar diferentes problemáticas",
+    description:
+      "Multiples unidades de negocio diseñadas para abordar diferentes problemáticas.",
   },
   {
     id: "omega-distribuciones",
     logo: "/omegaDistribucionesLogo_no_background.png",
     title: "OMEGA DISTRIBUCIONES",
-    description: "Comercialización y distribución de todo tipo de productos y servicios.",
+    description:
+      "Comercialización y distribución de todo tipo de productos y servicios.",
   },
   {
     id: "omega-clean",
     logo: "/omegaCleanLogo_no_background.png",
     title: "OMEGA CLEAN",
-    description: "Fabricacion y envasado de productos de higiene domestica e institucional.",
+    description:
+      "Fabricación y envasado de productos de higiene doméstica e institucional.",
   },
   {
     id: "omega-construcciones",
     logo: "/omegaConstruccionesLogo_no_background.png",
     title: "OMEGA CONSTRUCCIONES",
-    description: "Diseño, construcción, remodelación y desarrollo de todo tipo de proyectos.",
+    description:
+      "Diseño, construcción, remodelación y desarrollo de todo tipo de proyectos.",
   },
   {
     id: "omega-tech",
     logo: "/omegaTechLogo_no_background.png",
     title: "OMEGA TECH",
-    description: "Desarrollo de software a medida y comercialización de todo tipo de hardware",
+    description:
+      "Desarrollo de software a medida y comercialización de hardware.",
   },
 ];
 
@@ -53,10 +57,10 @@ const OmegaShowcase: React.FC = () => {
   return (
     <div
       id="hero"
-      className="bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center min-h-screen flex flex-col items-center justify-center px-4 pt-6 lg:pt-10"
+      className="bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center min-h-screen flex flex-col items-center justify-start px-4 pt-[5rem] sm:pt-[10rem] pb-[3rem]"
     >
       {/* Contenido Principal */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 w-full max-w-5xl  sm:mt-[6rem] mb-6 lg:mb-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 w-full max-w-5xl mb-0 lg:mb-10">
         <motion.div
           key={activeLogo.id}
           initial={{ opacity: 0, scale: 0.8 }}
@@ -74,30 +78,29 @@ const OmegaShowcase: React.FC = () => {
         </motion.div>
 
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-          <h1 className="text-2xl sm:text-4xl font-bold text-gray-800">
+          <h2 className="text-2xl sm:text-4xl font-bold text-gray-800">
             {activeLogo.title}
-          </h1>
+          </h2>
           <p className="text-base sm:text-xl text-gray-600 mt-4">
             {activeLogo.description}
           </p>
-          <Link to="tabsDemo" smooth={true} duration={1000}>
-            <button className="mt-6 px-4 py-2 sm:px-6 sm:py-3 bg-white text-gray-800 font-bold rounded-full shadow-md hover:bg-gray-200 transition-all">
-              Más información
-            </button>
-          </Link>
         </div>
       </div>
 
-      {/* Botones Siempre Abajo */}
-      <div className="flex flex-wrap justify-center gap-4 sm:gap-6 w-full mt-[3rem]">
+      {/* Botones - Logos de Unidades */}
+      <div className="flex flex-wrap justify-center items-start gap-4 sm:gap-6 w-full mt-[1.5rem] sm:mt-[3rem]">
         {logos.map((logo) => (
           <button
             key={logo.id}
             onClick={() => handleLogoChange(logo)}
             className={`flex flex-col items-center transition-all duration-300 ${
               activeLogo.id === logo.id
-                ? "opacity-100"
+                ? "opacity-100 scale-110"
                 : "opacity-50 hover:opacity-100"
+            } ${
+              logo.id === "omega-soluciones"
+                ? "order-first mb-4 w-full sm:w-auto"
+                : ""
             }`}
           >
             <div className="bg-white rounded-full p-2 sm:p-4 shadow-md">
@@ -107,9 +110,14 @@ const OmegaShowcase: React.FC = () => {
                 className="h-16 w-16 sm:h-20 sm:w-20 object-contain"
               />
             </div>
-            <span className="mt-2 text-xs sm:text-sm text-gray-800">
+            <span className="mt-2 text-xs sm:text-sm text-gray-800 font-medium">
               {logo.title}
             </span>
+            {logo.id !== "omega-soluciones" && (
+              <span className="text-[10px] sm:text-xs text-orange-500 font-semibold mt-1">
+                Unidad de Negocio
+              </span>
+            )}
           </button>
         ))}
       </div>
