@@ -19,13 +19,6 @@ const logos: LogoData[] = [
       "Multiples unidades de negocio diseñadas para abordar diferentes problemáticas.",
   },
   {
-    id: "omega-distribuciones",
-    logo: "/omegaDistribucionesLogo_no_background.png",
-    title: "OMEGA DISTRIBUCIONES",
-    description:
-      "Comercialización y distribución de todo tipo de productos y servicios.",
-  },
-  {
     id: "omega-clean",
     logo: "/omegaCleanLogo_no_background.png",
     title: "OMEGA CLEAN",
@@ -33,18 +26,26 @@ const logos: LogoData[] = [
       "Fabricación y envasado de productos de higiene doméstica e institucional.",
   },
   {
-    id: "omega-construcciones",
-    logo: "/omegaConstruccionesLogo_no_background.png",
-    title: "OMEGA CONSTRUCCIONES",
-    description:
-      "Diseño, construcción, remodelación y desarrollo de todo tipo de proyectos.",
-  },
-  {
     id: "omega-tech",
     logo: "/omegaTechLogo_no_background.png",
     title: "OMEGA TECH",
     description:
       "Desarrollo de software a medida y comercialización de hardware.",
+  },
+  {
+    id: "omega-distribuciones",
+    logo: "/omegaDistribucionesLogo_no_background.png",
+    title: "OMEGA DISTRIBUCIONES",
+    description:
+      "Comercialización y distribución de todo tipo de productos y servicios.",
+  },
+  
+  {
+    id: "omega-construcciones",
+    logo: "/omegaConstruccionesLogo_no_background.png",
+    title: "OMEGA CONSTRUCCIONES",
+    description:
+      "Diseño, construcción, remodelación y desarrollo de todo tipo de proyectos.",
   },
 ];
 
@@ -100,38 +101,38 @@ const OmegaShowcase: React.FC = () => {
 
       {/* Botones - Logos de Unidades */}
       <div className="flex flex-wrap justify-center items-start gap-4 sm:gap-6 w-full mt-[1.5rem] sm:mt-[3rem]">
-        {logos.map((logo) => (
-          <button
-            key={logo.id}
-            onClick={() => handleLogoChange(logo)}
-            className={`flex flex-col items-center transition-all duration-300 ${
-              activeLogo.id === logo.id
-                ? "opacity-100 scale-110"
-                : "opacity-50 hover:opacity-100"
-            } ${
-              logo.id === "omega-soluciones"
-                ? "order-first mb-4 w-full sm:w-auto"
-                : ""
-            }`}
-          >
-            <div className="bg-white rounded-full p-2 sm:p-4 shadow-md">
-              <img
-                src={logo.logo}
-                alt={logo.title}
-                className="h-16 w-16 sm:h-20 sm:w-20 object-contain"
-              />
-            </div>
-            <span className="mt-2 text-xs sm:text-sm text-gray-800 font-medium">
-              {logo.title}
-            </span>
-            {logo.id !== "omega-soluciones" && (
-              <span className="text-[10px] sm:text-xs text-orange-500 font-semibold mt-1">
-                Unidad de Negocio
-              </span>
-            )}
-          </button>
-        ))}
+  {logos.map((logo) => (
+    <button
+      key={logo.id}
+      onClick={() => handleLogoChange(logo)}
+      className={`flex flex-col items-center justify-center transition-all duration-300 ${
+        activeLogo.id === logo.id
+          ? "opacity-100 scale-110"
+          : "opacity-50 hover:opacity-100"
+      } ${
+        logo.id === "omega-soluciones"
+          ? "order-first mb-4 w-full sm:w-auto flex justify-center"
+          : ""
+      }`}
+    >
+      <div className="bg-white rounded-full p-2 sm:p-4 shadow-md flex justify-center items-center">
+        <img
+          src={logo.logo}
+          alt={logo.title}
+          className="h-16 w-16 sm:h-20 sm:w-20 object-contain"
+        />
       </div>
+      <span className="mt-2 text-xs sm:text-sm text-gray-800 font-medium">
+        {logo.title}
+      </span>
+      {logo.id !== "omega-soluciones" && (
+        <span className="text-[10px] sm:text-xs text-orange-500 font-semibold mt-1">
+          Unidad de Negocio
+        </span>
+      )}
+    </button>
+  ))}
+</div>
 
       
       
