@@ -50,7 +50,7 @@ const Footer = () => {
           </li>
           <li>
             <Link2 className="cursor-pointer mb-6 text-xs md:text-xl hover:underline"
-              to="team"
+              to="nosotros"
               smooth={true}
               duration={1000}
             >
