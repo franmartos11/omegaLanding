@@ -67,7 +67,7 @@ function Navbar({ className }: { className?: string }) {
           </Link>
           <Link
             className="text-neutral-700 text-xl hover:text-orange-500 cursor-pointer"
-            to="team"
+            to="nosotros"
             smooth={true}
             duration={1000}
           >
@@ -119,7 +119,7 @@ function Navbar({ className }: { className?: string }) {
             </Link>
             <Link
               className="text-neutral-700 text-xl hover:text-orange-500 cursor-pointer"
-              to="team"
+              to="nosotros"
               smooth={true}
               duration={1000}
             >
