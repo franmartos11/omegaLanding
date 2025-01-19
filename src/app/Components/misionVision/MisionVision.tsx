@@ -72,18 +72,18 @@ const CombinedSection = () => {
           initial={{ opacity: 0, translateX: -50 }}
           animate={missionInView ? { opacity: 1, translateX: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative z-10 flex flex-col text-center lg:text-left"
+          className="relative z-10 flex flex-col text-center "
         >
           <h2 className="text-3xl font-bold text-white uppercase mb-4">
             Nuestra Misión
           </h2>
-          <div className="flex justify-center lg:justify-start mb-4">
+          <div className="flex justify-center  mb-4">
             <span className="inline-block w-10 h-1 mx-1 bg-orange-500 rounded-full"></span>
             <span className="inline-block w-20 h-1 bg-orange-500 rounded-full"></span>
             <span className="inline-block w-10 h-1 mx-1 bg-orange-500 rounded-full"></span>
           </div>
-          <p className="text-gray-100 text-2xl max-w-[35rem] mx-auto lg:mx-0">
-            Solucionar los problemas de abastecimiento de nuestros clientes,
+          <p className="text-gray-100 text-2xl max-w-[35rem] mx-auto lg:mx-0 ">
+            Solucionar los problemas de distinta indole de nuestros clientes,
             ofreciéndoles todo lo que requieran sin importar el tipo de producto
             o servicio.
           </p>
@@ -95,17 +95,17 @@ const CombinedSection = () => {
           initial={{ opacity: 0, translateX: 50 }}
           animate={visionInView ? { opacity: 1, translateX: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-          className="relative z-10 flex flex-col text-center lg:text-left"
+          className="relative z-10 flex flex-col text-center "
         >
           <h2 className="text-3xl font-bold text-white uppercase mb-4">
             Nuestra Visión
           </h2>
-          <div className="flex justify-center lg:justify-start mb-4">
+          <div className="flex justify-center mb-4">
             <span className="inline-block w-10 h-1 mx-1 bg-orange-500 rounded-full"></span>
             <span className="inline-block w-20 h-1 bg-orange-500 rounded-full"></span>
             <span className="inline-block w-10 h-1 mx-1 bg-orange-500 rounded-full"></span>
           </div>
-          <p className="text-gray-100 text-2xl max-w-[35rem] mx-auto lg:mx-0">
+          <p className="text-gray-100 text-2xl max-w-[35rem] mx-auto lg:mx-0 ">
             Trabajar en conjunto con las empresas más grandes de la región y
             convertirnos así, en un aliado estratégico para su desarrollo.
           </p>

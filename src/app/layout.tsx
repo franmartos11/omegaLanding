@@ -16,8 +16,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Omega Soluciones",
-  description: "Grupo Empresarial en Salta con experiencia en desarrollo de software, productos químicos para limpieza, construcción y distribución. Soluciones innovadoras para cada industria.",
-
+  description:
+    "Grupo Empresarial en Salta con experiencia en desarrollo de software, productos químicos para limpieza, construcción y distribución. Soluciones innovadoras para cada industria.",
 };
 
 export default function RootLayout({
@@ -44,9 +44,16 @@ export default function RootLayout({
         <meta name="twitter:title" content="Grupo Empresarial Salta" />
         <meta name="twitter:description" content="Consolidamos industrias: desarrollo de software, productos químicos, construcción y distribución en Salta." />
         <meta name="twitter:image" content="/og-image.jpg" />
+        
+        {/* Google Font Montserrat import */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
+        style={{ fontFamily: "Montserrat, sans-serif" }} // Applying Montserrat globally
       >
         {children}
       </body>
