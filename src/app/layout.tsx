@@ -50,7 +50,7 @@ export default function RootLayout({
         />
       </Head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
+        
         style={{ fontFamily: "Montserrat" }} // Applying Montserrat globally
       >
         {children}
