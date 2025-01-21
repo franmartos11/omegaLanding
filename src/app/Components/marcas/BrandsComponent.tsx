@@ -36,7 +36,7 @@ const BrandsComponent = () => {
     { name: "Babysec", logo: "/babysecLogo.png" },
     { name: "Kovalplast", logo: "/kovalplastLogo.png" },
     { name: "Cellpack", logo: "/cellpackLogo.png" },
-    { name: "Hisense", logo: "/hisenseLogo.png" },
+    
   ];
 
   const [visibleBrands, setVisibleBrands] = useState(8);

@@ -70,7 +70,7 @@ const OmegaShowcase2 = () => {
               onClick={() => handleLogoClick(section.id)}
               className={`${positionClasses[index]} ${
                 isMainButton
-                  ? "w-[7rem] lg:w-[10rem] h-[7rem] lg:h-[10rem]"
+                  ? "w-[7rem] lg:w-[15rem] h-[7rem] lg:h-[15rem]"
                   : "w-[4rem] lg:w-[6rem] h-[4rem] lg:h-[6rem]" 
               } rounded-full border-2 ${
                 isActive
