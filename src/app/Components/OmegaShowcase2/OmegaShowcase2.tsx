@@ -70,8 +70,8 @@ const OmegaShowcase2 = () => {
               onClick={() => handleLogoClick(section.id)}
               className={`${positionClasses[index]} ${
                 isMainButton
-                  ? "w-[7rem] lg:w-[15rem] h-[7rem] lg:h-[15rem]"
-                  : "w-[4rem] lg:w-[6rem] h-[4rem] lg:h-[6rem]" 
+                  ? "w-[10rem] lg:w-[15rem] h-[10rem] lg:h-[15rem]"
+                  : "w-[5rem] lg:w-[8rem] h-[5rem] lg:h-[8rem]" 
               } rounded-full border-2 ${
                 isActive
                   ? "shadow-lg shadow-orange-500 border-orange-500 scale-110"
@@ -99,7 +99,7 @@ const OmegaShowcase2 = () => {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }} // Smooth fade in/out for text
       >
-        <h2 className="text-3xl lg:text-5xl font-bold text-orange-500">
+        <h2 className=" pt-[1rem] text-3xl lg:text-5xl font-bold text-orange-500">
           {sections.find((section) => section.id === activeSection)?.title}
         </h2>
         <p className="text-lg lg:text-xl text-gray-700 mt-[1.5rem]">

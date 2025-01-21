@@ -32,7 +32,7 @@ export const Contacto = () => {
                     viewport={{ once: true }}
                     className="space-y-8"
                 >
-                    <h2 className="text-4xl text-white font-semibold capitalize lg:text-6xl">
+                    <h2 className="text-4xl uppercase text-white font-semibold lg:text-6xl">
                         ¿Dónde Nos Encontramos?
                     </h2>
                     <p className="text-white text-lg">
