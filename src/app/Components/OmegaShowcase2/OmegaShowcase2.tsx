@@ -8,7 +8,7 @@ const OmegaShowcase2 = () => {
   const sections = [
     {
       id: "omega-distribuciones",
-      logo: "/2.png",
+      logo: "/33.png",
       title: "OMEGA DISTRIBUCIONES",
       description:
         "Comercialización y distribución de todo tipo de productos y servicios.",
@@ -48,7 +48,7 @@ const OmegaShowcase2 = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center p-2 lg:p-8 bg-[#DBDBDB] min-h-screen">
+    <div className=" bg-[url('/1bg.png')] bg-no-repeat bg-cover bg-center flex flex-col lg:flex-row items-center justify-center p-2 lg:p-8 min-h-screen">
       {/* Contenedor central con logo e imágenes */}
       <div className="bg-[url('/bgHero.png')] bg-center relative flex items-center justify-center w-[20rem] lg:w-[29rem] h-[20rem] lg:h-[29rem]">
         {/* Imágenes en las esquinas */}
@@ -92,14 +92,14 @@ const OmegaShowcase2 = () => {
 
       {/* Section for title and description */}
       <motion.div
-        className="mt-2 lg:mt-0 text-center max-w-[25rem] lg:max-w-[35rem] px-4"
+        className="ml-[0rem] lg:ml-[5rem] mt-2 lg:mt-0 text-center max-w-[25rem] lg:max-w-[35rem] px-4"
         key={activeSection} // Key helps re-trigger transition
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }} // Smooth fade in/out for text
       >
-        <h2 className=" pt-[1rem] text-3xl lg:text-5xl font-bold text-orange-500">
+        <h2 className=" pt-[1rem] text-2xl lg:text-4xl font-bold text-[#f86709]">
           {sections.find((section) => section.id === activeSection)?.title}
         </h2>
         <p className="text-lg lg:text-xl text-gray-700 mt-[1.5rem]">

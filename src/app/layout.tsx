@@ -50,8 +50,7 @@ export default function RootLayout({
         />
       </Head>
       <body
-        
-        style={{ fontFamily: "Montserrat" }} // Applying Montserrat globally
+        style={{ fontFamily: "Montserrat, sans-serif" }} // Applying Montserrat globally
       >
         {children}
       </body>
