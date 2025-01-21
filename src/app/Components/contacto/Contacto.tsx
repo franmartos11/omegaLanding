@@ -44,16 +44,16 @@ export const Contacto = () => {
                         <div className="flex items-center gap-4 ">
                             <FiPhone className="text-white h-6 w-6 " />
                             <span className="text-white text-lg font-semibold hover:text-black  ">
-                                <a href="https://wa.me/5493876472604?text=Hola!%20 " >
-                                    +54 9 351 555-1234
+                                <a href="https://wa.me/5493876195572?text=Hola!%20" >
+                                    +54 9 387 619 5572
                                 </a>
                             </span>
                         </div>
                         <div className="flex items-center gap-4">
                             <FiMail className="text-white h-6 w-6" />
                             <span className="text-white text-lg font-semibold hover:text-black ">
-                                <a href="mailto:contacto@omegasoluciones.com">
-                                contacto@omegasoluciones.com
+                                <a href="mailto:ventas@omegasoluciones.com.ar ">
+                                ventas@omegasoluciones.com.ar 
                                 </a>
                             </span>
                         </div>

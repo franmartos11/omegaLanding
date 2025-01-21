@@ -7,13 +7,6 @@ const OmegaShowcase2 = () => {
 
   const sections = [
     {
-      id: "omega-soluciones",
-      logo: "/1.png",
-      title: "OMEGA SOLUCIONES",
-      description:
-        "Multiples unidades de negocio diseñadas para abordar diferentes problemáticas.",
-    },
-    {
       id: "omega-distribuciones",
       logo: "/2.png",
       title: "OMEGA DISTRIBUCIONES",
@@ -41,6 +34,13 @@ const OmegaShowcase2 = () => {
       description:
         "Desarrollo de software a medida y comercialización de hardware.",
     },
+    {
+      id: "omega-soluciones",
+      logo: "/1.png",
+      title: "OMEGA SOLUCIONES",
+      description:
+        "Multiples unidades de negocio diseñadas para abordar diferentes problemáticas.",
+    },
   ];
 
   const handleLogoClick = (id: string) => {
@@ -48,65 +48,61 @@ const OmegaShowcase2 = () => {
   };
 
   return (
-    <div className="flex lg:flex-row flex-col items-center justify-around p-8 bg-[#DBDBDB] min-h-screen">
+    <div className="flex flex-col lg:flex-row items-center justify-center p-2 lg:p-8 bg-[#DBDBDB] min-h-screen">
       {/* Contenedor central con logo e imágenes */}
-      <div className="bg-[url('/bgHero.png')] bg-center relative flex items-center justify-center w-[29rem] h-[29rem]">
-        {/* Logo central */}
-        <motion.div
-          className="flex items-center justify-center w-[14rem] h-[14rem] rounded-full shadow-2xl"
-          key={activeSection} // Key will help trigger a re-render
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }} // Smooth fade in/out
-        >
-          <img
-            src={sections.find((section) => section.id === activeSection)?.logo}
-            alt="logo central"
-            className="rounded-full shadow-2xl"
-          />
-        </motion.div>
-
+      <div className="bg-[url('/bgHero.png')] bg-center relative flex items-center justify-center w-[20rem] lg:w-[29rem] h-[20rem] lg:h-[29rem]">
         {/* Imágenes en las esquinas */}
-        {sections
-          .filter((section) => section.id !== activeSection)
-          .map((section, index) => {
-            const positionClasses = [
-              "absolute top-4 left-4",
-              "absolute top-4 right-4",
-              "absolute bottom-4 left-4",
-              "absolute bottom-4 right-4",
-            ];
+        {sections.map((section, index) => {
+          const positionClasses = [
+            "absolute top-2 left-2",
+            "absolute top-2 right-2",
+            "absolute bottom-2 left-2",
+            "absolute bottom-2 right-2",
+          ];
 
-            return (
-              <button
-                key={section.id}
-                onClick={() => handleLogoClick(section.id)}
-                className={`${positionClasses[index]} w-[6rem] h-[6rem] rounded-full shadow-md border-2 bg-white`}
-              >
-                <img
-                  src={section.logo}
-                  alt={section.title}
-                  className="w-full h-full object-contain rounded-full shadow-2xl"
-                />
-              </button>
-            );
-          })}
+          const isActive = section.id === activeSection;
+
+          const isMainButton = section.id === "omega-soluciones";
+
+          return (
+            <button
+              key={section.id}
+              onClick={() => handleLogoClick(section.id)}
+              className={`${positionClasses[index]} ${
+                isMainButton
+                  ? "w-[7rem] lg:w-[10rem] h-[7rem] lg:h-[10rem]"
+                  : "w-[4rem] lg:w-[6rem] h-[4rem] lg:h-[6rem]" 
+              } rounded-full border-2 ${
+                isActive
+                  ? "shadow-lg shadow-orange-500 border-orange-500 scale-110"
+                  : "shadow-md border-gray-300"
+              } bg-white transition-all duration-300`}
+            >
+              <img
+                src={section.logo}
+                alt={section.title}
+                className={`w-full h-full object-contain rounded-full ${
+                  isActive ? "brightness-110" : ""
+                }`}
+              />
+            </button>
+          );
+        })}
       </div>
 
       {/* Section for title and description */}
       <motion.div
-        className="mt-0 text-center max-w-[35rem]"
+        className="mt-2 lg:mt-0 text-center max-w-[25rem] lg:max-w-[35rem] px-4"
         key={activeSection} // Key helps re-trigger transition
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }} // Smooth fade in/out for text
       >
-        <h2 className="text-5xl font-bold text-orange-500">
+        <h2 className="text-3xl lg:text-5xl font-bold text-orange-500">
           {sections.find((section) => section.id === activeSection)?.title}
         </h2>
-        <p className="text-xl text-gray-700 mt-[1.5rem]">
+        <p className="text-lg lg:text-xl text-gray-700 mt-[1.5rem]">
           {sections.find((section) => section.id === activeSection)?.description}
         </p>
       </motion.div>
@@ -115,4 +111,5 @@ const OmegaShowcase2 = () => {
 };
 
 export default OmegaShowcase2;
+
 

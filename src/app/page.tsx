@@ -1,7 +1,6 @@
 
-import OmegaShowcase from "./Components/Hero/OmegaShowcase";
 import { NavbarDemo } from "./Components/Navbar/Navbar";
-
+import OmegaShowcase2 from "./Components/OmegaShowcase2/OmegaShowcase2";
 import { TabsDemo } from "./Components/TabsMenu/TabsDemo";
 import FloatingButton from "./Components/WhatsAppLogo/WhatsAppButton";
 import { Contacto } from "./Components/contacto/Contacto";
@@ -16,10 +15,8 @@ export default function Home() {
 
   return (
     <div>
-      <NavbarDemo />
-      
-
-<OmegaShowcase />
+      <NavbarDemo />     
+      <OmegaShowcase2></OmegaShowcase2>
       <MissionVision />
       <TabsDemo />
       <WorkComponent/>
