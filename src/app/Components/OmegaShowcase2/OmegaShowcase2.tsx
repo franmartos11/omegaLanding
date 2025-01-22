@@ -99,7 +99,7 @@ const OmegaShowcase2 = () => {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }} // Smooth fade in/out for text
       >
-        <h2 className=" pt-[1rem] text-2xl lg:text-4xl font-bold text-[#f86709]">
+        <h2 className=" pt-[1rem] text-2xl lg:text-4xl font-semibold text-[#f86709]">
           {sections.find((section) => section.id === activeSection)?.title}
         </h2>
         <p className="text-lg lg:text-xl text-gray-700 mt-[1.5rem]">

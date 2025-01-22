@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Head from "next/head";
 
-
 export const metadata: Metadata = {
   title: "Omega Soluciones",
   description:
@@ -38,11 +37,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </Head>
-      <body
-        style={{ fontFamily: "Montserrat, sans-serif" }} // Applying Montserrat globally
-      >
+      <body className="font-montserrat">
         {children}
       </body>
     </html>
   );
 }
+
