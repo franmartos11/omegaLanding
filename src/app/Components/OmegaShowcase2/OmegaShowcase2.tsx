@@ -16,21 +16,21 @@ const OmegaShowcase2 = () => {
     },
     {
       id: "omega-clean",
-      logo: "/3.png",
+      logo: "/1c.png",
       title: "OMEGA CLEAN",
       description:
         "Fabricación y envasado de productos de higiene doméstica e institucional.",
     },
     {
       id: "omega-construcciones",
-      logo: "/4.png",
+      logo: "/4c.png",
       title: "OMEGA CONSTRUCCIONES",
       description:
         "Diseño, construcción, remodelación y desarrollo de todo tipo de proyectos.",
     },
     {
       id: "omega-tech",
-      logo: "/5.png",
+      logo: "/2t.png",
       title: "OMEGA TECH",
       description:
         "Desarrollo de software a medida y comercialización de hardware.",
