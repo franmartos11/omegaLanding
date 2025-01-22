@@ -28,7 +28,7 @@ function Navbar({ className }: { className?: string }) {
             className="cursor-pointer"
             to="hero"
             smooth={true}
-            duration={1000}
+            duration={500}
           >
         <img
           src="/omegaLogo3.png"
@@ -53,7 +53,7 @@ function Navbar({ className }: { className?: string }) {
             className="text-neutral-700 text-xl hover:text-orange-500 cursor-pointer"
             to="tabsDemo"
             smooth={true}
-            duration={1000}
+            duration={500}
           >
             UNIDADES DE NEGOCIO
           </Link>
@@ -69,7 +69,7 @@ function Navbar({ className }: { className?: string }) {
             className="text-neutral-700 text-xl hover:text-orange-500 cursor-pointer"
             to="nosotros"
             smooth={true}
-            duration={1000}
+            duration={500}
           >
             NOSOTROS
           </Link>
@@ -97,7 +97,7 @@ function Navbar({ className }: { className?: string }) {
               className="text-neutral-700 text-xl hover:text-orange-500 cursor-pointer"
               to="hero"
               smooth={true}
-              duration={1000}
+              duration={500}
             >
               INICIO
             </Link>
@@ -105,7 +105,7 @@ function Navbar({ className }: { className?: string }) {
               className="text-neutral-700 text-xl hover:text-orange-500 cursor-pointer"
               to="tabsDemo"
               smooth={true}
-              duration={1000}
+              duration={500}
             >
               UNIDADES DE NEGOCIO
             </Link>
@@ -113,7 +113,7 @@ function Navbar({ className }: { className?: string }) {
               className="text-neutral-700 text-xl hover:text-orange-500 cursor-pointer"
               to="marcas"
               smooth={true}
-              duration={1000}
+              duration={500}
             >
               MARCAS
             </Link>
@@ -121,7 +121,7 @@ function Navbar({ className }: { className?: string }) {
               className="text-neutral-700 text-xl hover:text-orange-500 cursor-pointer"
               to="nosotros"
               smooth={true}
-              duration={1000}
+              duration={500}
             >
               NOSOTROS
             </Link>
