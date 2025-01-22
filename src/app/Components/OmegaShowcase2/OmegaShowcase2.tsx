@@ -70,8 +70,8 @@ const OmegaShowcase2 = () => {
               key={section.id}
               onClick={() => handleLogoClick(section.id)}
               className={`${positionClasses[index]} ${isMainButton
-                  ? "w-[10rem] lg:w-[15rem] h-[10rem] lg:h-[15rem]"
-                  : "w-[5rem] lg:w-[8rem] h-[5rem] lg:h-[8rem]"
+                ? "w-[10rem] lg:w-[15rem] h-[10rem] lg:h-[15rem]"
+                : "w-[5rem] lg:w-[8rem] h-[5rem] lg:h-[8rem]"
                 } rounded-full border-2 ${isActive
                   ? "shadow-lg shadow-orange-500 border-orange-500 scale-110"
                   : "shadow-md border-gray-300"
@@ -104,17 +104,16 @@ const OmegaShowcase2 = () => {
           {sections.find((section) => section.id === activeSection)?.description}
         </p>
         <div className="pt-[1.5rem]">
-        <Link
-          className="px-6 py-3 bg-white text-black font-medium rounded-full shadow-md hover:bg-[#f86709] cursor-pointer"
-          to="tabsDemo"
-          smooth={true}
-          duration={500}
-        >
-          MAS INFORMACION
-        </Link>
-
+          <Link
+            className="px-6 py-3 bg-white text-black font-medium rounded-full shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+            to="tabsDemo"
+            smooth={true}
+            duration={500}
+          >
+            MAS INFORMACION
+          </Link>
         </div>
-        
+
       </motion.div>
     </div>
   );
