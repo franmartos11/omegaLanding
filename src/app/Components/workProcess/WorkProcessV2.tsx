@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 const WorkProcess = () => {
   const steps = [
+    {title: "Nos Contactas", icon:"/lupa.png"},
     { title: "Análisis", icon: "/lupa.png" },
     { title: "Gestión", icon: "/management-icon.png" },
     { title: "Entrega", icon: "/delivery-icon.png" },

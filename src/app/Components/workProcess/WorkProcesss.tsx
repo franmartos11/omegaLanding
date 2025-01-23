@@ -6,6 +6,7 @@ import { useInView } from "react-intersection-observer";
 
 const WorkProcess = () => {
   const steps = [
+    {title: "Nos Contactas", icon:"/lupa.png"},
     { title: "Análisis", icon: "/lupa.png" },
     { title: "Gestión", icon: "/management-icon.png" },
     { title: "Entrega", icon: "/delivery-icon.png" },
@@ -20,8 +21,8 @@ const WorkProcess = () => {
     },
     visible: (index: number) => ({
       opacity: 1,
-      x: 0,
-      y: index % 2 === 0 ? -50 : 50,
+      //x: 0,
+      //y: index % 2 === 0 ? -50 : 50,  animation to move up and down
       transition: {
         duration: 2,
         ease: "easeOut",
@@ -66,15 +67,15 @@ const WorkProcess = () => {
           >
             <motion.div
               whileHover={{ scale: 1.1 }}
-              className="flex items-center justify-center w-[5rem] h-[5rem]  sm:w-48 sm:h-48 bg-white rounded-full shadow-lg border-4 border-orange-500"
+              className="flex items-center justify-center w-[5rem] h-[5rem]  sm:w-[10rem] sm:h-[10rem] bg-white rounded-full shadow-lg border-4 border-orange-500"
             >
               <img
                 src={step.icon}
                 alt={step.title}
-                className="w-[3rem] h-[3rem] sm:w-[7rem] sm:h-[7rem] object-contain"
+                className="w-[3rem] h-[3rem] sm:w-[6rem] sm:h-[6rem] object-contain"
               />
             </motion.div>
-            <p className="mt-6 text-lg font-bold text-white">{step.title}</p>
+            <p className="mt-[1rem] text-lg font-bold text-white">{step.title}</p>
           </motion.div>
         ))}
       </div>

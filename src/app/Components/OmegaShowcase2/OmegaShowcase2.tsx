@@ -120,5 +120,3 @@ const OmegaShowcase2 = () => {
 };
 
 export default OmegaShowcase2;
-
-
