@@ -16,11 +16,11 @@ export const Contacto = () => {
                     className="flex justify-center"
                 >
                     <Image
-                        src="/callmen.webp" // Imagen de una persona hablando
+                        src="/1.png" // Imagen de una persona hablando
                         alt="Persona hablando por teléfono"
                         width={400}
                         height={400}
-                        className="object-contain rounded-lg shadow-lg"
+                        className="w-[17rem] lg:w-[25rem] h-[17rem] lg:h-[25rem] rounded-full border-2   "
                         priority
                     />
                 </motion.div>
@@ -43,15 +43,15 @@ export const Contacto = () => {
                     <div className="space-y-4">
                         <div className="flex items-center gap-4 ">
                             <FiPhone className="text-white h-6 w-6 " />
-                            <span className="text-white text-lg font-semibold hover:text-black  ">
+                            <span className="text-white text-lg font-semibold hover:text-[#f86709] ">
                                 <a href="https://wa.me/5493876195572?text=Hola!%20" >
                                     +54 9 387 619 5572
                                 </a>
                             </span>
                         </div>
-                        <div className="flex items-center gap-4">
-                            <FiMail className="text-white h-6 w-6" />
-                            <span className="text-white text-lg font-semibold hover:text-black ">
+                        <div className="flex items-center gap-4 ">
+                            <FiMail className="text-white h-6 w-6 " />
+                            <span className="text-white text-lg font-semibold hover:text-[#f86709] ">
                                 <a href="mailto:ventas@omegasoluciones.com.ar ">
                                 ventas@omegasoluciones.com.ar 
                                 </a>
