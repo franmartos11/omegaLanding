@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export const Contacto = () => {
     return (
-        <section className="py-16 px-[3rem] lg:px-[5rem] bg-[url('/bgorange.png')] bg-no-repeat bg-cover bg-center ">
+        <section id="contactanos" className="py-16 px-[3rem] lg:px-[5rem] bg-[url('/bgorange.png')] bg-no-repeat bg-cover bg-center ">
             <div className="container text-center sm:text-left mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <motion.div
                     initial={{ opacity: 0, x: 50 }}

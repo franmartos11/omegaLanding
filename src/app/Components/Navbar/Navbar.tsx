@@ -73,7 +73,14 @@ function Navbar({ className }: { className?: string }) {
           >
             MARCAS
           </Link>
-          
+          <Link
+            className="text-neutral-700 font-bold  text-xl hover:text-orange-500 cursor-pointer"
+            to="contactanos"
+            smooth={true}
+            duration={1000}
+          >
+            CONTACTANOS
+          </Link>
         </Menu>
       </div>
 
@@ -126,6 +133,14 @@ function Navbar({ className }: { className?: string }) {
             >
               NOSOTROS
             </Link>
+            <Link
+            className="text-neutral-700 font-bold  text-xl hover:text-orange-500 cursor-pointer"
+            to="contactanos"
+            smooth={true}
+            duration={1000}
+          >
+            CONTACTANOS
+          </Link>
           </Menu>
         </div>
       )}
