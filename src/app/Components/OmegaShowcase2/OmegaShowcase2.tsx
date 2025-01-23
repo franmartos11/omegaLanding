@@ -16,7 +16,7 @@ const OmegaShowcase2 = () => {
     },
     {
       id: "omega-clean",
-      logo: "/1c.png",
+      logo: "/1cc.png",
       title: "OMEGA CLEAN",
       description:
         "Fabricación y envasado de productos de higiene doméstica e institucional.",
