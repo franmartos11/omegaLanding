@@ -49,9 +49,12 @@ const OmegaShowcase2 = () => {
   };
 
   return (
-    <div id="hero" className=" bg-[url('/bhHero.png')] bg-no-repeat bg-cover bg-center flex flex-col lg:flex-row items-center justify-center p-2 lg:p-8 min-h-screen">
+    <div
+      id="hero"
+      className="bg-[url('/bhHero.png')] bg-no-repeat bg-cover bg-center flex flex-col lg:flex-row items-center justify-center p-2 lg:p-8 min-h-screen"
+    >
       {/* Contenedor central con logo e imágenes */}
-      <div className="bg-[url('/bgHome.png')] bg-center bg-no-repeat bg-cover  relative flex items-center justify-center w-[20rem] lg:w-[29rem] h-[20rem] lg:h-[29rem]">
+      <div className="bg-[url('/bgg.png')] bg-center bg-no-repeat bg-cover relative flex items-center justify-center w-[20rem] lg:w-[29rem] h-[20rem] lg:h-[29rem]">
         {/* Imágenes en las esquinas */}
         {sections.map((section, index) => {
           const positionClasses = [
@@ -69,19 +72,22 @@ const OmegaShowcase2 = () => {
             <button
               key={section.id}
               onClick={() => handleLogoClick(section.id)}
-              className={`${positionClasses[index]} ${isMainButton
-                ? "w-[10rem] lg:w-[15rem] h-[10rem] lg:h-[15rem]"
-                : "w-[5rem] lg:w-[8rem] h-[5rem] lg:h-[8rem]"
-                } rounded-full border-2 ${isActive
+              className={`${positionClasses[index]} ${
+                isMainButton
+                  ? "w-[10rem] lg:w-[15rem] h-[10rem] lg:h-[15rem]"
+                  : "w-[5rem] lg:w-[8rem] h-[5rem] lg:h-[8rem]"
+              } rounded-full border-2 ${
+                isActive
                   ? "shadow-lg shadow-orange-500 border-orange-500 scale-110"
                   : "shadow-md border-gray-300"
-                } bg-white transition-all duration-300`}
+              } bg-white transition-all duration-300`}
             >
               <img
                 src={section.logo}
                 alt={section.title}
-                className={`w-full h-full object-contain rounded-full ${isActive ? "brightness-110" : ""
-                  }`}
+                className={`w-full h-full object-contain rounded-full ${
+                  isActive ? "brightness-110" : ""
+                }`}
               />
             </button>
           );
@@ -92,17 +98,22 @@ const OmegaShowcase2 = () => {
       <motion.div
         className="ml-[0rem] lg:ml-[5rem] mt-2 lg:mt-0 text-center lg:text-start lg:pl-[2rem] max-w-[25rem] lg:max-w-[35rem] px-4"
         key={activeSection} // Key helps re-trigger transition
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.5 }} // Smooth fade in/out for text
+        initial={{ opacity: 0, y: 50 }} // Start invisible and slightly below
+        animate={{ opacity: 1, y: 0 }} // Fade in and move up
+        exit={{ opacity: 0, y: -50 }} // Fade out and move up
+        transition={{ duration: 0.5, ease: "easeInOut" }} // Smooth fade in/out for text
       >
-        <h2 className=" pt-[1rem] text-3xl lg:text-4xl font-semibold text-[#f86709]">
+        <h2 className="pt-[1rem] text-3xl lg:text-4xl font-semibold text-[#f86709]">
           {sections.find((section) => section.id === activeSection)?.title}
         </h2>
-        <p className="text-lg lg:text-2xl font-bold text-gray-500 mt-[1rem]">
+        <motion.p
+          className="text-lg lg:text-2xl font-bold text-gray-500 mt-[1rem]"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
           {sections.find((section) => section.id === activeSection)?.description}
-        </p>
+        </motion.p>
         <div className="pt-[1.5rem]">
           <Link
             className="px-6 py-3 bg-white text-black font-semibold rounded-full shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
@@ -113,7 +124,6 @@ const OmegaShowcase2 = () => {
             MAS INFORMACION
           </Link>
         </div>
-
       </motion.div>
     </div>
   );
