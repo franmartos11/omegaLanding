@@ -14,7 +14,7 @@ import WorkComponent from "./Components/workProcess/WorkComponent";
 export default function Home() {
 
   return (
-    <div>
+    <div className="font-montserrat">
       <NavbarDemo />     
       <OmegaShowcase2></OmegaShowcase2>
       <MissionVision />
