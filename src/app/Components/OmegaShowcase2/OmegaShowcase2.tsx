@@ -49,9 +49,9 @@ const OmegaShowcase2 = () => {
   };
 
   return (
-    <div id="hero" className=" bg-[url('/1bg.png')] bg-no-repeat bg-cover bg-center flex flex-col lg:flex-row items-center justify-center p-2 lg:p-8 min-h-screen">
+    <div id="hero" className=" bg-[url('/bhHero.png')] bg-no-repeat bg-cover bg-center flex flex-col lg:flex-row items-center justify-center p-2 lg:p-8 min-h-screen">
       {/* Contenedor central con logo e imágenes */}
-      <div className="bg-[url('/bgHero.png')] bg-center relative flex items-center justify-center w-[20rem] lg:w-[29rem] h-[20rem] lg:h-[29rem]">
+      <div className="bg-[url('/bgHome.png')] bg-center bg-no-repeat bg-cover  relative flex items-center justify-center w-[20rem] lg:w-[29rem] h-[20rem] lg:h-[29rem]">
         {/* Imágenes en las esquinas */}
         {sections.map((section, index) => {
           const positionClasses = [
@@ -105,7 +105,7 @@ const OmegaShowcase2 = () => {
         </p>
         <div className="pt-[1.5rem]">
           <Link
-            className="px-6 py-3 bg-white text-black font-medium rounded-full shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+            className="px-6 py-3 bg-white text-black font-semibold rounded-full shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
             to="tabsDemo"
             smooth={true}
             duration={500}

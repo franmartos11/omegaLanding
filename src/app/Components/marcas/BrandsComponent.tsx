@@ -101,7 +101,7 @@ const BrandsComponent = () => {
         <div className="mt-10">
           <button
             onClick={handleShowMore}
-            className="px-6 py-2 bg-orange-500 text-white font-medium rounded-full shadow-md hover:bg-orange-600 transition duration-300"
+            className="px-6 py-2 bg-orange-500 uppercase text-white font-semibold rounded-full shadow-md hover:bg-orange-600 transition duration-300"
           >
             Descubre más
           </button>
@@ -110,5 +110,4 @@ const BrandsComponent = () => {
     </section>
   );
 };
-
 export default BrandsComponent;
