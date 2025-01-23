@@ -40,7 +40,7 @@ const OmegaShowcase2 = () => {
       logo: "/1.png",
       title: "OMEGA SOLUCIONES",
       description:
-        "Multiples unidades de negocio diseñadas para abordar diferentes problemáticas.",
+        "Multiples unidades de negocio diseñadas para satisfacer diferentes necesidades.",
     },
   ];
 
