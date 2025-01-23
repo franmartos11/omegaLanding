@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 
 const BrandsComponent = () => {
   const allBrands = [
+    // 1. Tecnología y Electrónica
     { name: "Epson", logo: "/epsonLogo.webp" },
     { name: "Brother", logo: "/brotherLogo.webp" },
     { name: "Noblex", logo: "/noblexLogo.png" },
@@ -12,31 +13,42 @@ const BrandsComponent = () => {
     { name: "LG", logo: "/lg_logo.webp" },
     { name: "Motorola", logo: "/motorolaLogo.png" },
     { name: "Lenovo", logo: "/lenovoLogo.webp" },
-    { name: "Hp", logo: "/hpLogo.webp" },
+    { name: "Hp", logo: "/hpLogo.webp" }, 
     { name: "Dell", logo: "/dellLogo.webp" },
     { name: "Asus", logo: "/asusLogo.webp" },
-    { name: "Bosh", logo: "/BoschLogo.png" },
-    { name: "Tinacos", logo: "/tinacosLogo.webp" },
-    { name: "Biassoni", logo: "/biassoniLogo.png" },
+    { name: "Intel", logo: "/intelLogo.png" },
+    { name: "Kingston", logo: "/kingston.png" },
+  
+    // 2. Herramientas y Equipamiento Industrial
+    { name: "Bosh", logo: "/BoschLogo.png" }, // Parece Bosch, si es correcto corrige el nombre
     { name: "Makita", logo: "/makitaLogo.png" },
     { name: "Stihl", logo: "/stihlLogo.png" },
-    { name: "Dibra", logo: "/dibraLogo.png" },
-    { name: "Pauna", logo: "/pauna.jpg" },
-    { name: "Depaolo", logo: "/depaoloLogo.avif" },
+    { name: "Biassoni", logo: "/biassoniLogo.png" },
+  
+    // 3. Electrodomésticos
     { name: "Drean", logo: "/dreanLogo.png" },
-    { name: "Media Naranja", logo: "/mediaNaranjaLogo.webp" },
-    { name: "Johnson y Johnson", logo: "/j&j.svg" },
-    { name: "Elite (papel)", logo: "/eliteLogo.png" },
-    { name: "Washington", logo: "/wassingtonLogo.webp" },
-    { name: "Sacchi", logo: "/sacchiLogo.png" },
-    { name: "Raid", logo: "/raidLogo.webp" },
-    { name: "Virulana", logo: "/virulanaLogo3.png" },
-    { name: "Lysoform", logo: "/lisoform.webp" },
+    { name: "Noblex", logo: "/noblexLogo.png" }, // Noblex ya está en otra categoría, pero coincide
+  
+    // 4. Materiales de Construcción
+    { name: "Tinacos", logo: "/tinacosLogo.webp" },
+  
+    // 5. Cuidado Personal y Familiar
+    { name: "Johnson y Johnson", logo: "/j&j.svg" }, // Nombre correcto sería "Johnson & Johnson"
     { name: "Pampers", logo: "/pampersLogo.png" },
     { name: "Babysec", logo: "/babysecLogo.png" },
-    { name: "Kovalplast", logo: "/kovalplastLogo.png" },
+  
+    // 6. Descartable
+    { name: "Kovalplast", logo: "/kovalplastLogo.png" }, // Nombre correcto sería "Koval"
     { name: "Cellpack", logo: "/cellpackLogo.png" },
-    
+  
+    // 7. Productos Químicos y de Limpieza
+    { name: "Raid", logo: "/raidLogo.webp" },
+    { name: "Sacchi", logo: "/sacchiLogo.png" },
+    { name: "Elite (papel)", logo: "/eliteLogo.png" }, // Nombre correcto sería "Elite"
+    { name: "Virulana", logo: "/virulanaLogo3.png" },
+    { name: "Washington", logo: "/wassingtonLogo.webp" }, // Nombre correcto sería "Wassington"
+    { name: "Lysoform", logo: "/lisoform.webp" },
+    { name: "Media Naranja", logo: "/mediaNaranjaLogo.webp" },
   ];
 
   const [visibleBrands, setVisibleBrands] = useState(8);

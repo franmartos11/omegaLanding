@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 const WorkProcess = () => {
   const steps = [
     {title: "Nos Contactas", icon:"/phone.png"},
-    { title: "Análisis", icon: "/lupa.png" },
-    { title: "Gestión", icon: "/management-icon.png" },
-    { title: "Entrega", icon: "/delivery-icon.png" },
-    { title: "Seguimiento", icon: "/tracking-icon.png" },
+    { title: "Análisis y Presupuesto", icon: "/lupa.png" },
+    { title: "Nos Aprobas", icon: "/management-icon.png" },
+    { title: "Gestion Y Seguimiento", icon: "/tracking-icon.png" },
+    { title: "Finalizacion Con Garantia", icon: "/delivery-icon.png" },
   ];
 
   const stepVariants = {
