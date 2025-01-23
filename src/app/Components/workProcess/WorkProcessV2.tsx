@@ -57,11 +57,11 @@ const WorkProcess = () => {
               <img
                 src={step.icon}
                 alt={step.title}
-                className="w-[2rem] h-[2rem] md:w-[3rem] md:h-[3rem] object-contain"
+                className="w-[1.5rem] h-[1.5rem] md:w-[2rem] md:h-[2rem] object-contain"
               />
             </div>
             {/* Título */}
-            <p className="mt-2 text-xs md:text-xs lg:text-base font-bold text-white">
+            <p className="mt-2 text-xs lg:text-xs  text-white">
               {step.title}
             </p>
           </motion.div>
