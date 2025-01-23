@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export const Contacto = () => {
     return (
-        <section className="py-16 px-[5rem] bg-[url('/bgorange.png')] bg-no-repeat bg-cover bg-center ">
+        <section className="py-16 px-[3rem] lg:px-[5rem] bg-[url('/bgorange.png')] bg-no-repeat bg-cover bg-center ">
             <div className="container text-center sm:text-left mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <motion.div
                     initial={{ opacity: 0, x: 50 }}
@@ -20,7 +20,7 @@ export const Contacto = () => {
                         alt="Persona hablando por teléfono"
                         width={400}
                         height={400}
-                        className="w-[17rem] lg:w-[25rem] h-[17rem] lg:h-[25rem] rounded-full border-2   "
+                        className="w-[13rem] lg:w-[25rem] h-[13rem] lg:h-[25rem] rounded-full border-2   "
                         priority
                     />
                 </motion.div>
@@ -32,10 +32,10 @@ export const Contacto = () => {
                     viewport={{ once: true }}
                     className="space-y-8"
                 >
-                    <h2 className="text-4xl uppercase text-white font-semibold lg:text-6xl">
+                    <h2 className="text-2xl uppercase text-white font-semibold lg:text-6xl">
                         ¿Dónde Nos Encontramos?
                     </h2>
-                    <p className="text-white text-lg">
+                    <p className="text-white text-sm lg:text-lg">
                         Ven a visitarnos o contáctanos por teléfono o correo electrónico.
                     </p>
 
@@ -43,7 +43,7 @@ export const Contacto = () => {
                     <div className="space-y-4">
                         <div className="flex items-center gap-4 ">
                             <FiPhone className="text-white h-6 w-6 " />
-                            <span className="text-white text-lg font-semibold hover:text-[#f86709] ">
+                            <span className="text-white text-sm lg:text-lg font-semibold hover:text-[#f86709] ">
                                 <a href="https://wa.me/5493876195572?text=Hola!%20" >
                                     +54 9 387 619 5572
                                 </a>
@@ -51,9 +51,9 @@ export const Contacto = () => {
                         </div>
                         <div className="flex items-center gap-4 ">
                             <FiMail className="text-white h-6 w-6 " />
-                            <span className="text-white text-lg font-semibold hover:text-[#f86709] ">
+                            <span className="text-white text-sm lg:text-lg font-semibold hover:text-[#f86709] ">
                                 <a href="mailto:ventas@omegasoluciones.com.ar ">
-                                ventas@omegasoluciones.com.ar 
+                                    ventas@omegasoluciones.com.ar 
                                 </a>
                             </span>
                         </div>

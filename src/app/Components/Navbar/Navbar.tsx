@@ -51,6 +51,14 @@ function Navbar({ className }: { className?: string }) {
           </Link>
           <Link
             className="text-neutral-700 font-bold  text-xl hover:text-orange-500 cursor-pointer"
+            to="nosotros"
+            smooth={true}
+            duration={500}
+          >
+            NOSOTROS
+          </Link>
+          <Link
+            className="text-neutral-700 font-bold  text-xl hover:text-orange-500 cursor-pointer"
             to="tabsDemo"
             smooth={true}
             duration={500}
@@ -65,14 +73,7 @@ function Navbar({ className }: { className?: string }) {
           >
             MARCAS
           </Link>
-          <Link
-            className="text-neutral-700 font-bold  text-xl hover:text-orange-500 cursor-pointer"
-            to="nosotros"
-            smooth={true}
-            duration={500}
-          >
-            NOSOTROS
-          </Link>
+          
         </Menu>
       </div>
 

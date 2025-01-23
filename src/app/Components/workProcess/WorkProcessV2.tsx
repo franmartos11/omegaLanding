@@ -61,7 +61,7 @@ const WorkProcess = () => {
               />
             </div>
             {/* Título */}
-            <p className="mt-2 text-xs md:text-sm lg:text-base font-bold text-white">
+            <p className="mt-2 text-xs md:text-xs lg:text-base font-bold text-white">
               {step.title}
             </p>
           </motion.div>
