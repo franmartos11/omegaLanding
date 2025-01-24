@@ -55,8 +55,6 @@ const BrandsComponentDivition = () => {
     { name: "Lysoform", logo: "/lisoform.webp", type: "Productos Químicos y de Limpieza" },
     { name: "Media Naranja", logo: "/mediaNaranjaLogo.webp", type: "Productos Químicos y de Limpieza" },
   ];
-
-  const [visibleBrands, setVisibleBrands] = useState(8);
   
 
   
@@ -94,7 +92,7 @@ const BrandsComponentDivition = () => {
             <div key={type} className="mb-10">
               <h3 className="text-2xl font-bold text-left text-black mb-4">{type}</h3>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-                {brands.slice(0, visibleBrands).map((brand, index) => (
+                {brands.map((brand, index) => (
                   <div
                     key={index}
                     className="flex items-center justify-center bg-white rounded-lg shadow-md p-4 transition-all duration-300 hover:bg-gradient-to-b hover:to-orange-400 hover:from-orange-100"
