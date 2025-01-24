@@ -5,7 +5,7 @@ import { TabsDemo } from "./Components/TabsMenu/TabsDemo";
 import FloatingButton from "./Components/WhatsAppLogo/WhatsAppButton";
 import { Contacto } from "./Components/contacto/Contacto";
 import Footer from "./Components/footer/Footer";
-import BrandsComponent from "./Components/marcas/BrandsComponent";
+import BrandsComponentDivition from "./Components/marcas/BrandsConponentDivition";
 import MissionVision from "./Components/misionVision/MisionVision";
 import StatsComponent from "./Components/stats/StatsComponent";
 import WorkComponent from "./Components/workProcess/WorkComponent";
@@ -21,7 +21,7 @@ export default function Home() {
       <TabsDemo />
       <WorkComponent/>
       <StatsComponent />
-      <BrandsComponent />
+      <BrandsComponentDivition />
       <Contacto/>
       <Footer />
       <FloatingButton />
