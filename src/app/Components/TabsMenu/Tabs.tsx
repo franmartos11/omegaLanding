@@ -65,7 +65,7 @@ export const Tabs = ({
                         onMouseEnter={() => !isMobile && setHovering(true)} // No ejecuta si es móvil
                         onMouseLeave={() => !isMobile && setHovering(false)} // No ejecuta si es móvil
                         className={cn(
-                            "relative px-4 py-2 rounded-full",
+                            "relative px-4  rounded-full",
                             tabClassName
                         )}
                         style={{ transformStyle: "preserve-3d" }}

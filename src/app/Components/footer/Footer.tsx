@@ -31,6 +31,15 @@ const Footer = () => {
             </Link2>
           </li>
           <li>
+          <Link2 className="cursor-pointer mb-6 text-xs md:text-xl hover:underline"
+              to="nosotros"
+              smooth={true}
+              duration={1000}
+            >
+              NOSOTROS
+            </Link2>
+          </li>
+          <li>
             <Link2 className="cursor-pointer mb-6 text-xs md:text-xl hover:underline"
               to="tabsDemo"
               smooth={true}
@@ -50,12 +59,13 @@ const Footer = () => {
           </li>
           <li>
             <Link2 className="cursor-pointer mb-6 text-xs md:text-xl hover:underline"
-              to="nosotros"
+              to="contactanos"
               smooth={true}
               duration={1000}
             >
-              NOSOTROS
+              CONTACTANOS
             </Link2>
+            
           </li>
         </ul>
       </nav>
