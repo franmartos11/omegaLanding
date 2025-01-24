@@ -39,10 +39,10 @@ function Navbar({ className }: { className?: string }) {
       </div>
 
 
-      <div className="hidden sm:flex pr-[0rem] sm:pr-[5rem] lg:pr-[0rem] ">
+      <div className="hidden sm:flex  ">
         <Menu>
           <Link
-            className="text-neutral-700 font-bold  px-[0.5rem] text-lg hover:text-orange-500 cursor-pointer"
+            className="text-neutral-700 font-bold  px-[0.1rem] lg:px-[0.5rem] text-sm lg:text-lg hover:text-orange-500 cursor-pointer"
             to="hero"
             smooth={true}
             duration={1000}
@@ -50,7 +50,7 @@ function Navbar({ className }: { className?: string }) {
             INICIO
           </Link>
           <Link
-            className="text-neutral-700 font-bold px-[0.5rem] text-lg hover:text-orange-500 cursor-pointer"
+            className="text-neutral-700 font-bold px-[0.1rem] lg:px-[0.5rem] text-sm lg:text-lg hover:text-orange-500 cursor-pointer"
             to="nosotros"
             smooth={true}
             duration={500}
@@ -58,7 +58,7 @@ function Navbar({ className }: { className?: string }) {
             NOSOTROS
           </Link>
           <Link
-            className="text-neutral-700 font-bold px-[0.5rem] text-lg hover:text-orange-500 cursor-pointer"
+            className="text-neutral-700 font-bold px-[0.1rem] lg:px-[0.5rem] text-sm lg:text-lg hover:text-orange-500 cursor-pointer"
             to="tabsDemo"
             smooth={true}
             duration={500}
@@ -66,7 +66,7 @@ function Navbar({ className }: { className?: string }) {
             UNIDADES DE NEGOCIO
           </Link>
           <Link
-            className="text-neutral-700 font-bold px-[0.5rem]  text-lg hover:text-orange-500 cursor-pointer"
+            className="text-neutral-700 font-bold px-[0.1rem] lg:px-[0.5rem]  text-sm lg:text-lg hover:text-orange-500 cursor-pointer"
             to="marcas"
             smooth={true}
             duration={1000}
@@ -74,7 +74,7 @@ function Navbar({ className }: { className?: string }) {
             MARCAS
           </Link>
           <Link
-            className="text-neutral-700 font-bold px-[0.5rem] text-lg hover:text-orange-500 cursor-pointer"
+            className="text-neutral-700 font-bold px-[0.1rem] lg:px-[0.5rem] text-sm lg:text-lg hover:text-orange-500 cursor-pointer"
             to="contactanos"
             smooth={true}
             duration={1000}
