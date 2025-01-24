@@ -70,9 +70,7 @@ const BrandsComponentDivition = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleShowMore = () => {
-    setVisibleBrands((prev) => Math.min(prev + (isMobile ? 8 : 16), allBrands.length));
-  };
+  
 
   const groupedBrands: { [key: string]: Brand[] } = allBrands.reduce((acc, brand) => {
     if (!acc[brand.type]) {
