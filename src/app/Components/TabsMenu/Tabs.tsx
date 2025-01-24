@@ -98,7 +98,7 @@ export const Tabs = ({
                 tabs={tabs}
                 active={active}
                 hovering={!isMobile && hovering} // Desactiva hovering si es móvil
-                className={cn("mt-[3rem] sm:mt-[11rem]", contentClassName)}
+                className={cn("mt-[3rem] sm:mt-[7rem]", contentClassName)}
             />
         </>
     );
