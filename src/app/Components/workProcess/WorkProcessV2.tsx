@@ -9,7 +9,7 @@ const WorkProcess = () => {
     { title: "Análisis y Presupuesto", icon: "/lupa.png" },
     { title: "Nos Aprobas", icon: "/management-icon.png" },
     { title: "Gestion Y Seguimiento", icon: "/tracking-icon.png" },
-    { title: "Finalizacion Con Garantia", icon: "/delivery-icon.png" },
+    { title: "Finalizacion Con Garantia", icon: "/contrato.png" },
   ];
 
   const stepVariants = {

@@ -10,7 +10,7 @@ const WorkProcess = () => {
     { title: "ANÁLISIS Y PRESUPUESTO", icon: "/lupa.png" },
     { title: "APROBACION", icon: "/management-icon.png" },
     { title: "GESTIÓN Y SEGUIMIENTO", icon: "/tracking-icon.png" },
-    { title: "FINALIZACIÓN CON GARANTÍA", icon: "/delivery-icon.png" },
+    { title: "FINALIZACIÓN CON GARANTÍA", icon: "/contrato.png" },
   ];
 
   const stepVariants = {
@@ -78,7 +78,7 @@ const WorkProcess = () => {
               {step.title}
             </p>
           </motion.div>
-        ))}ß
+        ))}
       </div>
     </section>
   );
