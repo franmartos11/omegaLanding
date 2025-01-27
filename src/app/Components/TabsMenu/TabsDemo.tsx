@@ -38,17 +38,15 @@ export function TabsDemo() {
       value: "content",
       link: "/apps-a-medida",
       logo: "/2t.png",
-      src: "/22.png",
+      src: "/omegatech.png",
       alt: "OmegaTechLogo",
       title: "Apps-a-Medida-data",
     },
   ];
 
- 
-
 
   return (
-    
+
     <div className=" bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center sm:pt-[4rem] sm:min-h-[100vh]  " id="tabsDemo" >
       <motion.div
         ref={titleRef}
@@ -77,7 +75,7 @@ export function TabsDemo() {
         <Tabs tabs={tabs} />
       </motion.div>
     </div>
-    
+
   );
 }
 

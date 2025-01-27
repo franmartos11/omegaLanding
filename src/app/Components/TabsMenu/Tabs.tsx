@@ -139,12 +139,12 @@ export const FadeInDiv = ({
                         className
                     )}
                 >
-                    <div className="flex items-center justify-center w-full h-[26rem]">
+                    <div className="flex items-center justify-center w-full h-[29rem]">
                         <img
                             src={tab.src}
                             alt={tab.alt}
                             title={tab.title}
-                            className="rounded-[2.5rem] sm:w-[70%]"
+                            className="rounded-[2.5rem] sm:w-[80%]"
                         />
                     </div>
                 </motion.div>

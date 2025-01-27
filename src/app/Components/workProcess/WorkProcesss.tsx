@@ -78,7 +78,7 @@ const WorkProcess = () => {
               {step.title}
             </p>
           </motion.div>
-        ))}
+        ))}ß
       </div>
     </section>
   );
