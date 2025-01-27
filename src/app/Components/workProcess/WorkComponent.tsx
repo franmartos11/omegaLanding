@@ -6,11 +6,12 @@ import WorkProcess from "./WorkProcesss";
 
 
 const WorkProcessWrapper = () => {
-  const isMobile = useDeviceType();
+  //const isMobile = useDeviceType();
 
   return (
     <div>
-      {isMobile ? <WorkProcess /> : <WorkProcess />}
+      {/*isMobile ? <WorkProcess /> : <WorkProcess /> */}
+      <WorkProcess></WorkProcess>
     </div>
   );
 };
