@@ -51,11 +51,8 @@ const BrandsComponentDivition = () => {
     return acc;
   }, {} as { [key: string]: Brand[] });
 
-  const [showAllCategories, setShowAllCategories] = useState(false);
-
-  const categories = Object.entries(groupedBrands);
-  const firstCategory = categories[0];
-  const otherCategories = categories.slice(1);
+  // Por defecto, mostrar "Tecnología y Electrónica"
+  const [visibleCategory, setVisibleCategory] = useState<string | null>("Tecnología y Electrónica");
 
   return (
     <section
@@ -75,14 +72,32 @@ const BrandsComponentDivition = () => {
         </div>
       </div>
 
-      {/* Grid de Marcas */}
-      <div className="flex sm:pt-[5rem] pt-[3rem] pb-[3rem] justify-center">
-        <div className="w-full max-w-[80%]">
-          {/* Primera Categoría */}
-          <div className="mb-10">
-            <h3 className="text-2xl font-bold text-left text-black mb-4">{firstCategory[0]}</h3>
+      {/* Botones de Categorías */}
+      <div className="container mx-auto mt-10">
+        <div className="flex flex-wrap justify-center gap-4">
+          {Object.entries(groupedBrands).map(([type]) => (
+            <button
+              key={type}
+              onClick={() =>
+                setVisibleCategory((prev) => (prev === type ? null : type))
+              }
+              className={`px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg shadow-lg hover:bg-orange-700 transition duration-300 ${
+                visibleCategory === type ? "bg-orange-700" : ""
+              }`}
+            >
+              {type}
+            </button>
+          ))}
+        </div>
+
+        {/* Marcas de la Categoría Seleccionada */}
+        {visibleCategory && (
+          <div className="mt-10">
+            <h3 className="text-2xl font-bold text-left text-black mb-4">
+              {visibleCategory}
+            </h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-              {firstCategory[1].map((brand, index) => (
+              {groupedBrands[visibleCategory].map((brand, index) => (
                 <div
                   key={index}
                   className="flex items-center justify-center bg-white rounded-lg shadow-md p-4 transition-all duration-300 hover:bg-gradient-to-b hover:to-orange-400 hover:from-orange-100"
@@ -97,42 +112,7 @@ const BrandsComponentDivition = () => {
               ))}
             </div>
           </div>
-
-          {/* Otras Categorías */}
-          {showAllCategories &&
-            otherCategories.map(([type, brands]) => (
-              <div key={type} className="mb-10">
-                <h3 className="text-2xl font-bold text-left text-black mb-4">{type}</h3>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-                  {brands.map((brand, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center justify-center bg-white rounded-lg shadow-md p-4 transition-all duration-300 hover:bg-gradient-to-b hover:to-orange-400 hover:from-orange-100"
-                    >
-                      <img
-                        src={brand.logo}
-                        alt={brand.name}
-                        title={brand.name}
-                        className="h-[4rem] w-[4rem] object-contain"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-
-          {/* Botón para mostrar más */}
-          {!showAllCategories && (
-            <div className="text-center">
-              <button
-                onClick={() => setShowAllCategories(true)}
-                className="mt-6 px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg shadow-lg hover:bg-orange-700 transition duration-300"
-              >
-                Mostrar más categorías
-              </button>
-            </div>
-          )}
-        </div>
+        )}
       </div>
     </section>
   );
