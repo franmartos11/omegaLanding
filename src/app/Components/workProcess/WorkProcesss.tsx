@@ -6,18 +6,15 @@ import { useInView } from "react-intersection-observer";
 
 const WorkProcess = () => {
   const steps = [
-    { title: "NOS CONTACTAS", icon: "/phone.png" },
+    { title: "CONTACTO", icon: "/phone.png" },
     { title: "ANÁLISIS Y PRESUPUESTO", icon: "/lupa.png" },
-    { title: "NOS APRUEBAS", icon: "/management-icon.png" },
+    { title: "APROBACION", icon: "/management-icon.png" },
     { title: "GESTIÓN Y SEGUIMIENTO", icon: "/tracking-icon.png" },
     { title: "FINALIZACIÓN CON GARANTÍA", icon: "/delivery-icon.png" },
   ];
 
   const stepVariants = {
-    hidden: {
-      opacity: 0,
-      y: 50,
-    },
+    hidden: { opacity: 0, y: 50 },
     visible: (index: number) => ({
       opacity: 1,
       y: 0,
@@ -53,11 +50,13 @@ const WorkProcess = () => {
       </div>
 
       {/* Steps Section */}
-      <div className="pt-[5rem] relative flex flex-col lg:flex-row lg:justify-center lg:gap-16 items-center space-y-16 lg:space-y-0">
+      <div className="pt-[5rem] flex flex-wrap justify-center items-center gap-x-16 gap-y-16">
         {steps.map((step, index) => (
           <motion.div
             key={index}
-            className="relative flex flex-col items-center"
+            className={`relative flex flex-col items-center ${
+              index % 2 === 0 ? "lg:mt-[-5rem]" : "lg:mt-[5rem]"
+            }`}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             variants={stepVariants}
@@ -71,7 +70,7 @@ const WorkProcess = () => {
               <img
                 src={step.icon}
                 alt={step.title}
-                className="w-[3rem] h-[3rem] sm:w-[6rem] sm:h-[6rem] object-contain"
+                className="w-[4rem] h-[4rem] sm:w-[6rem] sm:h-[6rem] object-contain"
               />
             </motion.div>
             {/* Step Title */}
