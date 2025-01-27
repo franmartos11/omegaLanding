@@ -12,7 +12,7 @@ const WorkProcessWrapper = () => {
 
   return (
     <div>
-      {isMobile ? <WorkProcessV2 /> : <WorkProcess />}
+      {isMobile ? <WorkProcess /> : <WorkProcess />}
     </div>
   );
 };
