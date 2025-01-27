@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import useDeviceType from "./detect";
+
 import WorkProcess from "./WorkProcesss";
 
 
