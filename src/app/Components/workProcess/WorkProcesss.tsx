@@ -6,11 +6,11 @@ import { useInView } from "react-intersection-observer";
 
 const WorkProcess = () => {
   const steps = [
-    { title: "CONTACTO", icon: "/phone.png" },
+    { title: "NOS CONTACTAS", icon: "/phone.png" },
     { title: "ANÁLISIS Y PRESUPUESTO", icon: "/lupa.png" },
-    { title: "APROBACION", icon: "/management-icon.png" },
+    { title: "NOS APROBÁS", icon: "/management-icon.png" },
     { title: "GESTIÓN Y SEGUIMIENTO", icon: "/tracking-icon.png" },
-    { title: "FINALIZACIÓN CON GARANTÍA", icon: "/contrato.png" },
+    { title: "FINALIZACIÓN CON GARANTÍA", icon: "/delivery-icon.png" },
   ];
 
   const stepVariants = {
@@ -26,7 +26,6 @@ const WorkProcess = () => {
     }),
   };
 
-  // Intersection Observer
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -70,7 +69,7 @@ const WorkProcess = () => {
               <img
                 src={step.icon}
                 alt={step.title}
-                className="w-[4rem] h-[4rem] sm:w-[6rem] sm:h-[6rem] object-contain"
+                className="w-[3rem] h-[3rem] sm:w-[6rem] sm:h-[6rem] object-contain"
               />
             </motion.div>
             {/* Step Title */}
