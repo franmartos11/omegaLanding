@@ -51,7 +51,7 @@ const OmegaShowcase2 = () => {
   return (
     <div
       id="hero"
-      className="sm:bg-[url('/homebg.png')] bg-[url('/graybg.png')]  bg-no-repeat bg-cover bg-center flex flex-col lg:flex-row items-center justify-center p-2 lg:p-8 min-h-screen"
+      className="sm:bg-[url('/brrr.png')] bg-[url('/graybg.png')]  bg-no-repeat bg-cover bg-center flex flex-col lg:flex-row items-center justify-center p-2 lg:p-8 min-h-screen"
     >
       {/* Contenedor central con logo e imágenes */}
       <div className="bg-[url('/bgg.png')] bg-center bg-no-repeat bg-cover relative flex items-center justify-center w-[20rem] lg:w-[29rem] h-[20rem] lg:h-[29rem]">
