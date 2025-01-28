@@ -40,7 +40,7 @@ const OmegaShowcase2 = () => {
       logo: "/1.png",
       title: "OMEGA SOLUCIONES",
       description:
-        "Multiples unidades de negocio diseñadas para satisfacer diferentes necesidades.",
+        "Múltiples unidades de negocio diseñadas para satisfacer diferentes necesidades.",
     },
   ];
 
@@ -116,12 +116,12 @@ const OmegaShowcase2 = () => {
         </motion.p>
         <div className="pt-[1.5rem]">
           <Link
-            className="px-6 py-3 bg-white text-black font-semibold rounded-full shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+            className="px-6 py-3 uppercase bg-white text-black font-semibold rounded-full shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
             to="tabsDemo"
             smooth={true}
             duration={500}
           >
-            MAS INFORMACION
+            Más Información
           </Link>
         </div>
       </motion.div>
