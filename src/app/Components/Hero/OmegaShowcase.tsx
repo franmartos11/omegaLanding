@@ -16,7 +16,7 @@ const logos: LogoData[] = [
     logo: "/omegaSolucionesLogo3.png",
     title: "OMEGA SOLUCIONES",
     description:
-      "Multiples unidades de negocio diseñadas para abordar diferentes problemáticas.",
+      "Múltiples unidades de negocio diseñadas para abordar diferentes problemáticas.",
   },
   {
     id: "omega-distribuciones",
@@ -58,7 +58,7 @@ const OmegaShowcase: React.FC = () => {
   return (
     <div
       id="hero"
-      className="bg-[url('/bggray.png')] bg-no-repeat bg-cover bg-center min-h-screen flex flex-col items-center justify-start px-4 pt-[5rem] sm:pt-[10rem] pb-[3rem]"
+      className="bg-[url('/bghome2.png')] bg-no-repeat bg-cover bg-center min-h-screen flex flex-col items-center justify-start px-4 pt-[5rem] sm:pt-[10rem] pb-[3rem]"
     >
       {/* Contenido Principal */}
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 w-full max-w-5xl mb-0 lg:mb-10">
@@ -92,7 +92,7 @@ const OmegaShowcase: React.FC = () => {
           duration={800}
           className="bg-orange-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-orange-600 transition-all cursor-pointer"
         >
-          Mas Informacion
+          Más Información
         </Link>
       </div>
         </div>
