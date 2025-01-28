@@ -10,6 +10,7 @@ const BrandsComponentDivition = () => {
   };
 
   const allBrands: Brand[] = [
+    // Tecnología y Electrónica
     { name: "Epson", logo: "/epsonLogo.webp", type: "Tecnología y Electrónica" },
     { name: "Brother", logo: "/brotherLogo.webp", type: "Tecnología y Electrónica" },
     { name: "Noblex", logo: "/noblexLogo.png", type: "Tecnología y Electrónica" },
@@ -22,14 +23,40 @@ const BrandsComponentDivition = () => {
     { name: "Dell", logo: "/dellLogo.webp", type: "Tecnología y Electrónica" },
     { name: "Asus", logo: "/asusLogo.webp", type: "Tecnología y Electrónica" },
     { name: "Intel", logo: "/intelLogo.png", type: "Tecnología y Electrónica" },
+
+    // Herramientas y Equipamiento Industrial
     { name: "Bosch", logo: "/BoschLogo.png", type: "Herramientas y Equipamiento Industrial" },
     { name: "Cat", logo: "/cat.png", type: "Herramientas y Equipamiento Industrial" },
     { name: "Makita", logo: "/makitaLogo.png", type: "Herramientas y Equipamiento Industrial" },
     { name: "Stihl", logo: "/stihlLogo.png", type: "Herramientas y Equipamiento Industrial" },
     { name: "Biassoni", logo: "/biassoniLogo.png", type: "Herramientas y Equipamiento Industrial" },
+
+    // Electrodomésticos
     { name: "Drean", logo: "/dreanLogo.png", type: "Electrodomésticos" },
     { name: "Noblex", logo: "/noblexLogo.png", type: "Electrodomésticos" },
+    { name: "LG", logo: "/lg_logo.webp", type: "Electrodomésticos" },
     { name: "Inelro", logo: "/inelro.png", type: "Electrodomésticos" },
+
+    // Materiales de Construcción
+    { name: "Tinacos", logo: "/tinacosLogo.webp", type: "Materiales de Construcción" },
+
+    // Cuidado Personal y Familiar
+    { name: "Johnson & Johnson", logo: "/j&j.svg", type: "Cuidado Personal y Familiar" },
+    { name: "Pampers", logo: "/pampersLogo.png", type: "Cuidado Personal y Familiar" },
+    { name: "Babysec", logo: "/babysecLogo.png", type: "Cuidado Personal y Familiar" },
+
+    // Descartable
+    { name: "Koval", logo: "/kovalplastLogo.png", type: "Descartable" },
+    { name: "Cellpack", logo: "/cellpackLogo.png", type: "Descartable" },
+
+    // Productos Químicos y de Limpieza
+    { name: "Raid", logo: "/raidLogo.webp", type: "Productos Químicos y de Limpieza" },
+    { name: "Sacchi", logo: "/sacchiLogo.png", type: "Productos Químicos y de Limpieza" },
+    { name: "Elite", logo: "/eliteLogo.png", type: "Productos Químicos y de Limpieza" },
+    { name: "Virulana", logo: "/virulanaLogo3.png", type: "Productos Químicos y de Limpieza" },
+    { name: "Wassington", logo: "/wassingtonLogo.webp", type: "Productos Químicos y de Limpieza" },
+    { name: "Lysoform", logo: "/lisoform.webp", type: "Productos Químicos y de Limpieza" },
+    { name: "Media Naranja", logo: "/mediaNaranjaLogo.webp", type: "Productos Químicos y de Limpieza" },
   ];
 
   const groupedBrands: { [key: string]: Brand[] } = allBrands.reduce((acc, brand) => {
