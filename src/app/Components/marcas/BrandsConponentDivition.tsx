@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 const BrandsComponentDivition = () => {
   type Brand = {
@@ -54,8 +54,23 @@ const BrandsComponentDivition = () => {
     return acc;
   }, {} as { [key: string]: Brand[] });
 
-  // Por defecto, mostrar "Tecnología y Electrónica"
+  // Mostrar "Tecnología y Electrónica" por defecto
   const [visibleCategory, setVisibleCategory] = useState<string | null>("Tecnología y Electrónica");
+
+  // Referencia para hacer scroll a la sección de logos en mobile
+  const brandsRef = useRef<HTMLDivElement>(null);
+
+  // Manejar clic en una categoría
+  const handleCategoryClick = (type: string) => {
+    setVisibleCategory((prev) => (prev === type ? null : type));
+
+    // Si está en móvil, hacer scroll hasta los logos
+    if (window.innerWidth < 768 && brandsRef.current) {
+      setTimeout(() => {
+        brandsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 200);
+    }
+  };
 
   return (
     <section
@@ -81,12 +96,8 @@ const BrandsComponentDivition = () => {
           {Object.entries(groupedBrands).map(([type]) => (
             <button
               key={type}
-              onClick={() =>
-                setVisibleCategory((prev) => (prev === type ? null : type))
-              }
-              className={`px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg shadow-lg hover:bg-orange-700 transition duration-300 ${
-                visibleCategory === type ? "bg-orange-700" : ""
-              }`}
+              onClick={() => handleCategoryClick(type)}
+              className="w-[50%] sm:w-auto px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg shadow-lg hover:bg-orange-700 transition duration-300 text-center"
             >
               {type}
             </button>
@@ -95,10 +106,8 @@ const BrandsComponentDivition = () => {
 
         {/* Marcas de la Categoría Seleccionada */}
         {visibleCategory && (
-          <div className="mt-10">
-            <h3 className="text-2xl font-bold text-left text-black mb-4">
-              {visibleCategory}
-            </h3>
+          <div ref={brandsRef} className="mt-10">
+            <h3 className="text-2xl font-bold text-left text-black mb-4">{visibleCategory}</h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
               {groupedBrands[visibleCategory].map((brand, index) => (
                 <div
