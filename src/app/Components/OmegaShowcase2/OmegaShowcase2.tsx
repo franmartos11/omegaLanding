@@ -1,6 +1,6 @@
 "use client";
-import { useState } from "react";
-import { motion } from "framer-motion"; // Import motion from framer-motion
+import { useState, useEffect, SetStateAction } from "react";
+import { motion } from "framer-motion"; 
 import { Link } from "react-scroll";
 
 const OmegaShowcase2 = () => {
@@ -44,18 +44,28 @@ const OmegaShowcase2 = () => {
     },
   ];
 
-  const handleLogoClick = (id: string) => {
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSection((prev) => {
+        const currentIndex = sections.findIndex((section) => section.id === prev);
+        const nextIndex = (currentIndex + 1) % sections.length;
+        return sections[nextIndex].id;
+      });
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleLogoClick = (id: SetStateAction<string>) => {
     setActiveSection(id);
   };
 
   return (
     <div
       id="hero"
-      className="sm:bg-[url('/brrr.png')] bg-[url('/graybg.png')]  bg-no-repeat bg-cover bg-center flex flex-col lg:flex-row items-center justify-center p-2 lg:p-8 min-h-screen"
+      className="sm:bg-[url('/brrr.png')] bg-[url('/graybg.png')] bg-no-repeat bg-cover bg-center flex flex-col lg:flex-row items-center justify-center p-2 lg:p-8 min-h-screen"
     >
-      {/* Contenedor central con logo e imágenes */}
       <div className="bg-[url('/bgg.png')] bg-center bg-no-repeat bg-cover relative flex items-center justify-center w-[20rem] lg:w-[29rem] h-[20rem] lg:h-[29rem]">
-        {/* Imágenes en las esquinas */}
         {sections.map((section, index) => {
           const positionClasses = [
             "absolute top-2 left-2",
@@ -65,7 +75,6 @@ const OmegaShowcase2 = () => {
           ];
 
           const isActive = section.id === activeSection;
-
           const isMainButton = section.id === "omega-soluciones";
 
           return (
@@ -94,14 +103,13 @@ const OmegaShowcase2 = () => {
         })}
       </div>
 
-      {/* Section for title and description */}
       <motion.div
         className="ml-[0rem] lg:ml-[5rem] mt-2 lg:mt-0 text-center lg:text-start lg:pl-[2rem] max-w-[25rem] lg:max-w-[35rem] px-4"
-        key={activeSection} // Key helps re-trigger transition
-        initial={{ opacity: 0, y: 50 }} // Start invisible and slightly below
-        animate={{ opacity: 1, y: 0 }} // Fade in and move up
-        exit={{ opacity: 0, y: -50 }} // Fade out and move up
-        transition={{ duration: 0.5, ease: "easeInOut" }} // Smooth fade in/out for text
+        key={activeSection}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -50 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         <h2 className="pt-[1rem] text-3xl lg:text-4xl font-semibold text-[#f86709]">
           {sections.find((section) => section.id === activeSection)?.title}
