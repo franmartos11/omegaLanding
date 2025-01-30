@@ -18,7 +18,6 @@ const Footer = () => {
         />
       </div>
 
-
       <nav className="mb-6">
         <ul className="flex flex-wrap justify-center space-x-4 lg:space-x-8 font-bold text-sm md:text-base">
           <li>
@@ -31,7 +30,7 @@ const Footer = () => {
             </Link2>
           </li>
           <li>
-          <Link2 className="cursor-pointer mb-6 text-xs md:text-xl hover:underline"
+            <Link2 className="cursor-pointer mb-6 text-xs md:text-xl hover:underline"
               to="nosotros"
               smooth={true}
               duration={1000}
@@ -65,11 +64,10 @@ const Footer = () => {
             >
               CONTACTANOS
             </Link2>
-            
+
           </li>
         </ul>
       </nav>
-
 
       <Link aria-label="maps" target="_blank" href={"https://www.google.com/maps/place/Omega+Soluciones/@-24.7618653,-65.41137,15z/data=!4m6!3m5!1s0x941bc36adcbf6bd9:0x9db0642ee2c946ce!8m2!3d-24.7618653!4d-65.41137!16s%2Fg%2F11gmds8b0m?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D"}>
         <p className="mb-6 text-xs md:text-sm hover:underline">

@@ -26,7 +26,7 @@ const TeamSection = () => {
         viewport={{ once: true, amount: 0.2 }}
         className="text-center px-6"
       >
-        {/* Título */}
+
         <motion.h2
           variants={fadeInUp}
           custom={0}
@@ -35,7 +35,6 @@ const TeamSection = () => {
           NOSOTROS
         </motion.h2>
 
-        {/* Separador */}
         <motion.div
           variants={fadeInUp}
           custom={1}
@@ -46,7 +45,6 @@ const TeamSection = () => {
           <span className="inline-block w-5 h-1 bg-orange-500 rounded-full"></span>
         </motion.div>
 
-        {/* Texto */}
         <motion.div
           variants={fadeInUp}
           custom={2}

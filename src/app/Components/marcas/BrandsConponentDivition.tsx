@@ -73,12 +73,12 @@ const BrandsComponentDivition = () => {
   const handleCategoryClick = (type: string) => {
     setVisibleCategory((prev) => (prev === type ? null : type));
 
-    // Solo hacer scroll en mobile y si la referencia no es null
+
     if (window.innerWidth < 768) {
       setTimeout(() => {
         if (brandsRef.current) {
           window.scrollTo({
-            top: brandsRef.current.offsetTop - 120, // Offset para ver el título
+            top: brandsRef.current.offsetTop - 120,
             behavior: "smooth",
           });
         }

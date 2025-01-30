@@ -24,20 +24,19 @@ function Navbar({ className }: { className?: string }) {
     >
 
       <div className="logo">
-      <Link
-            className="cursor-pointer"
-            to="hero"
-            smooth={true}
-            duration={500}
-          >
-        <img
-          src="/omegaLogo3.png"
-          alt="Company Logo"
-          className="h-[3rem] w-auto"
-        />
+        <Link
+          className="cursor-pointer"
+          to="hero"
+          smooth={true}
+          duration={500}
+        >
+          <img
+            src="/omegaLogo3.png"
+            alt="Company Logo"
+            className="h-[3rem] w-auto"
+          />
         </Link>
       </div>
-
 
       <div className="hidden sm:flex  ">
         <Menu>
@@ -84,7 +83,6 @@ function Navbar({ className }: { className?: string }) {
         </Menu>
       </div>
 
-
       <button
         className="sm:hidden flex items-center text-neutral-700 focus:outline-none"
         onClick={toggleMobileMenu}
@@ -96,7 +94,6 @@ function Navbar({ className }: { className?: string }) {
           <span className="block w-6 h-0.5 bg-gray-700"></span>
         </div>
       </button>
-
 
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white shadow-lg z-40 sm:hidden">
@@ -134,13 +131,13 @@ function Navbar({ className }: { className?: string }) {
               NOSOTROS
             </Link>
             <Link
-            className="text-neutral-700 font-bold  text-lg hover:text-orange-500 cursor-pointer"
-            to="contactanos"
-            smooth={true}
-            duration={1000}
-          >
-            CONTACTANOS
-          </Link>
+              className="text-neutral-700 font-bold  text-lg hover:text-orange-500 cursor-pointer"
+              to="contactanos"
+              smooth={true}
+              duration={1000}
+            >
+              CONTACTANOS
+            </Link>
           </Menu>
         </div>
       )}

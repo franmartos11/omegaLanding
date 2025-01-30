@@ -60,7 +60,7 @@ const OmegaShowcase: React.FC = () => {
       id="hero"
       className="bg-[url('/brrr.png')] bg-no-repeat bg-cover bg-center min-h-screen flex flex-col items-center justify-start px-4 pt-[5rem] sm:pt-[10rem] pb-[3rem]"
     >
-      {/* Contenido Principal */}
+
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 w-full max-w-5xl mb-0 lg:mb-10">
         <motion.div
           key={activeLogo.id}
@@ -86,55 +86,52 @@ const OmegaShowcase: React.FC = () => {
             {activeLogo.description}
           </p>
           <div className="hidden lg:block mt-8">
-        <Link
-          to="tabsDemo" // ID de la sección a la que quieres ir
-          smooth={true}
-          duration={800}
-          className="bg-orange-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-orange-600 transition-all cursor-pointer"
-        >
-          Más Información
-        </Link>
-      </div>
+            <Link
+              to="tabsDemo"
+              smooth={true}
+              duration={800}
+              className="bg-orange-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-orange-600 transition-all cursor-pointer"
+            >
+              Más Información
+            </Link>
+          </div>
         </div>
       </div>
 
-      {/* Botones - Logos de Unidades */}
       <div className="flex flex-wrap justify-center items-start gap-4 sm:gap-6 w-full mt-[1.5rem] sm:mt-[3rem]">
-  {logos.map((logo) => (
-    <button
-      key={logo.id}
-      onClick={() => handleLogoChange(logo)}
-      className={`flex flex-col items-center justify-center transition-all duration-300 ${
-        activeLogo.id === logo.id
-          ? "opacity-100 scale-110"
-          : "opacity-50 hover:opacity-100"
-      } ${
-        logo.id === "omega-soluciones"
-          ? "order-first mb-4 w-full sm:w-auto flex justify-center"
-          : ""
-      }`}
-    >
-      <div className="bg-white rounded-full p-2 sm:p-4 shadow-md flex justify-center items-center">
-        <img
-          src={logo.logo}
-          alt={logo.title}
-          className="h-16 w-16 sm:h-20 sm:w-20 object-contain"
-        />
+        {logos.map((logo) => (
+          <button
+            key={logo.id}
+            onClick={() => handleLogoChange(logo)}
+            className={`flex flex-col items-center justify-center transition-all duration-300 ${activeLogo.id === logo.id
+                ? "opacity-100 scale-110"
+                : "opacity-50 hover:opacity-100"
+              } ${logo.id === "omega-soluciones"
+                ? "order-first mb-4 w-full sm:w-auto flex justify-center"
+                : ""
+              }`}
+          >
+            <div className="bg-white rounded-full p-2 sm:p-4 shadow-md flex justify-center items-center">
+              <img
+                src={logo.logo}
+                alt={logo.title}
+                className="h-16 w-16 sm:h-20 sm:w-20 object-contain"
+              />
+            </div>
+            <span className="mt-2 text-xs sm:text-sm text-gray-800 font-medium">
+              {logo.title}
+            </span>
+            {logo.id !== "omega-soluciones" && (
+              <span className="text-[10px] sm:text-xs text-orange-500 font-semibold mt-1">
+                Unidad de Negocio
+              </span>
+            )}
+          </button>
+        ))}
       </div>
-      <span className="mt-2 text-xs sm:text-sm text-gray-800 font-medium">
-        {logo.title}
-      </span>
-      {logo.id !== "omega-soluciones" && (
-        <span className="text-[10px] sm:text-xs text-orange-500 font-semibold mt-1">
-          Unidad de Negocio
-        </span>
-      )}
-    </button>
-  ))}
-</div>
 
-      
-      
+
+
     </div>
   );
 };

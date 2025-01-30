@@ -43,7 +43,7 @@ export const Tabs = ({
     // Detectar si la pantalla es móvil
     useEffect(() => {
         const checkMobile = () => setIsMobile(window.innerWidth <= 768);
-        checkMobile(); // Llamar al inicio
+        checkMobile();
         window.addEventListener("resize", checkMobile);
         return () => window.removeEventListener("resize", checkMobile);
     }, []);
@@ -62,8 +62,8 @@ export const Tabs = ({
                         onClick={() => {
                             moveSelectedTabToTop(idx);
                         }}
-                        onMouseEnter={() => !isMobile && setHovering(true)} // No ejecuta si es móvil
-                        onMouseLeave={() => !isMobile && setHovering(false)} // No ejecuta si es móvil
+                        onMouseEnter={() => !isMobile && setHovering(true)}
+                        onMouseLeave={() => !isMobile && setHovering(false)}
                         className={cn(
                             "relative px-4  rounded-full",
                             tabClassName
@@ -97,7 +97,7 @@ export const Tabs = ({
             <FadeInDiv
                 tabs={tabs}
                 active={active}
-                hovering={!isMobile && hovering} // Desactiva hovering si es móvil
+                hovering={!isMobile && hovering}
                 className={cn("mt-[3rem] sm:mt-[7rem]", contentClassName)}
             />
         </>
@@ -127,7 +127,7 @@ export const FadeInDiv = ({
                     layoutId={tab.value}
                     style={{
                         scale: 1 - idx * 0.1,
-                        top: hovering ? idx * -50 : 0, // Evita cambios en hover si está desactivado
+                        top: hovering ? idx * -50 : 0,
                         zIndex: -idx,
                         opacity: idx < 3 ? 1 - idx * 0.1 : 0,
                     }}

@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, SetStateAction } from "react";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 
 const OmegaShowcase2 = () => {
@@ -65,6 +65,7 @@ const OmegaShowcase2 = () => {
       id="hero"
       className="sm:bg-[url('/brrr.webp')] bg-[url('/graybg.webp')] bg-no-repeat bg-cover bg-center flex flex-col lg:flex-row items-center justify-center p-2 lg:p-8 min-h-screen"
     >
+
       <div className="bg-[url('/bgg.webp')] bg-center bg-no-repeat bg-cover relative flex items-center justify-center w-[20rem] lg:w-[29rem] h-[20rem] lg:h-[29rem]">
         {sections.map((section, index) => {
           const positionClasses = [
@@ -81,22 +82,19 @@ const OmegaShowcase2 = () => {
             <button
               key={section.id}
               onClick={() => handleLogoClick(section.id)}
-              className={`${positionClasses[index]} ${
-                isMainButton
+              className={`${positionClasses[index]} ${isMainButton
                   ? "w-[10rem] lg:w-[15rem] h-[10rem] lg:h-[15rem]"
                   : "w-[5rem] lg:w-[8rem] h-[5rem] lg:h-[8rem]"
-              } rounded-full border-2 ${
-                isActive
+                } rounded-full border-2 ${isActive
                   ? "shadow-lg shadow-orange-500 border-orange-500 scale-110"
                   : "shadow-md border-gray-300"
-              } bg-white transition-all duration-300`}
+                } bg-white transition-all duration-300`}
             >
               <img
                 src={section.logo}
                 alt={section.title}
-                className={`w-full h-full object-contain rounded-full ${
-                  isActive ? "brightness-110" : ""
-                }`}
+                className={`w-full h-full object-contain rounded-full ${isActive ? "brightness-110" : ""
+                  }`}
               />
             </button>
           );

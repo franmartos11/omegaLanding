@@ -22,7 +22,7 @@ const CombinedSection = () => {
 
   return (
     <section id="nosotros" className="bg-[url('/bgorange.png')] bg-no-repeat bg-cover bg-center min-h-screen flex flex-col justify-center items-center px-6 py-[3rem] lg:py-[0rem] overflow-hidden">
-      {/* Team Section (Parte Superior) */}
+
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -64,9 +64,8 @@ const CombinedSection = () => {
         </motion.p>
       </motion.div>
 
-      {/* MissionVision (Parte Inferior) */}
       <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-        {/* Bloque de Misión - Izquierda */}
+
         <motion.div
           ref={missionRef}
           initial={{ opacity: 0, translateX: -50 }}
@@ -89,7 +88,6 @@ const CombinedSection = () => {
           </p>
         </motion.div>
 
-        {/* Bloque de Visión - Derecha */}
         <motion.div
           ref={visionRef}
           initial={{ opacity: 0, translateX: 50 }}
