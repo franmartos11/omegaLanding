@@ -65,7 +65,7 @@ const OmegaShowcase2 = () => {
       id="hero"
       className="sm:bg-[url('/brrr.png')] bg-[url('/graybg.png')] bg-no-repeat bg-cover bg-center flex flex-col lg:flex-row items-center justify-center p-2 lg:p-8 min-h-screen"
     >
-      <div className="bg-[url('/bgg.png')] bg-center bg-no-repeat bg-cover relative flex items-center justify-center w-[20rem] lg:w-[29rem] h-[20rem] lg:h-[29rem]">
+      <div className="bg-[url('/bgg.webp')] bg-center bg-no-repeat bg-cover relative flex items-center justify-center w-[20rem] lg:w-[29rem] h-[20rem] lg:h-[29rem]">
         {sections.map((section, index) => {
           const positionClasses = [
             "absolute top-2 left-2",
