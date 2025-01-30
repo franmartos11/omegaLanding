@@ -13,7 +13,7 @@ export function TabsDemo() {
     {
       value: "product",
       link: "/carcheck",
-      logo: "/33.png",
+      logo: "/33.webp",
       src: "/19.png",
       alt: "OmegaDistribucionesLogo",
       title: "carcheck-data",
@@ -21,7 +21,7 @@ export function TabsDemo() {
     {
       value: "services",
       link: "/auditorias",
-      logo: "/4c.png",
+      logo: "/4c.webp",
       src: "/20.png",
       alt: "OmegaConstruccionesLogo",
       title: "Auditorias-data",
@@ -29,7 +29,7 @@ export function TabsDemo() {
     {
       value: "playground",
       link: "/desarrollo-web",
-      logo: "/1cc.png",
+      logo: "/1cc.webp",
       src: "/21.png",
       alt: "OmegaCleanLogo",
       title: "Paginas-Web-data",
@@ -37,7 +37,7 @@ export function TabsDemo() {
     {
       value: "content",
       link: "/apps-a-medida",
-      logo: "/2t.png",
+      logo: "/2t.webp",
       src: "/omegatech.png",
       alt: "OmegaTechLogo",
       title: "Apps-a-Medida-data",
