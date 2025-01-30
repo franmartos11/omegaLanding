@@ -9,28 +9,28 @@ const OmegaShowcase2 = () => {
   const sections = [
     {
       id: "omega-distribuciones",
-      logo: "/33.png",
+      logo: "/33.webp",
       title: "OMEGA DISTRIBUCIONES",
       description:
         "Comercialización y distribución de todo tipo de productos y servicios.",
     },
     {
       id: "omega-clean",
-      logo: "/1cc.png",
+      logo: "/1cc.webp",
       title: "OMEGA CLEAN",
       description:
         "Fabricación y envasado de productos de higiene doméstica e institucional.",
     },
     {
       id: "omega-construcciones",
-      logo: "/4c.png",
+      logo: "/4c.webp",
       title: "OMEGA CONSTRUCCIONES",
       description:
         "Diseño, construcción, remodelación y desarrollo de todo tipo de proyectos.",
     },
     {
       id: "omega-tech",
-      logo: "/2t.png",
+      logo: "/2t.webp",
       title: "OMEGA TECH",
       description:
         "Desarrollo de software a medida y comercialización de hardware.",
