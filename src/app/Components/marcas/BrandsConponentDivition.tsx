@@ -106,7 +106,7 @@ const BrandsComponentDivition = () => {
             <button
               key={type}
               onClick={() => handleCategoryClick(type)}
-              className="w-[48%] sm:w-auto px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg shadow-lg hover:bg-orange-700 transition duration-300 text-center"
+              className="w-[48%] sm:w-auto px-6 py-3 bg-orange-500 text-white sm:font-semibold text-xs sm:text-sm uppercase font-extralight rounded-lg shadow-lg hover:bg-orange-700 transition duration-300 text-center"
             >
               {type}
             </button>

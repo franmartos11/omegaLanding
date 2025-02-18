@@ -57,6 +57,22 @@ export const Contacto = () => {
                                 </a>
                             </span>
                         </div>
+                        <div className="flex items-center gap-4 ">
+                            <FiMail className="text-white h-6 w-6 " />
+                            <span className="text-white text-sm lg:text-lg font-semibold hover:text-[#f86709] ">
+                                <a href="mailto:rrhh@omegasoluciones.com.ar ">
+                                    rrhh@omegasoluciones.com.ar 
+                                </a>
+                            </span>
+                        </div>
+                        <div className="flex items-center gap-4 ">
+                            <FiMail className="text-white h-6 w-6 " />
+                            <span className="text-white text-sm lg:text-lg font-semibold hover:text-[#f86709] ">
+                                <a href="mailto:compras@omegasoluciones.com.ar ">
+                                    compras@omegasoluciones.com.ar 
+                                </a>
+                            </span>
+                        </div>
                     </div>
 
                     <div className="rounded-lg overflow-hidden shadow-lg">
@@ -71,8 +87,6 @@ export const Contacto = () => {
                         ></iframe>
                     </div>
                 </motion.div>
-
-
             </div>
         </section>
     );
