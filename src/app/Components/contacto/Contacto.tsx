@@ -42,7 +42,7 @@ export const Contacto = () => {
                     </p>
 
                     <div className="">
-                    <p className="text-lg lg:text-xl text-white font-bold">Ventas</p>
+                    <p className="text-lg lg:text-xl text-white font-bold">Telefono</p>
                         <div className="flex items-center gap-4">
                             <FiPhone className="text-white h-6 w-6" />
                             <span className="text-white text-sm lg:text-lg font-semibold hover:text-[#f86709]">
