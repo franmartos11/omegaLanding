@@ -41,11 +41,11 @@ export const Contacto = () => {
                         Ven a visitarnos o contáctanos por teléfono o correo electrónico.
                     </p>
 
-                    <div className="">
-                    <p className="text-lg lg:text-xl text-white font-bold">Telefono</p>
+                    <div className="pb-[0.7rem]">
+                    <p className="text-lg lg:text-xl text-white font-semibold">Telefono</p>
                         <div className="flex items-center gap-4">
                             <FiPhone className="text-white h-6 w-6" />
-                            <span className="text-white text-sm lg:text-lg font-semibold hover:text-[#f86709]">
+                            <span className="text-white text-xs lg:text-lg  hover:text-[#f86709]">
                                 <a href="https://wa.me/5493876195572?text=Hola!%20">
                                     +54 9 387 619 5572
                                 </a>
@@ -53,11 +53,11 @@ export const Contacto = () => {
                         </div>
 
                         {/* Emails con títulos más grandes y menos espacio */}
-                        <div>
-                            <p className="text-lg lg:text-xl text-white font-bold">Ventas</p>
+                        <div className="pb-[0.5rem]">
+                            <p className="text-lg lg:text-xl text-white font-semibold">Ventas</p>
                             <div className="flex items-center gap-4">
                                 <FiMail className="text-white h-6 w-6" />
-                                <span className="text-white text-sm lg:text-lg font-semibold hover:text-[#f86709]">
+                                <span className="text-white text-xs lg:text-lg  hover:text-[#f86709]">
                                     <a href="mailto:ventas@omegasoluciones.com.ar">
                                         ventas@omegasoluciones.com.ar
                                     </a>
@@ -65,11 +65,11 @@ export const Contacto = () => {
                             </div>
                         </div>
 
-                        <div>
-                            <p className="text-lg lg:text-xl text-white font-bold">Administración</p>
+                        <div className="pb-[0.5rem]">
+                            <p className="text-lg lg:text-xl text-white font-semibold">Administración</p>
                             <div className="flex items-center gap-4">
                                 <FiMail className="text-white h-6 w-6" />
-                                <span className="text-white text-sm lg:text-lg font-semibold hover:text-[#f86709]">
+                                <span className="text-white text-xs lg:text-lg  hover:text-[#f86709]">
                                     <a href="mailto:administracion@omegasoluciones.com.ar">
                                         administracion@omegasoluciones.com.ar
                                     </a>
@@ -77,11 +77,11 @@ export const Contacto = () => {
                             </div>
                         </div>
 
-                        <div>
-                            <p className="text-lg lg:text-xl text-white font-bold">Compras</p>
+                        <div className="pb-[0.5rem]">
+                            <p className="text-sm lg:text-xl text-white font-semibold">Compras</p>
                             <div className="flex items-center gap-4">
                                 <FiMail className="text-white h-6 w-6" />
-                                <span className="text-white text-sm lg:text-lg font-semibold hover:text-[#f86709]">
+                                <span className="text-white text-xs lg:text-lg  hover:text-[#f86709]">
                                     <a href="mailto:compras@omegasoluciones.com.ar">
                                         compras@omegasoluciones.com.ar
                                     </a>
