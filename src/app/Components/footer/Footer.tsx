@@ -7,6 +7,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="bg-[#f86709] text-white py-8 text-center">
+      
 
       <div className="flex justify-center mb-6">
         <Image
@@ -69,11 +70,8 @@ const Footer = () => {
         </ul>
       </nav>
 
-      <Link aria-label="maps" target="_blank" href={"https://www.google.com/maps/place/Omega+Soluciones/@-24.7618653,-65.41137,15z/data=!4m6!3m5!1s0x941bc36adcbf6bd9:0x9db0642ee2c946ce!8m2!3d-24.7618653!4d-65.41137!16s%2Fg%2F11gmds8b0m?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D"}>
-        <p className="mb-6 text-xs md:text-sm hover:underline">
-          Arias Velázquez 733, A4400 Salta
-        </p>
-      </Link>
+
+
 
       <div className="flex justify-center space-x-4 md:space-x-6">
         <Link
@@ -116,6 +114,7 @@ const Footer = () => {
           />
         </Link>
       </div>
+
     </footer>
   );
 };
