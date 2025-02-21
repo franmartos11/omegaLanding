@@ -44,9 +44,9 @@ export const Contacto = () => {
                     {/* Lista de contactos */}
                     <div className="space-y-6">
                         {[
-                            { title: "Compras", email: "compras@omegasoluciones.com.ar", phone: "+54 9 387 210 5425" },
-                            { title: "Ventas", email: "ventas@omegasoluciones.com.ar", phone: "+54 9 387 619 5572" },
                             { title: "Administración", email: "administracion@omegasoluciones.com.ar" },
+                            { title: "Ventas", email: "ventas@omegasoluciones.com.ar", phone: "+54 9 387 619 5572" },
+                            { title: "Compras", email: "compras@omegasoluciones.com.ar", phone: "+54 9 387 210 5425" },
                         ].map(({ title, email, phone }, index) => (
                             <div key={index}>
                                 <p className="text-xl text-white font-semibold">{title}</p>
