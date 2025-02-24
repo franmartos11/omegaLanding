@@ -10,7 +10,7 @@ export const Contacto = () => {
             <div className="container mx-auto text-center md:text-left grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 {/* Imagen del logo */}
                 <motion.div
-                    initial={{ opacity: 0, y: -50 }}
+                    initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.2, ease: "easeOut" }}
                     viewport={{ once: true }}
@@ -28,7 +28,7 @@ export const Contacto = () => {
                 
                 {/* Información de contacto */}
                 <motion.div
-                    initial={{ opacity: 0, x: 50 }}
+                    initial={{ opacity: 0, x: 0 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     viewport={{ once: true }}
@@ -72,7 +72,7 @@ export const Contacto = () => {
 
             {/* Mapa */}
             <motion.div
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, ease: "easeOut" }}
                 viewport={{ once: true }}
